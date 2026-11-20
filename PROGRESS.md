@@ -47,5 +47,5 @@ This file is the project's memory. Read it at the start of every session and upd
 - `vercel.json` sends every address to the app, so links like `/track/t-exec` work on refresh.
 
 ## Session log
-- 2026-11-20: Phase 2 public side built and pushed. Waiting on Awele to run the Supabase script and set URL Configuration.
+- 2026-11-20: Phase 2 public side built and pushed. Awele ran the Supabase script and set URL Configuration. Next: live test on Vercel, then Phase 3 (learning).
 - 2026-11-20: Phase 1 foundation built and saved to GitHub (Okonkwo3434/The-Awelen-Communit). Deployed on Vercel by Awele. Next: Phase 2 (public side).
