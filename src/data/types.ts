@@ -18,18 +18,26 @@ export type Space = {
 
 export type Track = { id: string; space: string; title: string; desc?: string };
 
-export type CourseSummary = {
+export type Lesson = { id: string; title: string; kind: 'video' | 'pdf' | 'quiz'; mins: number };
+export type Module = { id: string; title: string; lessons: Lesson[] };
+export type Course = {
   id: string;
   space: string;
   track: string;
   title: string;
   headline?: string;
   sub?: string;
-  price: number;
+  desc?: string;
+  icon?: string;
+  price: number;        // full price in naira
+  instN: number;        // number of installments (1 = pay in full only)
+  instAmt: number;      // each installment in naira
   amld?: string;
-  modules: number;
-  lessons: number;
+  mode: 'paid' | 'free' | 'application';
+  downloads: string[];
+  modules: Module[];
 };
+export type PaymentSettings = { bankName: string; accountName: string; accountNumber: string; linpayUrl: string };
 
 export type Creator = {
   name: string;
@@ -60,6 +68,7 @@ export type SiteData = {
   groups: Group[];
   spaces: Space[];
   tracks: Track[];
-  courses: CourseSummary[];
+  courses: Course[];
+  payments: PaymentSettings;
   creator: Creator;
 };

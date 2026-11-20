@@ -415,10 +415,241 @@
    "title": "Idea Discovery",
    "headline": "Find the business idea that fits you",
    "sub": "For anyone thinking about starting something of their own.",
+   "desc": "Find the business idea that is truly yours. Five modules take you from your desire for a new life, through what you already know and how an entrepreneur thinks, to one idea worth testing in the real world.",
+   "icon": "💡",
    "price": 25000,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 5,
-   "lessons": 32
+   "mode": "paid",
+   "downloads": [
+    "Idea Discovery workbook",
+    "Problem-spotting checklist"
+   ],
+   "modules": [
+    {
+     "id": "2lzmg5l",
+     "title": "Module 1: Finding Meaning in Life",
+     "lessons": [
+      {
+       "id": "llrvg0r",
+       "title": "Your desire for a new life",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1xcz0ki",
+       "title": "Turning passion into purpose",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1jyi1mu",
+       "title": "Aligning Desire with what you already have",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lutl4dm",
+       "title": "Setting a clear vision",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l8egfma",
+       "title": "Overcoming your challenges",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lykypw9",
+       "title": "Identifying your own desire and idea",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "zkdr9nz",
+     "title": "Module 2: Assessing Your Knowledge Base",
+     "lessons": [
+      {
+       "id": "l1m875v6",
+       "title": "Your information base",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lhaf4l2",
+       "title": "Seeing – Accessing what you have seen",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1n2eir8",
+       "title": "Hearing – Deriving meaning from sounds",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1v6msqs",
+       "title": "Reading – Gathering information from reading",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "lknp5f1",
+     "title": "Module 3: Power in What You Know",
+     "lessons": [
+      {
+       "id": "l110w4h0",
+       "title": "What do you know for your age",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lpps0hu",
+       "title": "The four dimensions of knowledge power",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lkytf2w",
+       "title": "Knowing your God",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1o2nli8",
+       "title": "Knowing a joyful sound",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l159o1ga",
+       "title": "Knowing your purpose",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1ce1nzh",
+       "title": "Knowing your value",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l6u71t2",
+       "title": "Knowing your skills and experiences",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lph7jds",
+       "title": "Knowledge beats research",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1p55lar",
+       "title": "Knowledge gives personality and momentum",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "ll35cbh",
+       "title": "Applying your knowledge",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "6u46s6w",
+     "title": "Module 4: Entrepreneurial Mindset",
+     "lessons": [
+      {
+       "id": "lh5w2fg",
+       "title": "You are the first business",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lbf0gjw",
+       "title": "The war between your two selves",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "ly4ayob",
+       "title": "How you think of failure will determine everything else",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lhfzt28",
+       "title": "The danger of a crowded mind",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1pljkct",
+       "title": "Patience is a business strategy",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lnbvsyn",
+       "title": "What keeps you going when nothing is working",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "0x9qqid",
+     "title": "Module 5: Exploring Your Idea Space",
+     "lessons": [
+      {
+       "id": "l1ibvl81",
+       "title": "The world is speaking, are you listening",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lt7i5qp",
+       "title": "Your life is a laboratory",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lvoksrb",
+       "title": "From frustration to possibility",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lb1xym0",
+       "title": "Hunches, hypothesis and the art of testing",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1w991yc",
+       "title": "Does the world need this",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l15hrawd",
+       "title": "The idea that is truly yours",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "snb",
@@ -427,10 +658,68 @@
    "title": "Starting Your New Idea",
    "headline": "Turn an idea into a business that pays its way",
    "sub": "For first-time founders and anyone moving from employment into business.",
+   "desc": "You'll test demand before spending money, price for your market, and leave with a one-page plan you can act on this month.",
+   "icon": "🌱",
    "price": 50000,
+   "instN": 3,
+   "instAmt": 18000,
    "amld": "",
-   "modules": 2,
-   "lessons": 6
+   "mode": "paid",
+   "downloads": [
+    "One-page business plan template",
+    "Customer interview script",
+    "Pricing worksheet"
+   ],
+   "modules": [
+    {
+     "id": "mnls8an",
+     "title": "Module 1: Finding the problem",
+     "lessons": [
+      {
+       "id": "l1d7ad3l",
+       "title": "Why most businesses start with a problem",
+       "kind": "video",
+       "mins": 9
+      },
+      {
+       "id": "ldn1jo5",
+       "title": "Finding problems worth solving",
+       "kind": "video",
+       "mins": 12
+      },
+      {
+       "id": "l1lq394j",
+       "title": "Talking to your first customers",
+       "kind": "video",
+       "mins": 13
+      }
+     ]
+    },
+    {
+     "id": "t634euu",
+     "title": "Module 2: Making it pay",
+     "lessons": [
+      {
+       "id": "l16zg1n3",
+       "title": "Pricing for a Nigerian market",
+       "kind": "video",
+       "mins": 11
+      },
+      {
+       "id": "l3x7i7g",
+       "title": "Your one-page business plan",
+       "kind": "pdf",
+       "mins": 0
+      },
+      {
+       "id": "l1ydhgfo",
+       "title": "Module check",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "econ",
@@ -439,10 +728,88 @@
    "title": "Understanding Economic Outlook",
    "headline": "Read the economy before you bet your money on an idea",
    "sub": "For new founders who want to understand how inflation, exchange rates and policy shape their business.",
+   "desc": "Every business lives inside an economy. Prices, interest rates, the naira, government policy and what customers can afford all decide whether a good idea becomes a good business.\n\nThis course explains the big economic forces in plain language, shows you where to find reliable numbers, and helps you turn the outlook into practical decisions: what to sell, how to price, when to buy stock and how much risk to take.",
+   "icon": "📊",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "dao8wmi",
+     "title": "Module 1: How the economy touches your business",
+     "lessons": [
+      {
+       "id": "l1ey6q9y",
+       "title": "Why the economy matters to a small business",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l119mf9y",
+       "title": "Inflation, prices and what customers can afford",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l11mdlqz",
+       "title": "The naira, imports and exchange rates",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "gw32f3u",
+     "title": "Module 2: Reading the signals",
+     "lessons": [
+      {
+       "id": "l160q2e4",
+       "title": "Where to find reliable economic information",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lzo4jp8",
+       "title": "Interest rates, credit and the cost of money",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1h80cl6",
+       "title": "Government policy, budgets and regulation",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "0rderyy",
+     "title": "Module 3: Turning the outlook into decisions",
+     "lessons": [
+      {
+       "id": "l1xyk225",
+       "title": "Spotting opportunities in hard times",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lpmclfl",
+       "title": "Pricing and stock decisions in an uncertain market",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "llb6073",
+       "title": "Your one-page economic outlook",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "opp",
@@ -451,10 +818,88 @@
    "title": "Opportunity Recognition",
    "headline": "Learn to see the opportunities other people walk past",
    "sub": "For founders and managers who want a steady flow of good ideas for new products, customers and markets.",
+   "desc": "Opportunities rarely arrive labelled. They show up as complaints, workarounds, gaps in a market or changes in how people live and buy. This course trains you to notice them, test them quickly and choose the few worth your time and money.\n\nYou’ll practise on real situations from Nigerian markets and leave with a simple system for finding, scoring and acting on opportunities in your own business.",
+   "icon": "🔭",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "mi138g5",
+     "title": "Module 1: Where opportunities hide",
+     "lessons": [
+      {
+       "id": "lpehla2",
+       "title": "Problems, frustrations and workarounds",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1r363mk",
+       "title": "Changes in technology, policy and lifestyle",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l55gjo6",
+       "title": "Gaps your competitors leave open",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "iw8i7w0",
+     "title": "Module 2: Testing before you invest",
+     "lessons": [
+      {
+       "id": "ln14dp4",
+       "title": "Asking customers the right questions",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1r0mtjx",
+       "title": "Quick, low-cost experiments",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lu1t5sp",
+       "title": "Reading the results honestly",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "wx9wr2x",
+     "title": "Module 3: Choosing what to pursue",
+     "lessons": [
+      {
+       "id": "ld3gves",
+       "title": "Scoring opportunities against your strengths",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lby7qe5",
+       "title": "Timing: now, later or never",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "ltb0yrg",
+       "title": "Your opportunity pipeline",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "fin",
@@ -463,10 +908,88 @@
    "title": "Financial Intelligence",
    "headline": "Understand your numbers well enough to make better decisions",
    "sub": "For founders and managers who want to read accounts, manage cash and talk confidently with bankers and investors.",
+   "desc": "Many good businesses fail not because the idea was wrong but because the owner could not see what the numbers were saying. Financial intelligence is the skill of reading those numbers and acting on them early.\n\nTaught by a Chartered Accountant, this course walks you through the income statement, the balance sheet and cash flow in plain language. You’ll learn to price for profit, manage cash, spot the warning signs and prepare the figures banks and investors ask for.",
+   "icon": "💹",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "wvbx1ax",
+     "title": "Module 1: Reading the three statements",
+     "lessons": [
+      {
+       "id": "l1udj2mz",
+       "title": "The income statement: are we making money?",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1an3y5u",
+       "title": "The balance sheet: what we own and owe",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1oz5bpv",
+       "title": "Cash flow: why profit is not cash",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "09hz73a",
+     "title": "Module 2: Managing money day to day",
+     "lessons": [
+      {
+       "id": "ln2mfmx",
+       "title": "Costing and pricing for profit",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lzn0lwr",
+       "title": "Managing cash, credit and stock",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1nqwrwl",
+       "title": "Budgets and simple forecasts",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "h0gsvdr",
+     "title": "Module 3: Talking money with others",
+     "lessons": [
+      {
+       "id": "lvhws63",
+       "title": "The ratios bankers and investors check",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1wo5qb6",
+       "title": "Preparing for a loan or investor meeting",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1fb2r4t",
+       "title": "Your monthly financial dashboard",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "strat",
@@ -475,10 +998,88 @@
    "title": "Strategy Development",
    "headline": "Set a clear direction and the choices that will get you there",
    "sub": "For owners and managers ready to move from reacting every day to working to a plan.",
+   "desc": "Strategy is deciding where you will compete, how you will win and what you will not do. Without it, every opportunity looks urgent and the team pulls in different directions.\n\nThis course gives you practical tools to understand your market and competitors, choose a clear position, set a small number of goals and turn them into a plan your team can follow and review.",
+   "icon": "♟️",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "1qs70sj",
+     "title": "Module 1: Where you stand",
+     "lessons": [
+      {
+       "id": "l1volo0m",
+       "title": "Your market, customers and competitors",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lag29bh",
+       "title": "Your strengths and weak spots",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1yrwd5x",
+       "title": "What is changing around you",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "icbb6lv",
+     "title": "Module 2: Making the big choices",
+     "lessons": [
+      {
+       "id": "l11s0hx1",
+       "title": "Where to compete and how to win",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lpfksiq",
+       "title": "What to stop doing",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1bdznqu",
+       "title": "Setting a few clear goals",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "7kifpf1",
+     "title": "Module 3: From plan to action",
+     "lessons": [
+      {
+       "id": "l464iih",
+       "title": "Turning goals into a one-page strategy",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lerq2xr",
+       "title": "Getting your team behind it",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1lu11yz",
+       "title": "Reviewing and adjusting every quarter",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "lead",
@@ -487,10 +1088,42 @@
    "title": "Leading Yourself First",
    "headline": "Discipline, decisions and character",
    "sub": "For people who lead others, or soon will.",
+   "desc": "Great leadership starts with how you lead yourself when no one is watching. Build the habits, judgement and character that make people want to follow you.",
+   "icon": "🧭",
    "price": 40000,
+   "instN": 2,
+   "instAmt": 21000,
    "amld": "",
-   "modules": 1,
-   "lessons": 3
+   "mode": "paid",
+   "downloads": [
+    "Daily leadership journal"
+   ],
+   "modules": [
+    {
+     "id": "czfwsr5",
+     "title": "Module 1: Self-leadership",
+     "lessons": [
+      {
+       "id": "l1ef8xmk",
+       "title": "Leading when no one is watching",
+       "kind": "video",
+       "mins": 10
+      },
+      {
+       "id": "l1gwqpxy",
+       "title": "Decisions under pressure",
+       "kind": "video",
+       "mins": 11
+      },
+      {
+       "id": "l5m7qts",
+       "title": "Your leadership commitments",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "scale",
@@ -499,10 +1132,88 @@
    "title": "Scaling for Impact",
    "headline": "Grow the business without losing what made it work",
    "sub": "For founders and leaders whose business is ready to grow beyond one location, one product or one person.",
+   "desc": "Growth exposes every weakness: systems that only work when you are in the room, people stretched too thin and cash that runs out just as sales take off. Scaling well means building the foundations before you need them.\n\nThis course helps you decide how to grow, build the systems, team and finance that growth needs, and keep your impact on customers, staff and community strong as you get bigger.",
+   "icon": "📈",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "c6svll4",
+     "title": "Module 1: Ready to scale?",
+     "lessons": [
+      {
+       "id": "l1hrsk69",
+       "title": "Signs your business is ready, and signs it is not",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l16efbvh",
+       "title": "Choosing your growth path",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l9cn44d",
+       "title": "Funding growth without losing control",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "3sxj1g4",
+     "title": "Module 2: Building for size",
+     "lessons": [
+      {
+       "id": "log0lux",
+       "title": "Systems and processes that work without you",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l7gp29n",
+       "title": "Building the team you will need",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l733vim",
+       "title": "Keeping quality as volume rises",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "q3qsdhs",
+     "title": "Module 3: Growing with impact",
+     "lessons": [
+      {
+       "id": "l1tqsd8w",
+       "title": "Measuring what matters beyond profit",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1pw0609",
+       "title": "Partnerships that open new markets",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lk8m3h7",
+       "title": "Your 18-month scaling plan",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "visual",
@@ -511,10 +1222,88 @@
    "title": "Visual Thinking for Leaders",
    "headline": "Think more clearly, and explain your ideas so people see them",
    "sub": "For leaders who want to solve problems faster and communicate complex ideas simply.",
+   "desc": "Leaders spend their days making sense of messy situations and explaining them to others. Simple sketches, maps and diagrams make both easier: they show you the whole picture and help your team see it too.\n\nYou don’t need to be able to draw. This course teaches practical visual tools for mapping problems, planning, running meetings and presenting ideas, drawing on product design and UX methods that work as well on a whiteboard as on a screen.",
+   "icon": "🎨",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "220m1t2",
+     "title": "Module 1: Seeing the problem",
+     "lessons": [
+      {
+       "id": "ltw169o",
+       "title": "Why pictures beat paragraphs",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lea5kku",
+       "title": "Mapping a messy situation",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l169s29o",
+       "title": "Customer journeys and process maps",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "guimsvf",
+     "title": "Module 2: Thinking on paper",
+     "lessons": [
+      {
+       "id": "luoeal6",
+       "title": "Simple frameworks you can sketch",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l56sutf",
+       "title": "Visual planning and roadmaps",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1oq41nf",
+       "title": "Running a visual meeting",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "6p82eaj",
+     "title": "Module 3: Showing your ideas",
+     "lessons": [
+      {
+       "id": "l5egcq1",
+       "title": "One-page visuals for decisions",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1nzcp1v",
+       "title": "Presenting with clarity",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l67u8yp",
+       "title": "Your visual thinking toolkit",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "change",
@@ -523,10 +1312,88 @@
    "title": "Driving Change",
    "headline": "Lead people through change so it sticks",
    "sub": "For leaders introducing new systems, structures or ways of working.",
+   "desc": "Most change efforts fail not because the idea was wrong but because people were not brought along. Resistance, rumours and old habits quietly pull things back to the way they were.\n\nThis course shows you how to make the case for change, plan it in stages, communicate it honestly, handle resistance with respect and keep momentum until the new way becomes normal.",
+   "icon": "🔄",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "wp37tmj",
+     "title": "Module 1: Making the case",
+     "lessons": [
+      {
+       "id": "l1ervnnz",
+       "title": "Why change efforts fail",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1y5ekvt",
+       "title": "Building a clear case for change",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1vwj5lg",
+       "title": "Finding your champions",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "p05ahmc",
+     "title": "Module 2: Leading the transition",
+     "lessons": [
+      {
+       "id": "l11uodwj",
+       "title": "Planning change in stages",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1r6h0xj",
+       "title": "Communicating before, during and after",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lvwkqfs",
+       "title": "Handling resistance with respect",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "qkega3j",
+     "title": "Module 3: Making it stick",
+     "lessons": [
+      {
+       "id": "l1s2wf4n",
+       "title": "Quick wins and momentum",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1ulnzss",
+       "title": "Changing habits, not just processes",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lrdnebw",
+       "title": "Your change plan",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "wealth",
@@ -535,10 +1402,88 @@
    "title": "Building Sustainable Wealth",
    "headline": "Turn business success into wealth that lasts for generations",
    "sub": "For founders and leaders who want their income to become lasting wealth for their families and communities.",
+   "desc": "Earning well and building wealth are not the same thing. Without a plan, business income gets spent, tied up or lost, and families are left exposed when the unexpected happens.\n\nThis course covers the full picture: separating business and personal money, saving and investing with purpose, protecting what you build with insurance, and planning for succession and the next generation, with stewardship at the heart of it.",
+   "icon": "🏦",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "",
-   "modules": 3,
-   "lessons": 9
+   "mode": "free",
+   "downloads": [],
+   "modules": [
+    {
+     "id": "i1zr873",
+     "title": "Module 1: From income to wealth",
+     "lessons": [
+      {
+       "id": "lz9vstp",
+       "title": "Why high earners stay stuck",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lzpldc9",
+       "title": "Separating business and personal money",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l6cfo2w",
+       "title": "Your personal balance sheet",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "cvpvktb",
+     "title": "Module 2: Growing and protecting wealth",
+     "lessons": [
+      {
+       "id": "l1p56p1z",
+       "title": "Investing with purpose",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l3j8ccz",
+       "title": "Insurance and protecting your family",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lzlmbk",
+       "title": "Managing debt wisely",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "kg96cuq",
+     "title": "Module 3: Wealth that lasts",
+     "lessons": [
+      {
+       "id": "lw2irxa",
+       "title": "Wills, trusts and succession",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lvcv5gb",
+       "title": "Passing on values with wealth",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l3j75nz",
+       "title": "Your wealth plan",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "amld-strategy",
@@ -547,10 +1492,164 @@
    "title": "Strategy & Business Model Renewal",
    "headline": "Strategy & Business Model Renewal",
    "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "desc": "Seeing where the business really makes money, and where it should go next.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “Our core product is stalling. Where do we grow?”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Strategy & Business Model Renewal.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "sprint",
-   "modules": 6,
-   "lessons": 18
+   "mode": "application",
+   "downloads": [
+    "Sprint assessment rubric",
+    "Confidentiality agreement",
+    "Weekly studio planner"
+   ],
+   "modules": [
+    {
+     "id": "g7nkxi6",
+     "title": "Week 1: The brief",
+     "lessons": [
+      {
+       "id": "lh2avcg",
+       "title": "Masterclass: the core frameworks for this sprint",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1iuy539",
+       "title": "Studio session: meet your team and the brief",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1jyl4fv",
+       "title": "The client brief and confidentiality agreement",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "2xlgw8v",
+     "title": "Week 2: Diagnose",
+     "lessons": [
+      {
+       "id": "l1yhrj7j",
+       "title": "Masterclass: finding the real problem",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1h1fzii",
+       "title": "Studio session: fact-finding and the client interview",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lpr1pe1",
+       "title": "Deliverable: your diagnosis",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "plsps07",
+     "title": "Week 3: Options",
+     "lessons": [
+      {
+       "id": "l1rojmid",
+       "title": "Masterclass: building and testing options",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1kl3n4j",
+       "title": "Studio session: options review with a Guild Mentor",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lujtf1e",
+       "title": "Deliverable: your options paper",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "cw4a0gy",
+     "title": "Week 4: Decide",
+     "lessons": [
+      {
+       "id": "l11f0r76",
+       "title": "Masterclass: deciding and modelling the numbers",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lq0jhss",
+       "title": "Studio session: the recommendation and the people plan",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l6ku5k7",
+       "title": "Deliverable: recommendation and financial model",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "bc7s7nz",
+     "title": "Week 5: Rehearse",
+     "lessons": [
+      {
+       "id": "l1mydywi",
+       "title": "Masterclass: presenting to a client",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lreguq2",
+       "title": "Studio session: rehearsal with feedback",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1v893yi",
+       "title": "Deliverable: final presentation draft",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "yqiny1w",
+     "title": "Week 6: Deliver",
+     "lessons": [
+      {
+       "id": "lx74rtl",
+       "title": "Client presentation and sign-off",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lz6tcwx",
+       "title": "Your reflection: what you learned and would do differently",
+       "kind": "quiz",
+       "mins": 0
+      },
+      {
+       "id": "lnw43vy",
+       "title": "Portfolio checklist",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "amld-finance",
@@ -559,10 +1658,164 @@
    "title": "Financial Leadership & Capital",
    "headline": "Financial Leadership & Capital",
    "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "desc": "Reading the numbers like a CFO, managing cash, raising and pricing capital.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “We need to raise funds. Are we ready, and on what terms?”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Financial Leadership & Capital.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "sprint",
-   "modules": 6,
-   "lessons": 18
+   "mode": "application",
+   "downloads": [
+    "Sprint assessment rubric",
+    "Confidentiality agreement",
+    "Weekly studio planner"
+   ],
+   "modules": [
+    {
+     "id": "z2h56p7",
+     "title": "Week 1: The brief",
+     "lessons": [
+      {
+       "id": "lh2avcg",
+       "title": "Masterclass: the core frameworks for this sprint",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1iuy539",
+       "title": "Studio session: meet your team and the brief",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1jyl4fv",
+       "title": "The client brief and confidentiality agreement",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "w2u600j",
+     "title": "Week 2: Diagnose",
+     "lessons": [
+      {
+       "id": "l1yhrj7j",
+       "title": "Masterclass: finding the real problem",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1h1fzii",
+       "title": "Studio session: fact-finding and the client interview",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lpr1pe1",
+       "title": "Deliverable: your diagnosis",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "pxe4xwn",
+     "title": "Week 3: Options",
+     "lessons": [
+      {
+       "id": "l1rojmid",
+       "title": "Masterclass: building and testing options",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1kl3n4j",
+       "title": "Studio session: options review with a Guild Mentor",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lujtf1e",
+       "title": "Deliverable: your options paper",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "oks9f67",
+     "title": "Week 4: Decide",
+     "lessons": [
+      {
+       "id": "l11f0r76",
+       "title": "Masterclass: deciding and modelling the numbers",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lq0jhss",
+       "title": "Studio session: the recommendation and the people plan",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l6ku5k7",
+       "title": "Deliverable: recommendation and financial model",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "36a3lyx",
+     "title": "Week 5: Rehearse",
+     "lessons": [
+      {
+       "id": "l1mydywi",
+       "title": "Masterclass: presenting to a client",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lreguq2",
+       "title": "Studio session: rehearsal with feedback",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1v893yi",
+       "title": "Deliverable: final presentation draft",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "fm41vpu",
+     "title": "Week 6: Deliver",
+     "lessons": [
+      {
+       "id": "lx74rtl",
+       "title": "Client presentation and sign-off",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lz6tcwx",
+       "title": "Your reflection: what you learned and would do differently",
+       "kind": "quiz",
+       "mins": 0
+      },
+      {
+       "id": "lnw43vy",
+       "title": "Portfolio checklist",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "amld-leaders",
@@ -571,10 +1824,164 @@
    "title": "Leading Leaders & Building Teams",
    "headline": "Leading Leaders & Building Teams",
    "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "desc": "Moving from managing people to leading managers: culture, hiring and succession.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “Our managers are stretched and turnover is rising.”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Leading Leaders & Building Teams.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "sprint",
-   "modules": 6,
-   "lessons": 18
+   "mode": "application",
+   "downloads": [
+    "Sprint assessment rubric",
+    "Confidentiality agreement",
+    "Weekly studio planner"
+   ],
+   "modules": [
+    {
+     "id": "ekp2l0w",
+     "title": "Week 1: The brief",
+     "lessons": [
+      {
+       "id": "lh2avcg",
+       "title": "Masterclass: the core frameworks for this sprint",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1iuy539",
+       "title": "Studio session: meet your team and the brief",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1jyl4fv",
+       "title": "The client brief and confidentiality agreement",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "uhwp7ra",
+     "title": "Week 2: Diagnose",
+     "lessons": [
+      {
+       "id": "l1yhrj7j",
+       "title": "Masterclass: finding the real problem",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1h1fzii",
+       "title": "Studio session: fact-finding and the client interview",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lpr1pe1",
+       "title": "Deliverable: your diagnosis",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "knxnkmb",
+     "title": "Week 3: Options",
+     "lessons": [
+      {
+       "id": "l1rojmid",
+       "title": "Masterclass: building and testing options",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1kl3n4j",
+       "title": "Studio session: options review with a Guild Mentor",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lujtf1e",
+       "title": "Deliverable: your options paper",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "tuzfdvk",
+     "title": "Week 4: Decide",
+     "lessons": [
+      {
+       "id": "l11f0r76",
+       "title": "Masterclass: deciding and modelling the numbers",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lq0jhss",
+       "title": "Studio session: the recommendation and the people plan",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l6ku5k7",
+       "title": "Deliverable: recommendation and financial model",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "zw4igbk",
+     "title": "Week 5: Rehearse",
+     "lessons": [
+      {
+       "id": "l1mydywi",
+       "title": "Masterclass: presenting to a client",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lreguq2",
+       "title": "Studio session: rehearsal with feedback",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1v893yi",
+       "title": "Deliverable: final presentation draft",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "wlefa5g",
+     "title": "Week 6: Deliver",
+     "lessons": [
+      {
+       "id": "lx74rtl",
+       "title": "Client presentation and sign-off",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lz6tcwx",
+       "title": "Your reflection: what you learned and would do differently",
+       "kind": "quiz",
+       "mins": 0
+      },
+      {
+       "id": "lnw43vy",
+       "title": "Portfolio checklist",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "amld-ops",
@@ -583,10 +1990,164 @@
    "title": "Operations, Systems & Digital Transformation",
    "headline": "Operations, Systems & Digital Transformation",
    "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "desc": "Making the business run without you: process, data and technology choices.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “We’re growing, but everything still depends on the founder.”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Operations, Systems & Digital Transformation.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "sprint",
-   "modules": 6,
-   "lessons": 18
+   "mode": "application",
+   "downloads": [
+    "Sprint assessment rubric",
+    "Confidentiality agreement",
+    "Weekly studio planner"
+   ],
+   "modules": [
+    {
+     "id": "g4z89i8",
+     "title": "Week 1: The brief",
+     "lessons": [
+      {
+       "id": "lh2avcg",
+       "title": "Masterclass: the core frameworks for this sprint",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1iuy539",
+       "title": "Studio session: meet your team and the brief",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1jyl4fv",
+       "title": "The client brief and confidentiality agreement",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "3rkurr3",
+     "title": "Week 2: Diagnose",
+     "lessons": [
+      {
+       "id": "l1yhrj7j",
+       "title": "Masterclass: finding the real problem",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1h1fzii",
+       "title": "Studio session: fact-finding and the client interview",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lpr1pe1",
+       "title": "Deliverable: your diagnosis",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "qo2cwhc",
+     "title": "Week 3: Options",
+     "lessons": [
+      {
+       "id": "l1rojmid",
+       "title": "Masterclass: building and testing options",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1kl3n4j",
+       "title": "Studio session: options review with a Guild Mentor",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lujtf1e",
+       "title": "Deliverable: your options paper",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "omlss0f",
+     "title": "Week 4: Decide",
+     "lessons": [
+      {
+       "id": "l11f0r76",
+       "title": "Masterclass: deciding and modelling the numbers",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lq0jhss",
+       "title": "Studio session: the recommendation and the people plan",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l6ku5k7",
+       "title": "Deliverable: recommendation and financial model",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "76e98xp",
+     "title": "Week 5: Rehearse",
+     "lessons": [
+      {
+       "id": "l1mydywi",
+       "title": "Masterclass: presenting to a client",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lreguq2",
+       "title": "Studio session: rehearsal with feedback",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1v893yi",
+       "title": "Deliverable: final presentation draft",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "i9d3foh",
+     "title": "Week 6: Deliver",
+     "lessons": [
+      {
+       "id": "lx74rtl",
+       "title": "Client presentation and sign-off",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lz6tcwx",
+       "title": "Your reflection: what you learned and would do differently",
+       "kind": "quiz",
+       "mins": 0
+      },
+      {
+       "id": "lnw43vy",
+       "title": "Portfolio checklist",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "amld-growth",
@@ -595,10 +2156,164 @@
    "title": "Growth, Markets & Partnerships",
    "headline": "Growth, Markets & Partnerships",
    "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "desc": "Customers, pricing, channels and the partnerships that open new markets.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “We want to enter a new state or country.”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Growth, Markets & Partnerships.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "sprint",
-   "modules": 6,
-   "lessons": 18
+   "mode": "application",
+   "downloads": [
+    "Sprint assessment rubric",
+    "Confidentiality agreement",
+    "Weekly studio planner"
+   ],
+   "modules": [
+    {
+     "id": "mxyb8tg",
+     "title": "Week 1: The brief",
+     "lessons": [
+      {
+       "id": "lh2avcg",
+       "title": "Masterclass: the core frameworks for this sprint",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1iuy539",
+       "title": "Studio session: meet your team and the brief",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1jyl4fv",
+       "title": "The client brief and confidentiality agreement",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "ut2ainj",
+     "title": "Week 2: Diagnose",
+     "lessons": [
+      {
+       "id": "l1yhrj7j",
+       "title": "Masterclass: finding the real problem",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1h1fzii",
+       "title": "Studio session: fact-finding and the client interview",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lpr1pe1",
+       "title": "Deliverable: your diagnosis",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "c87wwy2",
+     "title": "Week 3: Options",
+     "lessons": [
+      {
+       "id": "l1rojmid",
+       "title": "Masterclass: building and testing options",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1kl3n4j",
+       "title": "Studio session: options review with a Guild Mentor",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lujtf1e",
+       "title": "Deliverable: your options paper",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "g3r2vak",
+     "title": "Week 4: Decide",
+     "lessons": [
+      {
+       "id": "l11f0r76",
+       "title": "Masterclass: deciding and modelling the numbers",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lq0jhss",
+       "title": "Studio session: the recommendation and the people plan",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l6ku5k7",
+       "title": "Deliverable: recommendation and financial model",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "s46ruqx",
+     "title": "Week 5: Rehearse",
+     "lessons": [
+      {
+       "id": "l1mydywi",
+       "title": "Masterclass: presenting to a client",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lreguq2",
+       "title": "Studio session: rehearsal with feedback",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1v893yi",
+       "title": "Deliverable: final presentation draft",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "mkng7xo",
+     "title": "Week 6: Deliver",
+     "lessons": [
+      {
+       "id": "lx74rtl",
+       "title": "Client presentation and sign-off",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lz6tcwx",
+       "title": "Your reflection: what you learned and would do differently",
+       "kind": "quiz",
+       "mins": 0
+      },
+      {
+       "id": "lnw43vy",
+       "title": "Portfolio checklist",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "amld-turn",
@@ -607,10 +2322,164 @@
    "title": "Turnaround, Risk & Governance",
    "headline": "Turnaround, Risk & Governance",
    "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "desc": "Steering through trouble: risk, boards, compliance and hard decisions.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “Revenue fell 30% this year. What do we cut, keep and fix?”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Turnaround, Risk & Governance.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "sprint",
-   "modules": 6,
-   "lessons": 18
+   "mode": "application",
+   "downloads": [
+    "Sprint assessment rubric",
+    "Confidentiality agreement",
+    "Weekly studio planner"
+   ],
+   "modules": [
+    {
+     "id": "1tgcg4q",
+     "title": "Week 1: The brief",
+     "lessons": [
+      {
+       "id": "lh2avcg",
+       "title": "Masterclass: the core frameworks for this sprint",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1iuy539",
+       "title": "Studio session: meet your team and the brief",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1jyl4fv",
+       "title": "The client brief and confidentiality agreement",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "n6212dg",
+     "title": "Week 2: Diagnose",
+     "lessons": [
+      {
+       "id": "l1yhrj7j",
+       "title": "Masterclass: finding the real problem",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1h1fzii",
+       "title": "Studio session: fact-finding and the client interview",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lpr1pe1",
+       "title": "Deliverable: your diagnosis",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "ifl9y71",
+     "title": "Week 3: Options",
+     "lessons": [
+      {
+       "id": "l1rojmid",
+       "title": "Masterclass: building and testing options",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1kl3n4j",
+       "title": "Studio session: options review with a Guild Mentor",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lujtf1e",
+       "title": "Deliverable: your options paper",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "e73gbbi",
+     "title": "Week 4: Decide",
+     "lessons": [
+      {
+       "id": "l11f0r76",
+       "title": "Masterclass: deciding and modelling the numbers",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lq0jhss",
+       "title": "Studio session: the recommendation and the people plan",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l6ku5k7",
+       "title": "Deliverable: recommendation and financial model",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "m2u32ta",
+     "title": "Week 5: Rehearse",
+     "lessons": [
+      {
+       "id": "l1mydywi",
+       "title": "Masterclass: presenting to a client",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lreguq2",
+       "title": "Studio session: rehearsal with feedback",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1v893yi",
+       "title": "Deliverable: final presentation draft",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "d9n68m9",
+     "title": "Week 6: Deliver",
+     "lessons": [
+      {
+       "id": "lx74rtl",
+       "title": "Client presentation and sign-off",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lz6tcwx",
+       "title": "Your reflection: what you learned and would do differently",
+       "kind": "quiz",
+       "mins": 0
+      },
+      {
+       "id": "lnw43vy",
+       "title": "Portfolio checklist",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "ep-found",
@@ -619,10 +2488,272 @@
    "title": "Executive Presence Foundation",
    "headline": "Be seen, heard and trusted in the rooms that matter",
    "sub": "Self-paced · six modules · 36 lessons · most finish in 8–12 weeks",
+   "desc": "A modern finishing school for leaders, at your own pace. You’ll sharpen how you speak, write, negotiate, host, dress, show up on camera and hold your ground under pressure, across Nigerian, African and international settings.\n\nEvery lesson comes with a short video, a practical exercise and a workbook page. You get feedback through self-assessment checklists and from peers on the Critique Wall, and you finish with an online capstone and a Certificate of Completion.\n\nWant live coaching? You can upgrade to the next Executive Presence Cohort and pay only the difference.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "epf",
-   "modules": 6,
-   "lessons": 36
+   "mode": "application",
+   "downloads": [
+    "Presence audit workbook",
+    "Executive message planner",
+    "Business dining and protocol guide"
+   ],
+   "modules": [
+    {
+     "id": "1fhrbtf",
+     "title": "Module 1: The Foundations of Executive Presence",
+     "lessons": [
+      {
+       "id": "leubjny",
+       "title": "What executive presence is, and what it isn’t",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lgy14zu",
+       "title": "Gravitas, communication and appearance: the three pillars",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "le0zr0v",
+       "title": "Your presence audit: how others see you today",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l19tijcq",
+       "title": "Confidence without arrogance",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l16vp3p8",
+       "title": "Character behind the presence: integrity, humility and trust",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l21xuwr",
+       "title": "Your personal presence plan",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "fjqfw1w",
+     "title": "Module 2: Executive Communication",
+     "lessons": [
+      {
+       "id": "l1baouwc",
+       "title": "Say less, mean more: the executive message",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1i24bak",
+       "title": "Speaking with authority in meetings",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l15uh8gf",
+       "title": "Presenting to boards, investors and large audiences",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l4uhhd",
+       "title": "Executive writing: memos, emails and briefs that get read",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1gghod4",
+       "title": "Voice, pace and the power of the pause",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l2g0dsz",
+       "title": "Body language in person and on camera",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "3d8pfph",
+     "title": "Module 3: Boardroom Readiness and Stakeholder Diplomacy",
+     "lessons": [
+      {
+       "id": "l2c3zek",
+       "title": "How boards really work, and how to work with them",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1yap9sa",
+       "title": "Reading the room: power, influence and politics",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lekwwh1",
+       "title": "High-stakes negotiation",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l91mqhi",
+       "title": "Disagreeing well: handling difficult conversations at the top",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lljxclt",
+       "title": "Managing investors, regulators and partners",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lf3zibc",
+       "title": "Chairing and leading meetings that end in decisions",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "65x5u2g",
+     "title": "Module 4: Business Etiquette and Global Protocol",
+     "lessons": [
+      {
+       "id": "l117ngss",
+       "title": "Professional etiquette for senior leaders",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1ojnakf",
+       "title": "Business dining: from the business lunch to the formal dinner",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "ld9d02p",
+       "title": "Hosting VIPs, delegations and dignitaries",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "ljrujl0",
+       "title": "Doing business across cultures: Nigeria, Africa and the world",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "llwx1xm",
+       "title": "Diplomatic and government protocol",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1k646if",
+       "title": "Networking with purpose at events and receptions",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "4u351i7",
+     "title": "Module 5: Image, Personal Brand and Digital Presence",
+     "lessons": [
+      {
+       "id": "l1vtavtq",
+       "title": "Dressing for the role you’re stepping into",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l4bb2c3",
+       "title": "Grooming and the details people notice",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l141mgz5",
+       "title": "Defining your leadership brand",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1hw3xmh",
+       "title": "Your LinkedIn and digital footprint",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1oneyhf",
+       "title": "Thought leadership: writing and speaking in public",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lvg5zx6",
+       "title": "Protecting your reputation online",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "p4djl4j",
+     "title": "Module 6: Media Readiness and Leading Under Pressure",
+     "lessons": [
+      {
+       "id": "lhkekig",
+       "title": "Emotional intelligence for senior leaders",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l7zwbhs",
+       "title": "Poise under pressure: staying calm when it matters",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l11l7mj4",
+       "title": "Media interviews: TV, radio, print and podcasts",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "l1nnh8cb",
+       "title": "Crisis communication: speaking when things go wrong",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lopkxtc",
+       "title": "Handling hostile questions and difficult audiences",
+       "kind": "video",
+       "mins": 0
+      },
+      {
+       "id": "lmnqs7h",
+       "title": "Leading through change with steadiness and hope",
+       "kind": "video",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "ep-cohort",
@@ -631,10 +2762,200 @@
    "title": "Executive Presence Cohort",
    "headline": "Ten weeks of live coaching with a small group of senior leaders",
    "sub": "Live · 10 weeks · up to 16 participants · by application",
+   "desc": "Everything in Executive Presence Foundation, plus live coaching on every module. You get personal video critiques from faculty, live roleplay, a 1:1 coaching session and live sessions with diplomats, media coaches, image consultants and CEOs.\n\nPlan for about 4–5 hours a week: one 90-minute live session, the lessons, and recording your practice pieces. The programme ends with the Presence Showcase and the Presence Dinner, a formal evening in Lagos or Abuja. You can present your capstone online if you can’t attend.\n\nPlaces are by short application to keep the group senior and well matched. Graduates receive the Awelen Executive Presence Certificate.",
+   "icon": "",
    "price": 0,
+   "instN": 1,
+   "instAmt": 0,
    "amld": "epc",
-   "modules": 10,
-   "lessons": 20
+   "mode": "application",
+   "downloads": [
+    "Cohort calendar",
+    "Critique Wall guidelines",
+    "Presence Showcase brief"
+   ],
+   "modules": [
+    {
+     "id": "xj2b03q",
+     "title": "Week 1: Orientation",
+     "lessons": [
+      {
+       "id": "lnw1i9u",
+       "title": "Live session: orientation and your presence audit",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l1lgeuu6",
+       "title": "Post your “before” video on the Critique Wall",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "fu2nwos",
+     "title": "Week 2: The Foundations of Executive Presence",
+     "lessons": [
+      {
+       "id": "lgn5iit",
+       "title": "Live session: The Foundations of Executive Presence",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lecqiqh",
+       "title": "Practice: Write your personal presence plan",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "hqkaksa",
+     "title": "Week 3: Executive Communication",
+     "lessons": [
+      {
+       "id": "ljv8z06",
+       "title": "Live session: Executive Communication",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lcny4ji",
+       "title": "Practice: Record your three-minute executive briefing",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "0duafmz",
+     "title": "Week 4: Boardroom Readiness and Stakeholder Diplomacy",
+     "lessons": [
+      {
+       "id": "lqvfajc",
+       "title": "Live session: Boardroom Readiness and Stakeholder Diplomacy",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l2zxwtn",
+       "title": "Practice: Record your mock board presentation",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "nndyk4w",
+     "title": "Week 5: Business Etiquette and Global Protocol",
+     "lessons": [
+      {
+       "id": "l1bf050y",
+       "title": "Live session: Business Etiquette and Global Protocol",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lkriemk",
+       "title": "Practice: Draft a hosting plan for a high-level visit",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "mrygqj4",
+     "title": "Week 6: Image, Personal Brand and Digital Presence",
+     "lessons": [
+      {
+       "id": "l2k0bvi",
+       "title": "Live session: Image, Personal Brand and Digital Presence",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l197rirp",
+       "title": "Practice: Refresh your LinkedIn profile and write your brand statement",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "x1bb9qa",
+     "title": "Week 7: Media Readiness and Leading Under Pressure",
+     "lessons": [
+      {
+       "id": "l10c2v62",
+       "title": "Live session: Media Readiness and Leading Under Pressure",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "ly27pe6",
+       "title": "Practice: Record your mock media interview",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "70vppwq",
+     "title": "Week 8: Coaching and capstone drafting",
+     "lessons": [
+      {
+       "id": "l11jnkmb",
+       "title": "Your 1:1 coaching session",
+       "kind": "video",
+       "mins": 60
+      },
+      {
+       "id": "l1ki3nk4",
+       "title": "Draft your Presence Showcase",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "q7fe6uc",
+     "title": "Week 9: Capstone rehearsal",
+     "lessons": [
+      {
+       "id": "l1s76azi",
+       "title": "Rehearsal with peer and faculty critique",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "lxzhq4a",
+       "title": "Final notes for your showcase",
+       "kind": "quiz",
+       "mins": 0
+      }
+     ]
+    },
+    {
+     "id": "5dx0lr1",
+     "title": "Week 10: Showcase and the Presence Dinner",
+     "lessons": [
+      {
+       "id": "lp22xb7",
+       "title": "The Presence Showcase",
+       "kind": "video",
+       "mins": 90
+      },
+      {
+       "id": "l3aqoqz",
+       "title": "The Presence Dinner: details and dress code",
+       "kind": "pdf",
+       "mins": 0
+      }
+     ]
+    }
+   ]
   }
  ],
  "rules": [
@@ -747,5 +3068,11 @@
    "pinned": false,
    "published_at": "2026-11-18T08:17:26.371000+00:00"
   }
- ]
+ ],
+ "payments": {
+  "bankName": "",
+  "accountName": "",
+  "accountNumber": "",
+  "linpayUrl": ""
+ }
 }

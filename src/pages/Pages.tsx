@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { site, spaceById, trackById, coursesInTrack, naira } from '../data/site';
+import { site, spaceById, trackById, coursesInTrack, naira, lessonCount } from '../data/site';
 import { AnnouncementsPage, ContactPage, LinksPage, WelcomePage } from './PublicPages';
 
 /* Phase 1 pages: structure and content carried over from seed.json.
@@ -63,26 +63,10 @@ export function TrackPage() {
         {coursesInTrack(t.id).map((c) => (
           <Link key={c.id} className="mini" to={'/course/' + c.id} style={{ display: 'block' }}>
             <b>{c.title}</b><br />
-            <span className="small muted">{c.modules} modules · {c.lessons} lessons · {c.price > 0 ? naira(c.price) : 'Free'}</span>
+            <span className="small muted">{c.modules.length} modules · {lessonCount(c)} lessons · {c.price > 0 ? naira(c.price) : 'Free'}</span>
           </Link>
         ))}
       </div>
-    </section>
-  );
-}
-
-export function CoursePage() {
-  const { id = '' } = useParams();
-  const c = site.courses.find((x) => x.id === id);
-  if (!c) return <div className="card empty">Course not found. <Link to="/space/courses">See all courses</Link></div>;
-  const t = trackById(c.track);
-  return (
-    <section className="card">
-      {t && <Link className="small" to={'/track/' + t.id}>← {t.title}</Link>}
-      <h1 style={{ marginTop: 8 }}>{c.headline || c.title}</h1>
-      {c.sub && <p className="lead">{c.sub}</p>}
-      <p className="small muted">{c.modules} modules · {c.lessons} lessons · {c.price > 0 ? naira(c.price) : 'Free'}</p>
-      <Moving what="The course outline, lessons and payment" />
     </section>
   );
 }

@@ -6,6 +6,8 @@ import { supabase } from '../lib/supabase';
 import { firstName, niceError, useAuth } from '../lib/auth';
 import { okEmail } from '../lib/visitor';
 import { useModals } from '../components/Modals';
+import { useMyLearning } from '../lib/learning';
+import { courseById, lessonCount } from '../data/site';
 
 const fmtDate = (iso: string) => new Date(iso).toLocaleDateString('en-NG', { day: 'numeric', month: 'long', year: 'numeric' });
 
@@ -188,7 +190,7 @@ export function AccountPage() {
           <span className="badge" style={{ marginTop: 6 }}>{teamRole === 'admin' ? 'Admin' : teamRole === 'editor' ? 'Team editor' : 'Member'}</span></div>
       </div>
       <h3 style={{ marginTop: 18 }}>My courses</h3>
-      <p className="small muted">Courses you unlock will appear here. <Link to="/space/courses">Browse the course tracks</Link>.</p>
+      <MyCourses />
       <div className="row" style={{ marginTop: 14 }}>
         <Link className="btn quiet sm" to="/space/intro">🙋 Introduce yourself</Link>
         <button className="btn quiet sm" onClick={async () => { await signOut(); nav('/'); }}>Sign out</button>
@@ -229,5 +231,26 @@ export function ResetPasswordPage() {
         </form>
       )}
     </section>
+  );
+}
+
+function MyCourses() {
+  const rows = useMyLearning();
+  if (!rows.length) return <p className="small muted">Courses you start or unlock will appear here. <Link to="/space/courses">Browse the course tracks</Link>.</p>;
+  return (
+    <div className="stack" style={{ gap: 8 }}>
+      {rows.map(({ e, done }) => {
+        const c = courseById(e.course_id);
+        if (!c) return null;
+        const pct = Math.round((done * 100) / Math.max(1, lessonCount(c)));
+        return (
+          <Link key={e.course_id} className="mini" to={'/course/' + c.id} style={{ display: 'block' }}>
+            <b>{c.title}</b>
+            <div className="progress" style={{ margin: '4px 0' }}><span style={{ width: pct + '%' }} /></div>
+            <span className="small muted">{pct}% complete{e.plan === 'installments' && e.amount_paid < e.amount_due ? ' · installment due' : ''}</span>
+          </Link>
+        );
+      })}
+    </div>
   );
 }

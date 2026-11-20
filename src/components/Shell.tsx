@@ -4,6 +4,7 @@ import { site } from '../data/site';
 import { firstName, useAuth } from '../lib/auth';
 import { useModals } from './Modals';
 import { initials } from '../pages/PublicPages';
+import { CourseBanner } from '../pages/CoursePage';
 
 export function Logo() {
   return (
@@ -191,6 +192,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <>
       <TopBar onMenu={() => setDrawer((d) => !d)} />
       {home && <Banner />}
+      {pathname.startsWith('/course/') && <CourseBanner id={pathname.split('/')[2]} />}
       <UserBar />
       <div className="layout">
         <aside className={'left' + (drawer ? ' open' : '')}><LeftNav onNavigate={() => setDrawer(false)} /></aside>
