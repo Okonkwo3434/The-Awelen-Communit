@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { site } from '../data/site';
+import { firstName, useAuth } from '../lib/auth';
+import { useModals } from './Modals';
+import { initials } from '../pages/PublicPages';
 
 export function Logo() {
   return (
@@ -65,13 +68,16 @@ export function Banner() {
 }
 
 export function UserBar() {
+  const { session, profile } = useAuth();
+  const { openAccount } = useModals();
   return (
     <div className="ubar">
       <div className="in">
-        <span className="crumb small muted">Learning community</span>
+        <span className="crumb small muted">{session ? `Welcome back, ${firstName(profile?.name)}` : 'Learning community'}</span>
         <div className="ub-acts">
-          {/* Phase 2: member sign-up / sign-in replaces this button */}
-          <Link className="ub" to="/join"><span aria-hidden="true">👤</span><span className="lbl">Join or sign in</span></Link>
+          {session
+            ? <Link className="ub" to="/account" aria-label="Your account"><span className="avatar" style={{ width: 28, height: 28, fontSize: 11 }} aria-hidden="true">{initials(profile?.name)}</span><span className="lbl">My account</span></Link>
+            : <button className="ub" onClick={() => openAccount('up')}><span aria-hidden="true">👤</span><span className="lbl">Join or sign in</span></button>}
           <Link className="ub" to="/space/contact" aria-label="Contact the creator"><span aria-hidden="true">✉️</span><span className="lbl">Contact</span></Link>
         </div>
       </div>

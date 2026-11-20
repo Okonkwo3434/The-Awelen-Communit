@@ -482,3 +482,13 @@ form[data-f=prices] input{padding:6px 8px;font-size:.88rem}
 .acct .atabs button{border:0;background:none;padding:7px 16px;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;color:inherit}
 .acct .atabs button.on{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.15)}
 .exitf .kick{align-self:flex-start}
+
+/* ---------- Phase 2 additions ---------- */
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--purple);text-decoration:underline;cursor:pointer}
+.foot .linkbtn{color:inherit}
+.acct .atabs{display:flex;gap:4px;background:var(--line);padding:4px;border-radius:999px;margin:0 0 16px;width:max-content}
+.acct .atabs button{border:0;background:none;padding:7px 16px;border-radius:999px;font-weight:600;color:var(--ink)}
+.acct .atabs button.on{background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.exitf .kick{align-self:flex-start}
+.formmsg{margin:0;padding:8px 12px;border-radius:8px;background:#fdf3f2;color:var(--red);font-size:.9rem}
+.contactlist{list-style:none;padding:0;margin:0;display:grid;gap:6px}

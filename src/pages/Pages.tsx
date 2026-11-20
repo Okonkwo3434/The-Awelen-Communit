@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { site, spaceById, trackById, coursesInTrack, naira } from '../data/site';
+import { AnnouncementsPage, ContactPage, LinksPage, WelcomePage } from './PublicPages';
 
 /* Phase 1 pages: structure and content carried over from seed.json.
    Each space gets its full features as it moves over (see PROGRESS.md). */
@@ -16,6 +17,11 @@ export function SpacePage() {
   const { id = 'welcome' } = useParams();
   const s = spaceById(id);
   if (!s || s.hidden) return <div className="card empty">This space no longer exists. <Link to="/">Go to Welcome</Link></div>;
+
+  if (s.type === 'welcome') return <WelcomePage s={s} />;
+  if (s.type === 'announce') return <AnnouncementsPage s={s} />;
+  if (s.type === 'contact') return <ContactPage s={s} />;
+  if (s.type === 'links') return <LinksPage s={s} />;
 
   if (s.type === 'course') {
     return (

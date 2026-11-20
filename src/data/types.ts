@@ -45,7 +45,18 @@ export type Creator = {
   banner: { kicker: string; headline: string; sub: string; img?: string };
 };
 
+export type Rule = { icon: string; title: string; text: string; hard?: boolean };
+export type SiteLink = { id: string; label: string; url: string };
+export type Announcement = {
+  id: string; title: string; category: string; body: string;
+  important: boolean; pinned: boolean; published_at: string;
+};
+
 export type SiteData = {
+  rules: Rule[];
+  links: SiteLink[];
+  annCats: string[];
+  announcements: Announcement[];
   groups: Group[];
   spaces: Space[];
   tracks: Track[];

@@ -636,5 +636,116 @@
    "modules": 10,
    "lessons": 20
   }
+ ],
+ "rules": [
+  {
+   "icon": "🤝",
+   "title": "Be kind and respectful",
+   "text": "Treat every member the way you want to be treated. Disagree with ideas if you must, but never attack the person."
+  },
+  {
+   "icon": "🚫",
+   "title": "No bullying or harassment",
+   "text": "Insults, mocking, threats, tribal, religious or gender slurs and unwanted private messages are not allowed. Such posts are removed, and anyone who repeats them is removed from the community.",
+   "hard": true
+  },
+  {
+   "icon": "❓",
+   "title": "Ask questions freely",
+   "text": "No question is too small. Everyone here started somewhere, and your question often helps someone who was too shy to ask."
+  },
+  {
+   "icon": "🆘",
+   "title": "Seek help early",
+   "text": "Stuck on a lesson, an idea or a payment? Post in Community, send Awele a message or book a coaching session. Don't struggle alone."
+  },
+  {
+   "icon": "🌍",
+   "title": "Network to get more from your course",
+   "text": "Introduce yourself, comment on other people's posts and join a hangout. Founders who learn alongside others finish more courses and build stronger businesses."
+  },
+  {
+   "icon": "🎉",
+   "title": "Share and celebrate",
+   "text": "Post your progress, what you learned and your wins, and cheer others on when they share theirs."
+  },
+  {
+   "icon": "🙅",
+   "title": "No spam or hard selling",
+   "text": "No unrelated adverts, chain messages or get-rich-quick schemes. If you offer a service, apply to be listed as an affiliate expert instead."
+  },
+  {
+   "icon": "🔒",
+   "title": "Respect privacy",
+   "text": "Don't share other members' phone numbers, messages or business details outside the community without their permission."
+  },
+  {
+   "icon": "📣",
+   "title": "Report concerns",
+   "text": "If something feels wrong, tell Awele through Contact. Reports are handled quietly and fairly."
+  }
+ ],
+ "links": [
+  {
+   "id": "a1j15je",
+   "label": "Awelen Entrepreneurs website",
+   "url": "https://www.awelen.com"
+  },
+  {
+   "id": "3kywq2w",
+   "label": "YouTube channel",
+   "url": "https://www.youtube.com/"
+  },
+  {
+   "id": "c6qfdxg",
+   "label": "LinkedIn",
+   "url": "https://www.linkedin.com/"
+  }
+ ],
+ "annCats": [
+  "General",
+  "Course update",
+  "Event",
+  "The Crucible Circle",
+  "Business Solutions",
+  "Platform"
+ ],
+ "announcements": [
+  {
+   "id": "an-amld",
+   "title": "New: AMLD Studio Sprints and the Executive Presence Programme",
+   "category": "Course update",
+   "body": "Advanced Management & Leadership Development is now taught in six-week Studio Sprints, led by Professors of Practice who have run businesses themselves. You work on a live brief from a real business and finish with a portfolio, not just a certificate.\n\nThe Executive Presence Programme is AMLD’s capstone. Take it self-paced, or apply for the live Cohort with personal critiques and the Presence Dinner.\n\nEverything about both programmes now lives under Track 4 in the sidebar: the AMLD programme, Executive Presence and the Executive Peer-Circle.",
+   "important": false,
+   "pinned": false,
+   "published_at": "2026-11-20T09:17:26.371000+00:00"
+  },
+  {
+   "id": "an1",
+   "title": "Idea Discovery now has 5 modules and 32 lessons",
+   "category": "Course update",
+   "body": "Idea Discovery has grown. It now runs from Finding Meaning in Life all the way to Exploring Your Idea Space, with 32 lessons in five modules.\n\nIf you have already unlocked the course, the new lessons are open to you now at no extra cost. Pick up where you left off.",
+   "important": true,
+   "pinned": true,
+   "published_at": "2026-11-20T07:17:26.371000+00:00"
+  },
+  {
+   "id": "an2",
+   "title": "The Crucible Circle is open for challenges",
+   "category": "The Crucible Circle",
+   "body": "Organisations can now submit complex strategic challenges to the Ideation Room, and experienced practitioners can send an expression of interest to join as Expert Practitioners or Master Moderators.",
+   "important": false,
+   "pinned": false,
+   "published_at": "2026-11-19T08:17:26.371000+00:00"
+  },
+  {
+   "id": "an3",
+   "title": "Webinar: Pricing for profit in 2027",
+   "category": "Event",
+   "body": "Join Awele for a live session on setting prices that keep you in business, with time for your questions. Register in Live events; your joining link is emailed before the session.",
+   "important": false,
+   "pinned": false,
+   "published_at": "2026-11-18T08:17:26.371000+00:00"
+  }
  ]
 }
