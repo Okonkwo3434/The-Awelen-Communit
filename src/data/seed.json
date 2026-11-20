@@ -1,0 +1,640 @@
+{
+ "keys": [
+  "role",
+  "creator",
+  "groups",
+  "spaces",
+  "tracks",
+  "courses",
+  "posts",
+  "events",
+  "links",
+  "notes",
+  "affiliate",
+  "members",
+  "tiers",
+  "plan",
+  "plugins",
+  "tenants",
+  "services",
+  "ebooks",
+  "challenges",
+  "eois",
+  "consults",
+  "announcements",
+  "payLinks",
+  "payments",
+  "coachV",
+  "apps",
+  "amldV",
+  "tracksV",
+  "overrides",
+  "team",
+  "treeV",
+  "payKeys",
+  "mediaV"
+ ],
+ "groups": [
+  {
+   "id": "start",
+   "name": "Start here"
+  },
+  {
+   "id": "network",
+   "name": "Network"
+  },
+  {
+   "id": "tracks",
+   "name": "Courses"
+  },
+  {
+   "id": "learn",
+   "name": "Library"
+  },
+  {
+   "id": "programmes",
+   "name": "Programmes"
+  },
+  {
+   "id": "solve",
+   "name": "Solve"
+  },
+  {
+   "id": "connect",
+   "name": "Connect"
+  },
+  {
+   "id": "meet",
+   "name": "Meet"
+  },
+  {
+   "id": "info",
+   "name": "Get in touch"
+  }
+ ],
+ "spaces": [
+  {
+   "id": "welcome",
+   "name": "Welcome",
+   "icon": "👋",
+   "type": "welcome",
+   "group": "start",
+   "img": "",
+   "headline": "Welcome to Awelen Entrepreneurs",
+   "desc": "I'm glad you're here. Awelen Entrepreneurs is a community for people who want to find, start and grow a business of their own, whether you're looking for your first idea or already leading a team.\n\nYou'll learn through short video courses, ask questions, book private coaching and meet other founders at live events. Please take two minutes to read how things work and the guidelines below. They keep this a safe and useful place for everyone.",
+   "rules": [
+    {
+     "icon": "🤝",
+     "title": "Be kind and respectful",
+     "text": "Treat every member the way you want to be treated. Disagree with ideas if you must, but never attack the person."
+    },
+    {
+     "icon": "🚫",
+     "title": "No bullying or harassment",
+     "text": "Insults, mocking, threats, tribal, religious or gender slurs and unwanted private messages are not allowed. Such posts are removed, and anyone who repeats them is removed from the community.",
+     "hard": true
+    },
+    {
+     "icon": "❓",
+     "title": "Ask questions freely",
+     "text": "No question is too small. Everyone here started somewhere, and your question often helps someone who was too shy to ask."
+    },
+    {
+     "icon": "🆘",
+     "title": "Seek help early",
+     "text": "Stuck on a lesson, an idea or a payment? Post in Community, send Awele a message or book a coaching session. Don't struggle alone."
+    },
+    {
+     "icon": "🌍",
+     "title": "Network to get more from your course",
+     "text": "Introduce yourself, comment on other people's posts and join a hangout. Founders who learn alongside others finish more courses and build stronger businesses."
+    },
+    {
+     "icon": "🎉",
+     "title": "Share and celebrate",
+     "text": "Post your progress, what you learned and your wins, and cheer others on when they share theirs."
+    },
+    {
+     "icon": "🙅",
+     "title": "No spam or hard selling",
+     "text": "No unrelated adverts, chain messages or get-rich-quick schemes. If you offer a service, apply to be listed as an affiliate expert instead."
+    },
+    {
+     "icon": "🔒",
+     "title": "Respect privacy",
+     "text": "Don't share other members' phone numbers, messages or business details outside the community without their permission."
+    },
+    {
+     "icon": "📣",
+     "title": "Report concerns",
+     "text": "If something feels wrong, tell Awele through Contact. Reports are handled quietly and fairly."
+    }
+   ],
+   "theme": "lemon",
+   "video": {
+    "title": "A welcome from Awele",
+    "mins": 3,
+    "url": ""
+   }
+  },
+  {
+   "id": "news",
+   "name": "Announcements",
+   "icon": "📣",
+   "type": "announce",
+   "group": "start",
+   "img": "",
+   "theme": "ink",
+   "headline": "News and updates from Awelen",
+   "desc": "Official updates from Awele: new courses and lessons, events, programme news and important changes. Only the creator posts here, so nothing important gets lost in the conversation."
+  },
+  {
+   "id": "intro",
+   "name": "Introduce yourself",
+   "icon": "🙋",
+   "type": "intro",
+   "group": "start",
+   "img": "",
+   "headline": "Say hello to the community",
+   "desc": "New here? Tell us who you are and what you are building. A short introduction helps members welcome you and find people to learn with.",
+   "theme": "lilac"
+  },
+  {
+   "id": "courses",
+   "name": "Courses",
+   "icon": "🎓",
+   "type": "course",
+   "group": "tracks",
+   "img": "",
+   "headline": "Learn in tracks, at your own pace",
+   "desc": "Courses are grouped into tracks. Choose the track that matches where you are, unlock a course, then work through its modules and lessons: short videos, handouts and quizzes.",
+   "theme": "ink"
+  },
+  {
+   "id": "community",
+   "name": "Community",
+   "icon": "💬",
+   "type": "post",
+   "group": "connect",
+   "img": "",
+   "headline": "Ask, share and learn together",
+   "desc": "Post questions, share wins and get practical answers from Awele and other founders. No question is too small.",
+   "theme": "lemon"
+  },
+  {
+   "id": "coaching",
+   "name": "Private coaching & mentoring",
+   "icon": "🤝",
+   "type": "event",
+   "style": "coaching",
+   "group": "meet",
+   "img": "",
+   "headline": "Private coaching & mentoring with Awele",
+   "desc": "One-to-one coaching and mentoring for your money and your leadership. Start with a free 30-minute discovery call, choose the area that matters most to you right now, and work through it with Awele at your own pace, in complete confidence.",
+   "theme": "paper"
+  },
+  {
+   "id": "hangout",
+   "name": "Hangout",
+   "icon": "☕",
+   "type": "event",
+   "style": "hangout",
+   "group": "meet",
+   "img": "",
+   "headline": "Meet other founders, informally",
+   "desc": "Relaxed calls to meet members, swap stories and keep each other accountable. Free to join; just RSVP.",
+   "theme": "lilac"
+  },
+  {
+   "id": "live",
+   "name": "Live events",
+   "icon": "🎙️",
+   "type": "event",
+   "style": "webinar",
+   "group": "meet",
+   "img": "",
+   "headline": "Webinars and live teaching",
+   "desc": "Register for upcoming webinars and live Q&A sessions. Your joining link is emailed before the event.",
+   "theme": "ink"
+  },
+  {
+   "id": "members",
+   "name": "Member database",
+   "icon": "🗂️",
+   "type": "members",
+   "group": "network",
+   "img": "",
+   "headline": "Meet the people in this community",
+   "desc": "Every member has a profile here. Search by name, city, business or skill to find people to learn from, partner with or buy from.",
+   "theme": "paper"
+  },
+  {
+   "id": "affiliates",
+   "name": "Affiliate members",
+   "icon": "💼",
+   "type": "affiliates",
+   "group": "network",
+   "img": "",
+   "headline": "Find unique expertise, or earn as an affiliate",
+   "desc": "Affiliate members are vetted experts you can hire for the skills a new business needs. They also earn a commission when someone joins a course through their personal link.",
+   "theme": "ink"
+  },
+  {
+   "id": "contact",
+   "name": "Contact the creator",
+   "icon": "📇",
+   "type": "contact",
+   "group": "info",
+   "img": "",
+   "headline": "Get in touch",
+   "desc": "Questions about a course, coaching or working together? Reach Awele directly or send a message below.",
+   "theme": "paper"
+  },
+  {
+   "id": "links",
+   "name": "Links",
+   "icon": "🔗",
+   "type": "links",
+   "group": "info",
+   "img": "",
+   "headline": "More from Awelen",
+   "desc": "Websites and channels where you can find more of Awele's work.",
+   "theme": "lilac"
+  },
+  {
+   "id": "ebooks",
+   "name": "eBook Collection",
+   "icon": "📚",
+   "type": "ebooks",
+   "group": "learn",
+   "img": "",
+   "theme": "lilac",
+   "headline": "Read further, at your own pace",
+   "desc": "Short, practical eBooks that go deeper into the ideas in our courses. Some are free. The rest you buy once and keep reading for as long as you are a member."
+  },
+  {
+   "id": "crucible",
+   "name": "The Crucible Circle",
+   "icon": "🔥",
+   "type": "crucible",
+   "group": "solve",
+   "img": "",
+   "theme": "crimson",
+   "headline": "Bring your toughest challenge to the Ideation Room",
+   "desc": "Organisations submit complex strategic challenges. Carefully selected Expert Practitioners, guided by a Master Moderator, work through them in live sessions and return grounded, practical recommendations.",
+   "track": "t-solve"
+  },
+  {
+   "id": "solutions",
+   "name": "Business Solutions",
+   "icon": "🛠️",
+   "type": "consult",
+   "group": "solve",
+   "img": "",
+   "theme": "lemon",
+   "headline": "Hands-on help for real businesses",
+   "desc": "Sometimes you don't need another course. You need a partner. Book a consultation for business setup, turnaround, investors, talent, incubation or private coaching.",
+   "track": "t-solve"
+  },
+  {
+   "group": "programmes",
+   "img": "",
+   "id": "amld",
+   "name": "AMLD Programme",
+   "icon": "🏛️",
+   "type": "amld",
+   "theme": "ink",
+   "headline": "Advanced Management & Leadership Development",
+   "desc": "Taught by people who have done it. Finished with the presence to lead at the top. This is the home of the AMLD programme: how it works, the six Studio Sprints, the faculty and options for organisations."
+  },
+  {
+   "group": "programmes",
+   "img": "",
+   "id": "presence",
+   "name": "Executive Presence",
+   "icon": "✨",
+   "type": "presence",
+   "theme": "lilac",
+   "headline": "Be seen, heard and trusted in the rooms that matter",
+   "desc": "AMLD’s capstone and a modern finishing school for leaders: executive communication, boardroom readiness, global protocol, personal brand and media readiness. Self-paced or as a live cohort.",
+   "track": "t-adv",
+   "navSub": "The finishing place"
+  },
+  {
+   "id": "peers",
+   "name": "Executive Peer-Circle",
+   "icon": "👥",
+   "type": "peer",
+   "group": "programmes",
+   "track": "t-adv",
+   "img": "",
+   "theme": "ink",
+   "navSub": "Top leaders share ideas on complex issues",
+   "headline": "Where top leaders think through complex issues together",
+   "desc": "A room for senior leaders, founders and AMLD learners. Bring a complex issue you’re facing, hear how peers at your level would approach it, and lend your experience to theirs. What is shared here stays here."
+  },
+  {
+   "group": "programmes",
+   "img": "",
+   "id": "portfolio",
+   "name": "Portfolio Showcase",
+   "icon": "🖼️",
+   "type": "post",
+   "theme": "paper",
+   "headline": "Finished work from AMLD Studio Sprints",
+   "desc": "When your studio team completes a sprint, share a short summary of the brief, your recommendation and what the client said. Keep client details confidential.",
+   "track": "t-adv"
+  },
+  {
+   "group": "programmes",
+   "img": "",
+   "id": "faculty",
+   "name": "Faculty Lounge",
+   "icon": "🧑‍🏫",
+   "type": "post",
+   "theme": "ink",
+   "hidden": true,
+   "headline": "Private space for faculty",
+   "desc": "For Professors of Practice, Academic Facilitators, Guild Mentors and the Programme Director: sprint planning, marking moderation and arranging cover. Hidden from members."
+  }
+ ],
+ "tracks": [
+  {
+   "id": "t-idea",
+   "space": "courses",
+   "title": "Idea Discovery & Starters",
+   "desc": "For people at the very start: find an idea that fits you, understand the economy around it and turn it into a business that pays its way."
+  },
+  {
+   "id": "t-lead",
+   "space": "courses",
+   "title": "Management Foundation",
+   "desc": "Build the core skills of running a business: spotting the right opportunities, reading the numbers and setting a clear direction."
+  },
+  {
+   "id": "t-exec",
+   "space": "courses",
+   "title": "Executive Leadership",
+   "desc": "For leaders growing a business beyond themselves: scale with impact, think visually, lead change and build wealth that lasts."
+  },
+  {
+   "id": "t-adv",
+   "space": "courses",
+   "title": "Advanced Management & Leadership Development (AMLD)",
+   "desc": "For founders and senior managers ready to run the business and lead leaders. Six-week Studio Sprints taught by Professors of Practice, finished with the Executive Presence capstone.",
+   "home": "amld"
+  },
+  {
+   "id": "t-solve",
+   "space": "courses",
+   "title": "Solve",
+   "desc": "Bring a real challenge. Put it before a room of expert practitioners, or get hands-on help for your business."
+  }
+ ],
+ "creator": {
+  "name": "Awele Okonkwo",
+  "title": "Founder, Awelen Entrepreneurs · Chartered Accountant (ACA)",
+  "photo": "",
+  "email": "hello@awelen.com",
+  "phone": "+234 803 000 0000",
+  "whatsapp": "+234 803 000 0000",
+  "location": "Lekki, Lagos, Nigeria",
+  "hours": "Mon–Fri, 9am–5pm WAT",
+  "banner": {
+   "kicker": "Awelen Entrepreneurs",
+   "headline": "Helping you find, start and grow the business you were made to build.",
+   "sub": "Short video courses, private coaching and a community of founders across Nigeria.",
+   "img": ""
+  }
+ },
+ "courses": [
+  {
+   "id": "idea",
+   "space": "courses",
+   "track": "t-idea",
+   "title": "Idea Discovery",
+   "headline": "Find the business idea that fits you",
+   "sub": "For anyone thinking about starting something of their own.",
+   "price": 25000,
+   "amld": "",
+   "modules": 5,
+   "lessons": 32
+  },
+  {
+   "id": "snb",
+   "space": "courses",
+   "track": "t-idea",
+   "title": "Starting Your New Idea",
+   "headline": "Turn an idea into a business that pays its way",
+   "sub": "For first-time founders and anyone moving from employment into business.",
+   "price": 50000,
+   "amld": "",
+   "modules": 2,
+   "lessons": 6
+  },
+  {
+   "id": "econ",
+   "space": "courses",
+   "track": "t-idea",
+   "title": "Understanding Economic Outlook",
+   "headline": "Read the economy before you bet your money on an idea",
+   "sub": "For new founders who want to understand how inflation, exchange rates and policy shape their business.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "opp",
+   "space": "courses",
+   "track": "t-lead",
+   "title": "Opportunity Recognition",
+   "headline": "Learn to see the opportunities other people walk past",
+   "sub": "For founders and managers who want a steady flow of good ideas for new products, customers and markets.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "fin",
+   "space": "courses",
+   "track": "t-lead",
+   "title": "Financial Intelligence",
+   "headline": "Understand your numbers well enough to make better decisions",
+   "sub": "For founders and managers who want to read accounts, manage cash and talk confidently with bankers and investors.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "strat",
+   "space": "courses",
+   "track": "t-lead",
+   "title": "Strategy Development",
+   "headline": "Set a clear direction and the choices that will get you there",
+   "sub": "For owners and managers ready to move from reacting every day to working to a plan.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "lead",
+   "space": "courses",
+   "track": "t-lead",
+   "title": "Leading Yourself First",
+   "headline": "Discipline, decisions and character",
+   "sub": "For people who lead others, or soon will.",
+   "price": 40000,
+   "amld": "",
+   "modules": 1,
+   "lessons": 3
+  },
+  {
+   "id": "scale",
+   "space": "courses",
+   "track": "t-exec",
+   "title": "Scaling for Impact",
+   "headline": "Grow the business without losing what made it work",
+   "sub": "For founders and leaders whose business is ready to grow beyond one location, one product or one person.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "visual",
+   "space": "courses",
+   "track": "t-exec",
+   "title": "Visual Thinking for Leaders",
+   "headline": "Think more clearly, and explain your ideas so people see them",
+   "sub": "For leaders who want to solve problems faster and communicate complex ideas simply.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "change",
+   "space": "courses",
+   "track": "t-exec",
+   "title": "Driving Change",
+   "headline": "Lead people through change so it sticks",
+   "sub": "For leaders introducing new systems, structures or ways of working.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "wealth",
+   "space": "courses",
+   "track": "t-exec",
+   "title": "Building Sustainable Wealth",
+   "headline": "Turn business success into wealth that lasts for generations",
+   "sub": "For founders and leaders who want their income to become lasting wealth for their families and communities.",
+   "price": 0,
+   "amld": "",
+   "modules": 3,
+   "lessons": 9
+  },
+  {
+   "id": "amld-strategy",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Strategy & Business Model Renewal",
+   "headline": "Strategy & Business Model Renewal",
+   "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "price": 0,
+   "amld": "sprint",
+   "modules": 6,
+   "lessons": 18
+  },
+  {
+   "id": "amld-finance",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Financial Leadership & Capital",
+   "headline": "Financial Leadership & Capital",
+   "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "price": 0,
+   "amld": "sprint",
+   "modules": 6,
+   "lessons": 18
+  },
+  {
+   "id": "amld-leaders",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Leading Leaders & Building Teams",
+   "headline": "Leading Leaders & Building Teams",
+   "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "price": 0,
+   "amld": "sprint",
+   "modules": 6,
+   "lessons": 18
+  },
+  {
+   "id": "amld-ops",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Operations, Systems & Digital Transformation",
+   "headline": "Operations, Systems & Digital Transformation",
+   "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "price": 0,
+   "amld": "sprint",
+   "modules": 6,
+   "lessons": 18
+  },
+  {
+   "id": "amld-growth",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Growth, Markets & Partnerships",
+   "headline": "Growth, Markets & Partnerships",
+   "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "price": 0,
+   "amld": "sprint",
+   "modules": 6,
+   "lessons": 18
+  },
+  {
+   "id": "amld-turn",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Turnaround, Risk & Governance",
+   "headline": "Turnaround, Risk & Governance",
+   "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
+   "price": 0,
+   "amld": "sprint",
+   "modules": 6,
+   "lessons": 18
+  },
+  {
+   "id": "ep-found",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Executive Presence Foundation",
+   "headline": "Be seen, heard and trusted in the rooms that matter",
+   "sub": "Self-paced · six modules · 36 lessons · most finish in 8–12 weeks",
+   "price": 0,
+   "amld": "epf",
+   "modules": 6,
+   "lessons": 36
+  },
+  {
+   "id": "ep-cohort",
+   "space": "courses",
+   "track": "t-adv",
+   "title": "Executive Presence Cohort",
+   "headline": "Ten weeks of live coaching with a small group of senior leaders",
+   "sub": "Live · 10 weeks · up to 16 participants · by application",
+   "price": 0,
+   "amld": "epc",
+   "modules": 10,
+   "lessons": 20
+  }
+ ]
+}
