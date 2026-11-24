@@ -65,6 +65,7 @@ This file is the project's memory. Read it at the start of every session and upd
 - `vercel.json` sends every address to the app, so links like `/track/t-exec` work on refresh.
 
 ## Session log
+- 2026-11-24: All courses updated track by track in the single-file app (Edited_11) and saved to `docs/reference/` with a JSON export of tracks and courses. Courses now carry USD fees. Next: bring the new courses into `src/data/seed.json` and the database, and add a currency field to payments and `paystack-verify` (the Phase 3 installment plans for Starting Your New Idea and Leading Yourself First no longer apply; those courses were replaced or removed). See `docs/reference/README.md`.
 - 2026-11-20: Phase 3 learning and payments built and pushed. Awele ran the Phase 3 SQL (step 1). Paystack (steps 2 to 5) postponed to Monday 23 November; until then only bank transfer / LinPay notices show, which works without Paystack.
 - 2026-11-20: Phase 2 public side built and pushed. Awele ran the Supabase script and set URL Configuration. Next: live test on Vercel, then Phase 3 (learning).
 - 2026-11-20: Phase 1 foundation built and saved to GitHub (Okonkwo3434/The-Awelen-Communit). Deployed on Vercel by Awele. Next: Phase 2 (public side).
