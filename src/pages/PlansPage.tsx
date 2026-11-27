@@ -30,8 +30,8 @@ export function PlansBanner() {
     <section className="cbf" aria-label="Teach on Awelen banner">
       <div className="in">
         <div><span className="badge lemon">For course creators</span></div>
-        <h1>Teach on Awelen: run your own learning community</h1>
-        <p style={{ margin: 0 }}>Get your own app like Awelen Community for your training courses: courses, community, coaching, events and payments in one place. Start free, then choose the plan that fits as you grow.</p>
+        <h1>Teach on Awelen: create and sell your own course programme</h1>
+        <p style={{ margin: 0 }}>Subscribe to a plan and get your own learning platform, just like Awelen Community, to build, run and sell your own training courses: courses, community, coaching, events and payments in one place. Start free, then choose the plan that fits as you grow.</p>
         <div className="row" style={{ marginTop: 14 }}>
           <button className="btn lemon" onClick={go}>See the plans</button>
           <button className="btn onDark" onClick={() => window.dispatchEvent(new CustomEvent('awelen:creator-signup', { detail: 'starter' }))}>Start free</button>
@@ -81,6 +81,13 @@ export function PlansPage() {
 
   return (
     <>
+      <section className="card guide">
+        <h2 style={{ marginTop: 0 }}>What this page is for</h2>
+        <p>This page is not for taking a course. It is for people who want to <b>create and sell their own course programme</b>.</p>
+        <p>If you are a coach, trainer, consultant, teacher or expert with knowledge people will pay for, you can subscribe to a plan here. We then give you your own learning platform, built just like Awelen Community, under your own name. On it you can create your courses, modules and lessons, enrol your own learners, run your community, coaching and events, and get paid when people buy your courses.</p>
+        <p style={{ margin: 0 }} className="small">Here to learn instead? <Link to="/space/courses">Browse the Awelen course tracks →</Link></p>
+      </section>
+
       <section className="card" id="tiers">
         <div className="spread">
           <div><h2 style={{ margin: 0 }}>Choose your plan</h2><p className="small muted" style={{ margin: '4px 0 0' }}>Start free with one course. Upgrade or downgrade at any time. Prices are in US dollars.</p></div>
