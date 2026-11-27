@@ -32,6 +32,15 @@ This file is the project's memory. Read it at the start of every session and upd
 - Supabase client is set up in `src/lib/supabase.ts`. It reads the URL and key from `.env.production` / `.env.development` (or Vercel environment variables, which take priority).
 - The original single-file build (Awelen_Community_Edited_3.html) is the blueprint. It is kept privately by Awele, not in this public repository, because it contains the admin passcode check. Upload it to the session when a phase needs it.
 
+## Course update and dollar fees (27 November 2026)
+**Built and pushed.** Awele needs to run `supabase/migrations/20261127_courses_usd.sql` once in the SQL Editor (after Phase 2 and 3), and redeploy the `paystack-verify` Edge Function with the new code.
+- 24 courses across 5 tracks from the 27 Nov single-file app, including Deciding in the Fog. Lesson summaries show under each lesson title.
+- Fees in US dollars, pay in full or 3 installments (e.g. $50 or 3 × $18.34). Executive Presence Foundation and Executive Peer Circle are now paid ($150); the AMLD sprints and Executive Presence Cohort stay by application.
+- Money columns now take cents (numeric 12,2). Each course, payment and payment request carries its currency; the server stamps it from the course, so a member cannot change it.
+- `paystack-verify` checks the Paystack payment is in the course's own currency. Paystack must have USD switched on for the account before dollar card payments work.
+- Tested on a local Postgres: scripts run twice cleanly on top of Phase 3; full payment, 3 installments, too-small amounts, reused references, application-only courses and a confirmed dollar bank transfer all checked.
+- Not yet carried over from the single-file app: promo codes and the grace period for missed installments (`promos`, `payCfg`). These come with the admin portal.
+
 ## Next phases
 
 2. **Public side.** Built (see above). Still to add when the admin portal arrives: a screen for reading visitor sign-ups and contact messages (they can be read in Supabase > Table Editor meanwhile).
@@ -65,6 +74,7 @@ This file is the project's memory. Read it at the start of every session and upd
 - `vercel.json` sends every address to the app, so links like `/track/t-exec` work on refresh.
 
 ## Session log
+- 2026-11-27: Courses, tracks and USD fees brought into the React app from the 27 Nov single-file app; currency and cents added to payments. Next: Awele runs the new SQL and redeploys paystack-verify, then adds Paystack keys; then Phase 4 (community and special spaces).
 - 2026-11-24: All courses updated track by track in the single-file app (Edited_11) and saved to `docs/reference/` with a JSON export of tracks and courses. Courses now carry USD fees. Next: bring the new courses into `src/data/seed.json` and the database, and add a currency field to payments and `paystack-verify` (the Phase 3 installment plans for Starting Your New Idea and Leading Yourself First no longer apply; those courses were replaced or removed). See `docs/reference/README.md`.
 - 2026-11-20: Phase 3 learning and payments built and pushed. Awele ran the Phase 3 SQL (step 1). Paystack (steps 2 to 5) postponed to Monday 23 November; until then only bank transfer / LinPay notices show, which works without Paystack.
 - 2026-11-20: Phase 2 public side built and pushed. Awele ran the Supabase script and set URL Configuration. Next: live test on Vercel, then Phase 3 (learning).

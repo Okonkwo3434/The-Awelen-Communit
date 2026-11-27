@@ -42,7 +42,6 @@ Deno.serve(async (req) => {
   const tx = pj?.data;
   if (!ps.ok || !pj?.status || !tx) return reply({ error: 'Paystack could not confirm this payment yet. If you were charged, contact us with reference ' + reference }, 402);
   if (tx.status !== 'success') return reply({ error: 'This payment was not successful (' + tx.status + ').' }, 402);
-  if (tx.currency !== 'NGN') return reply({ error: 'Payment must be in naira.' }, 402);
 
   // 3. Make sure the payment was made for this member and this course
   const meta = typeof tx.metadata === 'string' ? JSON.parse(tx.metadata || '{}') : (tx.metadata || {});
@@ -50,12 +49,17 @@ Deno.serve(async (req) => {
     return reply({ error: 'This payment belongs to a different account or course.' }, 403);
   }
 
-  // 4. Record it and unlock the course (amount in naira; Paystack reports kobo)
+  // 4. The payment must be in the course's own currency (US dollars or naira)
   const admin = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
-  const amount = Math.floor(Number(tx.amount) / 100);
+  const { data: course } = await admin.from('courses').select('currency').eq('id', courseId).maybeSingle();
+  const want = course?.currency || 'NGN';
+  if (tx.currency !== want) return reply({ error: 'This course is paid in ' + (want === 'USD' ? 'US dollars' : 'naira') + '. Reference: ' + reference }, 402);
+
+  // 5. Record it and unlock the course (whole dollars or naira; Paystack reports cents or kobo)
+  const amount = Math.round(Number(tx.amount)) / 100;
   const { data, error } = await admin.rpc('apply_payment', {
     p_user: who.user.id, p_course: courseId, p_amount: amount, p_gateway: 'Paystack', p_reference: reference,
-    p_raw: { id: tx.id, paid_at: tx.paid_at, channel: tx.channel, email: tx.customer?.email, amount_kobo: tx.amount },
+    p_raw: { id: tx.id, paid_at: tx.paid_at, channel: tx.channel, email: tx.customer?.email, currency: tx.currency, amount_minor: tx.amount },
   });
   if (error) {
     // Already recorded (e.g. the page was refreshed): treat as success

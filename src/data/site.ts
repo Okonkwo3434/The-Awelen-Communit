@@ -13,3 +13,6 @@ export const lessonCount = (c: Course) => flatLessons(c).length;
 export const coursesInTrack = (trackId: string) => site.courses.filter((c) => c.track === trackId);
 
 export const naira = (n: number) => '₦' + Number(n || 0).toLocaleString('en-NG');
+export const dollars = (n: number) => '$' + Number(n || 0).toLocaleString('en-US');
+/** Money in the course's own currency (courses are priced in US dollars or naira). */
+export const cm = (c: Pick<Course, 'currency'>, n: number) => (c.currency === 'USD' ? dollars(n) : naira(n));

@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { courseById, flatLessons, naira, site, trackById } from '../data/site';
+import { cm, courseById, flatLessons, site, trackById } from '../data/site';
 import type { Course, Lesson } from '../data/types';
 import { niceError, useAuth } from '../lib/auth';
 import {
@@ -12,7 +12,7 @@ import { useModals } from '../components/Modals';
 const hasAccess = (e: Enrollment | null) => !!e && (e.plan === 'free' || e.plan === 'granted' || e.amount_paid > 0);
 const priceText = (c: Course) =>
   c.mode === 'application' ? 'By application' : c.mode === 'free' ? 'Free' :
-  naira(c.price) + (c.instN > 1 ? ` or ${c.instN} × ${naira(c.instAmt)}` : '');
+  cm(c, c.price) + (c.instN > 1 ? ` or ${c.instN} × ${cm(c, c.instAmt)}` : '');
 
 /* ---------- Full-width course banner (shown above the page layout) ---------- */
 export function CourseBanner({ id }: { id: string }) {
@@ -119,7 +119,7 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
       <section className="card enrolbox">
         <div className="spread">
           <div><span className="badge">✓ {e.plan === 'free' ? 'Enrolled' : e.plan === 'granted' ? 'Place confirmed' : 'Unlocked'}</span>
-            {e.plan === 'installments' && <p className="small muted" style={{ margin: '6px 0 0' }}>Paid {naira(e.amount_paid)} of {naira(e.amount_due)}{owed > 0 ? ` · next installment ${naira(Math.min(c.instAmt, owed))}` : ' · fully paid'}</p>}
+            {e.plan === 'installments' && <p className="small muted" style={{ margin: '6px 0 0' }}>Paid {cm(c, e.amount_paid)} of {cm(c, e.amount_due)}{owed > 0 ? ` · next installment ${cm(c, Math.min(c.instAmt, owed))}` : ' · fully paid'}</p>}
           </div>
           {continueLink}
         </div>
@@ -175,12 +175,12 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
       <p style={{ margin: '6px 0 12px' }}>Unlocking opens every lesson, the downloads and your certificate.</p>
       {c.instN > 1 && (
         <div className="stack" role="radiogroup" aria-label="How would you like to pay?" style={{ gap: 6, marginBottom: 12 }}>
-          <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay in full: <b>{naira(c.price)}</b></label>
-          <label className="row"><input type="radio" name="plan" checked={plan === 'inst'} onChange={() => setPlan('inst')} style={{ width: 'auto' }} /> {c.instN} installments of <b>{naira(c.instAmt)}</b> (total {naira(c.instN * c.instAmt)}). The course opens after the first.</label>
+          <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay in full: <b>{cm(c, c.price)}</b></label>
+          <label className="row"><input type="radio" name="plan" checked={plan === 'inst'} onChange={() => setPlan('inst')} style={{ width: 'auto' }} /> {c.instN} installments of <b>{cm(c, c.instAmt)}</b> (total {cm(c, c.instN * c.instAmt)}). The course opens after the first.</label>
         </div>
       )}
-      {pending.length > 0 && <div className="notice" style={{ marginBottom: 12 }}>⏳ We received your {pending[0].method.toLowerCase()} notice for {naira(pending[0].amount)}. The course opens as soon as we confirm it, usually within one working day.</div>}
-      <PayOptions c={c} amount={amount} label={'Pay ' + naira(amount)} busy={busy} setBusy={setBusy} setMsg={setMsg}
+      {pending.length > 0 && <div className="notice" style={{ marginBottom: 12 }}>⏳ We received your {pending[0].method.toLowerCase()} notice for {cm(c, pending[0].amount)}. The course opens as soon as we confirm it, usually within one working day.</div>}
+      <PayOptions c={c} amount={amount} label={'Pay ' + cm(c, amount)} busy={busy} setBusy={setBusy} setMsg={setMsg}
         email={profile?.email || session.user.email || ''} userId={session.user.id} onPaid={st.refresh} manual={manual} setManual={setManual}
         onRequested={() => myPendingRequests(c.id).then((r) => setPending(r as { amount: number; method: string }[]))} />
       {msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{msg}</p>}
@@ -198,7 +198,7 @@ function PayOptions(p: {
   const card = async () => {
     p.setBusy(true); p.setMsg('');
     try {
-      const r = await payWithPaystack({ courseId: p.c.id, courseTitle: p.c.title, amount: p.amount, email: p.email, userId: p.userId });
+      const r = await payWithPaystack({ courseId: p.c.id, courseTitle: p.c.title, amount: p.amount, currency: p.c.currency, email: p.email, userId: p.userId });
       if (r === 'paid') p.onPaid(); else p.setMsg('Payment window closed. You have not been charged.');
     } catch (err) { p.setMsg(niceError(err)); } finally { p.setBusy(false); }
   };
@@ -209,7 +209,7 @@ function PayOptions(p: {
     p.setBusy(true); p.setMsg('');
     try {
       await sendPaymentRequest({
-        course_id: p.c.id, method: (fd.get('method') as 'Bank transfer' | 'LinPay') || 'Bank transfer', amount: p.amount,
+        course_id: p.c.id, currency: p.c.currency, method: (fd.get('method') as 'Bank transfer' | 'LinPay') || 'Bank transfer', amount: p.amount,
         reference: String(fd.get('reference') || '').trim(), note: String(fd.get('note') || '').trim(),
       });
       setSent(true); p.onRequested?.();
@@ -229,7 +229,7 @@ function PayOptions(p: {
       ) : (
         <form className="stack paybox" onSubmit={request}>
           <p className="small" style={{ margin: 0 }}>
-            <b>1.</b> Send <b>{naira(p.amount)}</b>{' '}
+            <b>1.</b> Send <b>{cm(p.c, p.amount)}</b>{' '}
             {pay.accountNumber ? <>to <b>{pay.accountName}</b>, {pay.bankName}, account <b>{pay.accountNumber}</b></> : <>using the bank details we share on request (<Link to="/space/contact">contact us</Link>)</>}
             {pay.linpayUrl && <>, or pay through <a href={pay.linpayUrl} target="_blank" rel="noopener">LinPay ↗</a></>}.
             {' '}<b>2.</b> Tell us below, and we’ll unlock the course once we see it.
@@ -294,6 +294,7 @@ function LessonView({ c, lesson, open, access, done, flat, onDone }: { c: Course
     <div className="card" id="lesson">
       <span className="small muted">Lesson {i + 1} of {flat.length}</span>
       <h2>{lesson.title}</h2>
+      {lesson.sum && <p className="muted" style={{ marginTop: -4 }}>{lesson.sum}</p>}
       {body}
       {msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{msg}</p>}
       {open && (

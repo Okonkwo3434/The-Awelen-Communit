@@ -18,7 +18,7 @@ export type Space = {
 
 export type Track = { id: string; space: string; title: string; desc?: string };
 
-export type Lesson = { id: string; title: string; kind: 'video' | 'pdf' | 'quiz'; mins: number };
+export type Lesson = { id: string; title: string; kind: 'video' | 'pdf' | 'quiz'; mins: number; sum?: string };
 export type Module = { id: string; title: string; lessons: Lesson[] };
 export type Course = {
   id: string;
@@ -29,9 +29,10 @@ export type Course = {
   sub?: string;
   desc?: string;
   icon?: string;
-  price: number;        // full price in naira
+  price: number;        // full price, in the course currency
+  currency: 'USD' | 'NGN';
   instN: number;        // number of installments (1 = pay in full only)
-  instAmt: number;      // each installment in naira
+  instAmt: number;      // each installment, in the course currency
   amld?: string;
   mode: 'paid' | 'free' | 'application';
   downloads: string[];

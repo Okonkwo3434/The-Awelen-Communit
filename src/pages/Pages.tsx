@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { site, spaceById, trackById, coursesInTrack, naira, lessonCount } from '../data/site';
+import { site, spaceById, trackById, coursesInTrack, cm, lessonCount } from '../data/site';
 import { AnnouncementsPage, ContactPage, LinksPage, WelcomePage } from './PublicPages';
 
 /* Phase 1 pages: structure and content carried over from seed.json.
@@ -63,7 +63,7 @@ export function TrackPage() {
         {coursesInTrack(t.id).map((c) => (
           <Link key={c.id} className="mini" to={'/course/' + c.id} style={{ display: 'block' }}>
             <b>{c.title}</b><br />
-            <span className="small muted">{c.modules.length} modules · {lessonCount(c)} lessons · {c.price > 0 ? naira(c.price) : 'Free'}</span>
+            <span className="small muted">{c.modules.length} modules · {lessonCount(c)} lessons · {c.mode === 'application' ? 'By application' : c.price > 0 ? cm(c, c.price) : 'Free'}</span>
           </Link>
         ))}
       </div>

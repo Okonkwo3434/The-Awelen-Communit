@@ -75,7 +75,7 @@ export async function completeLesson(courseId: string, lessonId: string, answer?
   if (error && !/duplicate key/i.test(error.message)) throw error;
 }
 
-export async function sendPaymentRequest(r: { course_id: string; method: 'Bank transfer' | 'LinPay'; amount: number; reference: string; note: string }) {
+export async function sendPaymentRequest(r: { course_id: string; currency: 'USD' | 'NGN'; method: 'Bank transfer' | 'LinPay'; amount: number; reference: string; note: string }) {
   const { error } = await db().from('payment_requests').insert({ ...r, reference: r.reference || null, note: r.note || null });
   if (error) throw error;
 }
@@ -110,13 +110,13 @@ function loadPaystack(): Promise<PaystackPopType> {
 }
 
 /** Opens Paystack, then asks our server to confirm the payment with Paystack and unlock the course. */
-export async function payWithPaystack(o: { courseId: string; courseTitle: string; amount: number; email: string; userId: string }): Promise<'paid' | 'cancelled'> {
+export async function payWithPaystack(o: { courseId: string; courseTitle: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string }): Promise<'paid' | 'cancelled'> {
   if (!paystackKey) throw new Error('Card payments are not switched on yet.');
   const Pop = await loadPaystack();
   const reference = 'AWL-' + o.courseId.toUpperCase().replace(/[^A-Z0-9]/g, '') + '-' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2, 6).toUpperCase();
   const ref = await new Promise<string | null>((resolve, reject) => {
     new Pop().newTransaction({
-      key: paystackKey, email: o.email, amount: Math.round(o.amount * 100), currency: 'NGN', reference,
+      key: paystackKey, email: o.email, amount: Math.round(o.amount * 100), currency: o.currency, reference,  // Paystack counts cents / kobo
       metadata: {
         user_id: o.userId, course_id: o.courseId,
         custom_fields: [{ display_name: 'Course', variable_name: 'course', value: o.courseTitle }],
