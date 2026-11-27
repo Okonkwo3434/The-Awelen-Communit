@@ -111,7 +111,7 @@ export async function cancelBooking(id: string) {
 }
 
 /* ---------- Enquiries: one inbox for every form ---------- */
-export type EnquiryKind = 'challenge' | 'eoi' | 'consult' | 'coaching' | 'cohort' | 'faculty' | 'corporate' | 'brief' | 'intro';
+export type EnquiryKind = 'challenge' | 'eoi' | 'consult' | 'coaching' | 'cohort' | 'faculty' | 'corporate' | 'brief' | 'intro' | 'creator';
 export type Enquiry = { id: string; kind: EnquiryKind; ref: string; name: string; org: string | null; role: string | null; details: Record<string, unknown>; status: string; created_at: string };
 
 /** Sends a form. Visitors who are not signed in can send too (they just can't read it back). */

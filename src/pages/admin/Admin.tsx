@@ -49,6 +49,7 @@ export const KIND_LABEL: Record<string, [string, string, string]> = {   // icon,
   consult: ['🛠️', 'new consultation request', 'new consultation requests'], coaching: ['🤝', 'coaching discovery-call request', 'coaching discovery-call requests'],
   cohort: ['✨', 'Executive Presence Cohort application', 'Executive Presence Cohort applications'], faculty: ['🧑‍🏫', 'faculty application', 'faculty applications'],
   corporate: ['🏢', 'organisation enquiry', 'organisation enquiries'], brief: ['📋', 'client brief offer', 'client brief offers'], intro: ['💼', 'introduction request', 'introduction requests'],
+  creator: ['🚀', 'Teach on Awelen creator sign-up', 'Teach on Awelen creator sign-ups'],
 };
 
 function Overview() {
@@ -86,9 +87,10 @@ const STATUSES: Record<string, string[]> = {
   consult: ['Received', 'Discovery call booked', 'Proposal sent', 'Engaged', 'Completed', 'Closed'],
   coaching: ['Received', 'Discovery call booked', 'Engaged', 'Completed', 'Closed'],
   intro: ['Received', 'Introduced', 'Closed'],
+  creator: ['Received', 'Call booked', 'Setting up', 'Live', 'Closed'],
 };
 const statusesFor = (k: string) => STATUSES[k] || ['Received', 'In review', 'Accepted', 'Declined'];
-const KIND_NAME: Record<string, string> = { challenge: 'Crucible challenge', eoi: 'Expert interest', consult: 'Consultation', coaching: 'Coaching call', cohort: 'EP Cohort application', faculty: 'Faculty application', corporate: 'Organisation enquiry', brief: 'Client brief', intro: 'Introduction' };
+const KIND_NAME: Record<string, string> = { challenge: 'Crucible challenge', eoi: 'Expert interest', consult: 'Consultation', coaching: 'Coaching call', cohort: 'EP Cohort application', faculty: 'Faculty application', corporate: 'Organisation enquiry', brief: 'Client brief', intro: 'Introduction', creator: 'Creator sign-up' };
 
 function Inbox() {
   const params = new URLSearchParams(location.search);

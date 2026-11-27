@@ -9,6 +9,7 @@ import { RightSide } from './RightSide';
 import { initials } from '../pages/PublicPages';
 import { CourseBanner } from '../pages/CoursePage';
 import { AdminBanner, SpaceBanner, TrackBanner } from './Banners';
+import { PlansBanner } from '../pages/PlansPage';
 
 export function Logo() {
   return (
@@ -246,6 +247,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       {pathname.startsWith('/track/') && <TrackBanner id={pathname.split('/')[2]} />}
       {pathname.startsWith('/course/') && <CourseBanner id={pathname.split('/')[2]} />}
       {pathname.startsWith('/admin') && <AdminBanner />}
+      {pathname === '/plans' && <PlansBanner />}
       <UserBar />
       <div className="layout">
         <aside className={'left' + (drawer ? ' open' : '')}><LeftNav onNavigate={() => setDrawer(false)} /></aside>

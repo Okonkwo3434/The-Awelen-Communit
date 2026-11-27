@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { Layout } from './components/Shell';
-import { SimplePage, SpacePage, TrackPage } from './pages/Pages';
+import { SpacePage, TrackPage } from './pages/Pages';
 import { CoursePage } from './pages/CoursePage';
+import { PlansPage } from './pages/PlansPage';
 import { AccountPage, JoinPage, ResetPasswordPage } from './pages/PublicPages';
 import { AdminPage } from './pages/admin/Admin';
 
@@ -31,7 +32,7 @@ export default function App() {
         <Route path="/join" element={<JoinPage />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
-        <Route path="/plans" element={<SimplePage title="Teach on Awelen" text="Plans for other creators who want to teach on Awelen." />} />
+        <Route path="/plans" element={<PlansPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/admin/:tab" element={<AdminPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
