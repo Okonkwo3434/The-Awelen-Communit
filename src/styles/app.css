@@ -213,7 +213,7 @@ a.les:hover{background:var(--page);color:inherit}
 .rule .ri{font-size:1.25rem;width:26px;flex-shrink:0;text-align:center;line-height:1.3}
 .sign{margin:20px 0 0;font-size:.95rem}
 .agree{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px dashed var(--line-strong);padding-top:16px;margin-top:16px}
-.navhint{font-size:.8rem;color:var(--ink-3);padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px dashed var(--line);line-height:1.4}
+.navhint{font-size:.84rem;font-weight:600;color:var(--purple-ink);background:var(--lemon-soft);border-radius:8px;padding:8px 10px;margin-bottom:8px;line-height:1.4}
 .feedhead{display:flex;gap:10px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
 .feedhead h2{margin:0}
 

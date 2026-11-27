@@ -5,6 +5,7 @@ import type { Course, Space, Track } from '../data/types';
 import { useMyLearning } from '../lib/learning';
 import { firstName, useAuth } from '../lib/auth';
 import { useModals } from './Modals';
+import { RightSide } from './RightSide';
 import { initials } from '../pages/PublicPages';
 import { CourseBanner } from '../pages/CoursePage';
 import { AdminBanner, SpaceBanner, TrackBanner } from './Banners';
@@ -171,7 +172,7 @@ export function LeftNav({ onNavigate }: { onNavigate: () => void }) {
 
   return (
     <nav className="nav" aria-label="Categories, tracks and spaces">
-      <div className="navhint">Open a category, then a track, course, module or lesson.</div>
+      <div className="navhint"><span aria-hidden="true">👇 </span>Open a category, then a track, course, module or lesson.</div>
       {site.groups.map((g) => {
         const list = site.spaces.filter((sp) => sp.group === g.id && visible(sp) && !(sp.track && tIds.has(sp.track)) && !homes.has(sp.id));
         if (!list.length) return null;
@@ -249,7 +250,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <div className="layout">
         <aside className={'left' + (drawer ? ' open' : '')}><LeftNav onNavigate={() => setDrawer(false)} /></aside>
         <main className="stack" id="main">{children}</main>
-        <aside className="right" aria-label="Activity" />
+        <aside className="right" aria-label="Activity"><RightSide /></aside>
       </div>
       {drawer && <div className="scrim" onClick={() => setDrawer(false)} />}
       <Footer />
