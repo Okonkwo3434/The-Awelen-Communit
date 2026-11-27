@@ -401,7 +401,7 @@
       "title": "Idea Discovery",
       "headline": "Find the business idea that fits you",
       "sub": "For anyone thinking about starting something of their own.",
-      "desc": "Find the business idea that is truly yours. Six modules take you from your desire for a new life, through what you already know and how an entrepreneur thinks, to one idea worth testing in the real world, and then prepare you for the journey ahead: your first real goal, your support network, your real costs and the decision to begin.",
+      "desc": "You know you were made for more than the job you are in, or the life you are living. Maybe you have a dozen ideas and can't choose one. Maybe you have none and wonder if you are \"the business type\" at all. Either way, the hardest part of starting is not money. It is knowing which idea is truly yours.\n\nThis course starts with you, not with a market report. You'll look honestly at the life you want, the knowledge and experience you already carry, and the way entrepreneurs think. From there you'll explore the idea space around you and narrow it down to one idea that fits who you are and what the world will pay for.\n\nThen we prepare you for the road ahead: your first real goal, the people who will hold you up, what it will really cost, and the decision to begin. You finish with clarity, not just enthusiasm.",
       "icon": "💡",
       "price": 50,
       "currency": "USD",
@@ -678,6 +678,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "One business idea that fits you, chosen with reasons you can explain to anyone",
+        "A clear picture of the knowledge, skills and contacts you can build on today",
+        "The entrepreneur's mindset: how founders see problems, risk and opportunity",
+        "An honest view of what starting will cost you in money, time and energy",
+        "Your first real goal and a support network to help you reach it",
+        "The confidence to say \"I'm starting\" and mean it"
       ]
     },
     {
@@ -687,7 +695,7 @@
       "title": "Business Model Development 1: Designing Your Business Model",
       "headline": "Design a complete, costed business model, one block at a time",
       "sub": "For first-time founders and anyone moving from employment into business. Course 1 of 2.",
-      "desc": "Business Model Development is two linked courses with 110 lessons between them. This first course takes you from your first thinking as a founder to a complete, costed first-draft business model, which you present in its own capstone.\n\nIt answers three questions in turn: are we clear on why (Part A), will customers want it (Part B), and can we deliver it profitably (Part C). Every assumption you write down along the way becomes a \"We believe…\" statement that Course 2 tests with real evidence.",
+      "desc": "Most new businesses don't fail because the founder lacked passion. They fail because nobody checked, early enough, whether customers would pay, whether the business could deliver, and whether the numbers would ever add up.\n\nThis course walks you through every building block of a business model, one at a time, the way a seasoned adviser would sit with you. You start with your own why, then work out exactly who your customers are and what they will value, how you'll reach them, how you'll make money, what it takes to deliver, who you need beside you, and what it all costs, right down to the profit on a single sale.\n\nNothing stays in your head. Every lesson adds a page to your own model, and you finish by presenting a complete, costed first draft. Every assumption you make is written down as a \"We believe…\" statement, ready to be tested with real customers in Course 2.",
       "icon": "🧩",
       "price": 100,
       "currency": "USD",
@@ -1375,6 +1383,14 @@
           "title": "Part C — Making the model work: money in, operations, money out",
           "desc": "Part C builds the business side of the canvas. It answers two questions: can we deliver this (feasibility), and can we make money doing it (viability)? The order matters: revenue first, then what we must do, own and share with others to deliver it, then what all of that costs, then whether each sale makes money."
         }
+      ],
+      "gains": [
+        "A complete, costed first-draft business model for your own business",
+        "A clear vision, mission, values and first-year goals",
+        "A sharp picture of your customers and the value you promise them",
+        "Pricing and revenue streams you can defend, and unit economics that show your profit per sale",
+        "A brand identity, channels and customer relationships that fit your market",
+        "A list of the assumptions to test before you put serious money in"
       ]
     },
     {
@@ -1384,7 +1400,7 @@
       "title": "Business Model Development 2: Testing and Evolving Your Business Model",
       "headline": "Prove your business model with evidence, then keep it current",
       "sub": "For founders with a first-draft model who want proof before they bet on it. Course 2 of 2, and can be taken on its own.",
-      "desc": "Course 2 turns the first-draft canvas into a model backed by evidence. Every assumption is stated as a \"We believe…\" statement, sorted by the three lenses of Desirability, Feasibility and Viability, and then tested. The course closes by teaching learners to keep the model passing those tests as the market changes.",
+      "desc": "A business model on paper is a set of guesses. Some of those guesses will make you money. Others could quietly sink you. The only way to know which is which is to test them before you bet your savings, your loan or your reputation on them.\n\nThis course shows you how. You'll turn every assumption into a \"We believe…\" statement and sort it by the three questions that decide every business: will customers want it, can we deliver it, and will it make money? Then you'll design small, cheap tests and prototypes that give you real evidence, learn to read what the evidence is telling you, and change the model with confidence instead of fear.\n\nMarkets move, so the course ends by teaching you to keep your model current long after launch. You can take it straight after Course 1, or on its own if you already have a model to test.",
       "icon": "🧪",
       "price": 75,
       "currency": "USD",
@@ -1684,6 +1700,14 @@
           "outcome": "The participant presents a complete, evidence-backed business model for their own venture.",
           "deliverable": "Final business model pack and short presentation."
         }
+      ],
+      "gains": [
+        "A tested business model backed by evidence, not just hope",
+        "A ranked list of your riskiest assumptions and a test for each one",
+        "Low-cost prototypes and experiments you can run in days, not months",
+        "A simple way to decide whether to persevere, adjust or pivot",
+        "A habit of reviewing and updating your model as the market changes",
+        "A final model you can present to partners, lenders and investors"
       ]
     },
     {
@@ -1693,7 +1717,7 @@
       "title": "Understanding Economic Outlook",
       "headline": "Read the economy before you bet your money on an idea",
       "sub": "For new founders who want to understand how inflation, exchange rates and policy shape their business.",
-      "desc": "Every business lives inside an economy. Prices, interest rates, the currency, government policy and what customers can afford all decide whether a good idea becomes a good business.\n\nAcross seven modules you'll learn what an economic outlook is and how to turn a forecast into a decision, why productivity and innovation drive growth, how government spending, taxes and borrowing reach your business, what labour and education signals tell you, why fair practices pay, how to serve and strengthen vulnerable economies at the base of the pyramid, and how sustainable choices future-proof your business.",
+      "desc": "You can have a great product and a loyal customer, and still watch your business struggle because the naira fell, interest rates jumped or a new policy changed the rules overnight. Every business lives inside an economy. The founders who survive are the ones who see the weather coming and pack an umbrella.\n\nThis course makes the economy make sense. Without jargon or heavy maths, you'll learn to read an economic outlook and turn it into business decisions: when to stock up, when to borrow, when to hold prices and when to expand. You'll see how government spending, taxes and borrowing reach your customers' pockets, what jobs and education trends tell you about tomorrow's market, and why fairness and sustainability are good business, not charity.\n\nYou'll also learn to see and serve the base of the pyramid, the millions of customers most businesses overlook.",
       "icon": "📊",
       "price": 75,
       "currency": "USD",
@@ -2003,6 +2027,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "The confidence to read an economic forecast and know what it means for you",
+        "A simple way to turn inflation, exchange-rate and interest-rate news into decisions",
+        "An understanding of how government policy reaches your business and your customers",
+        "Early-warning signals to watch so you are not caught off guard",
+        "Fresh ideas for serving customers at the base of the pyramid",
+        "A sustainability lens that protects your business for the long term"
       ]
     },
     {
@@ -2012,7 +2044,7 @@
       "title": "Now Run It: Management Foundations for Founders and New Leaders",
       "headline": "Turn a good business model into a well-run enterprise",
       "sub": "For founders starting from scratch, individual contributors, emerging leaders, and leaders rebuilding after getting things wrong.",
-      "desc": "Now Run It is the bridge from Business Model Development to running the enterprise. Across 8 modules and 48 lessons you move from doing everything yourself to managing: setting the business up properly with the right legal structure and board, preparing the workplace, winning your first customers, bootstrapping on customer money, building the team and its rhythm, making decisions under uncertainty, and writing the business plan and pitch that raise money.\n\nZuri Kitchens, a Lagos cloud kitchen founded by Adaeze, runs through every module. Kofi, a top engineer in Accra newly promoted to lead six people, leads Modules 1, 6 and 7. Each lesson adds a short global or pan-African story.",
+      "desc": "Having a good business model is one thing. Running the business every day is another. Suddenly you are the salesperson, the accountant, the HR department and the person who fixes the generator. Or you were the best at your job, got promoted, and now you lead people who used to be your peers. Nobody prepares you for this shift.\n\nThis course is the bridge from idea to enterprise. You'll set the business up properly, with the right legal structure and a board that adds value, prepare a workplace that works, win and keep your first customers, and grow on customer money instead of debt. Then you'll build your team and its rhythm, learn to make good decisions when the facts are incomplete, and write the business plan and pitch that raise money.\n\nYou'll follow Adaeze as she builds Zuri Kitchens, a Lagos cloud kitchen, and Kofi, a newly promoted engineering lead in Accra. Their mistakes and wins become your shortcut.",
       "icon": "🏁",
       "price": 50,
       "currency": "USD",
@@ -2358,6 +2390,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "The shift from doing everything yourself to managing through others",
+        "A business set up properly: legal structure, governance and a useful board",
+        "A practical plan to win, serve and keep your first customers",
+        "Bootstrapping skills that keep you in control of your business",
+        "A team rhythm of meetings, goals and follow-up that gets things done",
+        "A business plan and pitch you can take to lenders and investors"
       ]
     },
     {
@@ -2367,7 +2407,7 @@
       "title": "Financial Intelligence for Leaders",
       "headline": "See it. Read it. Plan it. Decide it. Lead with it.",
       "sub": "For managers, founders, CEOs and board members anywhere in the world.",
-      "desc": "Financial Intelligence for Leaders is a self-paced video course of 7 modules and 42 lessons, for managers, founders, CEOs and board members anywhere in the world. It treats finance as a leadership skill: you learn the language of money, see the business in its three statements, diagnose what the numbers are telling you, plan and steer with budgets and forecasts, decide with confidence, tell the story with financial data, and protect the business against shocks.\n\nStories alternate between global and pan-African settings, with local currencies.",
+      "desc": "Have you ever nodded through a finance presentation, hoping nobody would ask what you think? Or signed off a budget you didn't fully understand? You are not alone. Many capable leaders were never taught to read the numbers, and it quietly limits their influence, their decisions and their careers.\n\nThis course changes that for good. Finance is taught as a leadership skill, not an accounting exam. You'll learn the language of money, see your business clearly through its three financial statements, spot what the numbers are really telling you, and plan and steer with budgets and forecasts. Then you'll use numbers to make confident decisions, tell a compelling story with financial data, and protect the business against shocks.\n\nThe stories move between global and pan-African settings, with real currencies, so everything you learn applies to the business in front of you.",
       "icon": "💹",
       "price": 100,
       "currency": "USD",
@@ -2678,6 +2718,14 @@
           ],
           "about": "Making sure the business survives shocks and the habit lasts."
         }
+      ],
+      "gains": [
+        "Fluency in the language of money, so you can hold your own in any boardroom",
+        "The ability to read an income statement, balance sheet and cash-flow statement with ease",
+        "Quick diagnostic checks that reveal problems before they become crises",
+        "Budgets and forecasts that actually steer the business",
+        "A sound way to judge investments, pricing and cost decisions",
+        "The skill to present numbers as a clear story that wins support"
       ]
     },
     {
@@ -2687,7 +2735,7 @@
       "title": "Winning Choices: Strategy for Leaders Who Want to Stand Apart",
       "headline": "Make the few clear choices that set you apart",
       "sub": "For leaders at every level: founders, executives, managers, team leads and public-sector leaders.",
-      "desc": "A self-paced video course of seven modules, six lessons each, about nine minutes per lesson. Strategy is a set of choices. You start from an honest diagnosis, learn how value is created and captured, choose where to play and how to win, narrow everything down to a few big moves, and turn them into what happens on Monday morning.\n\nThe course uses well-known company cases: Southwest Airlines, IKEA, Best Buy, Apple, Netflix, Nokia, Dangote, GTBank and others., told at the level of widely reported public facts. Other stories use invented people and businesses across Africa and the world.",
+      "desc": "Many organisations have a \"strategy\" that is really a long wish list. Everything is a priority, so nothing is. Meanwhile competitors who made a few bold, clear choices pull ahead. Strategy is not a document. It is the courage to choose what you will do, and what you will not do.\n\nThis course teaches you to make those choices. You'll start with an honest diagnosis of where you really stand, understand how value is created and captured, decide where to play and how to win, and narrow everything down to a few big moves. Then you'll learn to turn those moves into what your team actually does on Monday morning.\n\nYou'll learn from companies whose choices made or broke them, including Southwest Airlines, IKEA, Apple, Netflix, Nokia, Dangote and GTBank, alongside African and global stories you will recognise.",
       "icon": "♟️",
       "price": 100,
       "currency": "USD",
@@ -2991,6 +3039,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "A clear, honest diagnosis of your organisation's real position",
+        "A sharp answer to where you will play and how you will win",
+        "The discipline to say no, and the few big moves that matter most",
+        "A way to see where your business creates and captures value",
+        "A strategy your team can understand and act on next week",
+        "Lessons from the strategic wins and failures of well-known companies"
       ]
     },
     {
@@ -3000,7 +3056,7 @@
       "title": "Plans That Perform: Strategic Planning That Turns Choices into Results",
       "headline": "Turn strategic choices into priorities, targets, money and owners",
       "sub": "For leaders who need a plan that runs the business every month. Best taken after Winning Choices.",
-      "desc": "A self-paced video course of seven modules, six lessons each, about nine to ten minutes per lesson. It follows Winning Choices: a strategy session makes the choices; strategic planning turns them into priorities, targets, money, owners and a way to run the business every month.\n\nChromaCoat is a Nigerian paint manufacturer with about ₦298 million in annual revenue and three business lines: retail decorative paint sold through hardware stores, contractor and trade supply, and industrial protective coatings. The course follows ChromaCoat through all six planning layers, from strategic intent to the monthly dashboard, with its figures in naira. Other lessons add new pan-African and global stories, and well-known real cases where they help.",
+      "desc": "You've made your strategic choices. Now the hard part begins. Too many plans are beautifully written, presented once, and then left on a shelf while the business carries on as usual. A plan only matters if it runs the business every month.\n\nThis course shows you how to build that kind of plan. You'll turn strategic choices into clear priorities, measurable targets, a budget, named owners and a monthly rhythm of review. Layer by layer, you'll connect the big intent to the value drivers, initiatives and financial forecast that make it real, then align your whole organisation behind it and keep it alive with scorecards and honest reviews.\n\nYou'll follow ChromaCoat, a Nigerian paint manufacturer, through every layer of its plan, with real figures in naira. It works best after Winning Choices, our strategy course.",
       "icon": "🗺️",
       "price": 100,
       "currency": "USD",
@@ -3304,6 +3360,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "A complete strategic plan, from strategic intent to monthly dashboard",
+        "Priorities, targets and initiatives that connect directly to your strategy",
+        "A financial forecast tied to the plan, not a separate spreadsheet",
+        "Clear owners and accountability for every part of the plan",
+        "A scorecard and review rhythm that keep the plan alive all year",
+        "A way to renew the plan as conditions change"
       ]
     },
     {
@@ -3313,7 +3377,7 @@
       "title": "Built to Scale: Structure, Systems and People for Growing Organisations",
       "headline": "Grow without the organisation breaking",
       "sub": "For founders, managers and executives growing an organisation anywhere in the world.",
-      "desc": "Built to Scale is a self-paced video course of 7 modules and 42 lessons for founders, managers and executives growing an organisation anywhere in the world. It teaches how to build the structure, systems and people that let growth continue without the organisation breaking.\n\nGrowth adds revenue; scaling adds revenue faster than cost and complexity. Stories alternate between global and pan-African settings, and all names and companies are invented teaching cases.",
+      "desc": "Growth feels wonderful until things start to break. Customers complain, good staff leave, decisions pile up on your desk and profit doesn't grow as fast as sales. That is the difference between growing and scaling. Growth adds revenue. Scaling adds revenue faster than cost and complexity.\n\nThis course shows you how to scale without the organisation breaking. You'll find out whether you are truly ready, design a structure that grows with you, and build systems and processes that work without you in the room. Then you'll build the team for the next stage, learn to lead through others, protect the culture that made you successful, and replicate what works in new locations and markets.\n\nStories move between global and pan-African settings, so you see how scaling looks in markets like yours.",
       "icon": "📈",
       "price": 150,
       "currency": "USD",
@@ -3618,6 +3682,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "A clear answer to whether your organisation is ready to scale, and what to fix first",
+        "A structure with clear roles and decision rights that can grow",
+        "Systems and processes that run without you",
+        "A plan for the people and leaders you need at the next stage",
+        "A culture that survives growth instead of being diluted by it",
+        "A playbook for replicating success in new places"
       ]
     },
     {
@@ -3627,7 +3699,7 @@
       "title": "Systems Thinking for Leaders and Policymakers",
       "headline": "See the whole system before you act, so your fixes stop creating new problems",
       "sub": "For senior managers, C-suite executives and government policymakers.",
-      "desc": "A six-module, 36-lesson self-paced video course. It teaches leaders to see the whole system before they act, so their fixes stop creating new problems somewhere else. Each lesson is about 12 minutes of video, with two pause-the-video workshops and a one-page worksheet.\n\nBy the last lesson, every learner has mapped one real problem they own, found where to intervene, redesigned the organisation around it, and written a Systems Change Brief they can present.\n\nThe Live Challenge: In Lesson 1.1 each learner picks one stubborn problem they are responsible for. Every workshop applies that lesson's tool to the same problem, and the pages build up into the capstone brief in Lesson 6.6.",
+      "desc": "You fix one problem and two more appear somewhere else. Targets are met but results get worse. The same crisis returns every year, no matter who is in charge. These are not bad-luck problems. They are system problems, and they don't yield to harder work or a new memo.\n\nThis course teaches you to see the whole system before you act. You'll learn practical mapping tools you can use on Monday morning, recognise the traps behind recurring problems, and find the leverage points where a small, well-placed change makes a big difference. Then you'll redesign your organisation around what you have seen, and lead change that lasts.\n\nIt is hands-on from the first lesson. You pick one stubborn problem you own, apply every tool to it, and finish with a Systems Change Brief you can present to your board, minister or team.",
       "icon": "🕸️",
       "price": 150,
       "currency": "USD",
@@ -3901,6 +3973,14 @@
           "about": "Equip leaders to lead systemic change, learn from it as it unfolds, scale what works and make it survive their own departure.",
           "deliverable": "The Systems Change Brief."
         }
+      ],
+      "gains": [
+        "The ability to see why smart fixes keep failing in your organisation",
+        "Simple, practical tools to map any problem as a system",
+        "Recognition of the common traps behind recurring problems",
+        "Leverage points where a small change makes the biggest difference",
+        "A redesign of your organisation around one real problem you own",
+        "A Systems Change Brief ready to present"
       ]
     },
     {
@@ -3910,7 +3990,7 @@
       "title": "Visual Thinking for Leaders",
       "headline": "See It. Map It. Diagnose It. Decide It. Engage It. Show It.",
       "sub": "For senior managers, C-suite executives and government policymakers. No drawing talent needed.",
-      "desc": "A six-module, 36-lesson self-paced video course. It teaches leaders to reach for a pen and a shared surface the moment a problem gets too complicated for words alone, and to use simple pictures to see, decide and lead. Each lesson is about 12 minutes of video, with two pause-the-video workshops and a printable canvas for every tool.\n\nBy the last lesson, every learner has a working toolkit of more than 30 visual frameworks, has used them on one real leadership challenge, and has built a Visual Leadership Playbook for their own team. Every tool uses circles, boxes, lines, arrows and stick figures. Lesson 1.2 teaches the whole visual alphabet in 12 minutes.\n\nThe Live Challenge: In Lesson 1.1 each learner picks one real decision or problem on their desk. Every workshop draws that challenge with the lesson's tool, so the canvases build up into the capstone in Lesson 6.6.",
+      "desc": "Some problems are simply too complicated for words. Meetings go round in circles, people talk past each other and good decisions get lost in long emails. The leaders who cut through are often the ones who pick up a pen and say, \"Let me show you.\"\n\nThis course teaches you to think, decide and lead with simple pictures. No drawing talent is needed. Every tool uses circles, boxes, lines, arrows and stick figures, and you'll learn the whole visual alphabet early on. From there you'll map the big picture, diagnose what is really happening, compare options and decide, win people over, and show your plan in a way people remember.\n\nYou choose one real decision or problem on your desk at the start and work on it throughout, so you finish with a Visual Leadership Playbook built for your own team.",
       "icon": "🎨",
       "price": 150,
       "currency": "USD",
@@ -4184,6 +4264,14 @@
           "about": "Help leaders communicate decisions so they land and travel, and turn visual thinking into a daily habit and a team culture.",
           "deliverable": "The Visual Leadership Playbook."
         }
+      ],
+      "gains": [
+        "A toolkit of more than 30 simple visual frameworks for leaders",
+        "The confidence to lead a meeting from a whiteboard or flipchart",
+        "Faster, clearer decisions on complicated problems",
+        "Pictures that align teams and win over stakeholders",
+        "One real leadership challenge mapped and worked through",
+        "A Visual Leadership Playbook for your team"
       ]
     },
     {
@@ -4193,7 +4281,7 @@
       "title": "Design Thinking for Executives",
       "headline": "Lead discovery, not just efficiency",
       "sub": "For senior leaders and C-suite executives who want to solve a live strategic challenge with design thinking.",
-      "desc": "A practical, workshop-style course of six modules and 36 lessons. You choose a live strategic challenge in Module 1 and carry it through every stage of design thinking: empathy at the executive level, defining the right problem, ideation and strategic creativity, making ideas real before you commit, and scaling design thinking across the organisation.\n\nEvery module ends with a workshop, and the course closes with your final pitch and a 90-day action plan.",
+      "desc": "Your organisation is very good at doing what it already does. But the challenges in front of you now, such as new customers, new competitors and new expectations, can't be solved by doing the same things more efficiently. They need discovery.\n\nThis course gives senior leaders a practical way to lead that discovery. You'll bring a live strategic challenge from your own organisation and carry it through every stage of design thinking: understanding people deeply at an executive level, defining the right problem, generating bold ideas, and testing them cheaply before you commit serious money. Then you'll learn to build design thinking into how your organisation works.\n\nIt is workshop-style throughout. You finish with a pitch for your solution and a 90-day action plan you can start the following week.",
       "icon": "💡",
       "price": 100,
       "currency": "USD",
@@ -4455,6 +4543,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "A live strategic challenge worked through with design thinking",
+        "Executive-level empathy tools that reveal what customers and staff really need",
+        "The skill to frame the right problem before anyone jumps to solutions",
+        "Fast, low-cost ways to test ideas before committing budgets",
+        "A final pitch and a 90-day action plan",
+        "A plan to embed design thinking across your organisation"
       ]
     },
     {
@@ -4464,7 +4560,7 @@
       "title": "Innovation Culture Shift",
       "headline": "Break the three killers that stop good companies growing",
       "sub": "For senior and C-suite managers changing how an established organisation innovates.",
-      "desc": "Innovation Culture Shift follows one storyline. Module 1 diagnoses why good companies stop growing. Modules 2 to 4 take the three growth killers one at a time: silos, micro-management and the agility illusion. Module 5 brings in the pod structure as the cure, and Module 6 is about leading the change and making it stick.\n\nEvery module ends with a hands-on workshop lesson, so you leave with something you made about your own company.",
+      "desc": "Good companies rarely stop growing because they run out of ideas. They stop because the way they work kills the ideas they already have. Departments guard their territory, managers check every detail, and \"agility\" becomes a word on a slide rather than a way of working.\n\nThis course names the three killers of growth, silos, micro-management and the agility illusion, and shows you how to break each one. You'll diagnose your own organisation honestly, see the hidden cost of each killer, and discover the pod structure: small, empowered, cross-functional teams that move fast and own results. Then you'll learn to lead the shift and make it stick.\n\nEvery module ends with a hands-on workshop on your own company, so you finish with a real plan, not just insight.",
       "icon": "🔄",
       "price": 150,
       "currency": "USD",
@@ -4762,6 +4858,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "An honest diagnosis of what is slowing innovation in your organisation",
+        "Practical ways to break down silos and get departments working together",
+        "The confidence to hand over decisions without losing control",
+        "A clear test for whether your organisation is truly agile",
+        "A design for pods: small teams that move fast and own results",
+        "A change plan to lead the culture shift and make it last"
       ]
     },
     {
@@ -4771,7 +4875,7 @@
       "title": "Deciding in the Fog: Head, Heart, Models and Tools for Leaders in Complexity",
       "headline": "Decide well when the way ahead is not clear",
       "sub": "For senior managers, C-suite executives and policymakers around the world.",
-      "desc": "A seven-module, 56-lesson self-paced video course. It teaches leaders to decide well in complexity by bringing four things together: the Head (reasoning clearly, thinking from first principles and in probabilities, and guarding against bias), the Heart (values, emotion, intuition, conscience and courage), Models (frameworks for understanding the situation and the people in it, including Lewin, Kotter and ADKAR) and Tools (practical techniques for testing, weighing, committing and learning, including PCRM).\n\nThe Heart gets two full modules: one for the leader's inner life, and one for deciding on behalf of society. That second one is the Policymaker's Pause, the moment before a public decision when a leader must ask who carries its cost, when, and with what dignity.\n\nLocal and international cases run through every module. Two composite anchor cases, The Subsidy Reform and The Currency Redesign, come back again and again, each time through a different part of the course. They are told as design-and-impact studies with no blame or praise, and each ends with the questions any incoming government faces.\n\nThe course ends where most decision courses stop: choosing the right tool for the moment, making the call, carrying people with it, and building a culture where good decisions keep happening after you leave the room. Your capstone is a personal decision charter and a 90-day plan.",
+      "desc": "The decisions that keep leaders awake are rarely the ones with clear answers. Information is incomplete, the stakes are high, people disagree and every option carries a cost. Clever analysis alone won't carry you through. Neither will gut feeling alone.\n\nThis course teaches you to decide well in complexity by bringing four things together: your Head (clear reasoning, thinking in probabilities and guarding against bias), your Heart (values, emotion, intuition, conscience and courage), Models (frameworks that make sense of the situation and the people in it) and Tools (practical techniques for testing, weighing, committing and learning).\n\nFor those who decide on behalf of society, the course includes the Policymaker's Pause: the moment before a public decision when a leader asks who carries its cost, when, and with what dignity. Two cases, a subsidy reform and a currency redesign, return throughout as studies of design and impact, with no blame or praise. You finish with a personal decision charter and a 90-day plan.",
       "icon": "🌫️",
       "price": 150,
       "currency": "USD",
@@ -5222,6 +5326,14 @@
           ],
           "about": "The four parts joined in the conditions leaders actually face: groups, pressure and public scrutiny. It closes with the culture that sustains good decisions and your own plan."
         }
+      ],
+      "gains": [
+        "A reliable way to make good decisions when the way ahead is not clear",
+        "Protection against the biases that trip up even experienced leaders",
+        "The courage and clarity to act on your values under pressure",
+        "Proven models for reading the situation and the people involved",
+        "Practical tools for weighing options and making the call",
+        "A personal decision charter and a 90-day plan"
       ]
     },
     {
@@ -5231,7 +5343,7 @@
       "title": "Building Sustainable Wealth: From Breakthrough to Legacy",
       "headline": "Your breakthrough is the spark. Your systems are the fire.",
       "sub": "For founders, executives and professionals who want income to become wealth that lasts for generations.",
-      "desc": "Earning well and building wealth are not the same thing. A big contract, a bonus or a business sale can fade within a few years, while steady, disciplined choices build wealth that outlives you. Across seven modules you measure what you really own, set money rules that hold, turn income into assets, put the right structures and advisers in place, protect what you build, use it to lift the people around you, and pass on capability as well as money.\n\nThe course teaches principles. It is not personal financial, legal or tax advice, and rules differ from country to country.",
+      "desc": "Earning well and building wealth are not the same thing. A big contract, a bonus or the sale of a business can disappear within a few years, while steady, disciplined choices build wealth that outlives you. Many people with good incomes still feel one emergency away from trouble.\n\nThis course helps you turn your breakthrough into lasting wealth. You'll measure what you really own, set money rules that hold even when life gets busy, and turn income into assets that keep working for you. Then you'll put the right structures and advisers in place, protect what you have built, use your wealth to lift the people around you, and pass on capability as well as money to the next generation.\n\nThe course teaches principles, not personal financial, legal or tax advice, and rules differ from country to country.",
       "icon": "🏦",
       "price": 100,
       "currency": "USD",
@@ -5591,6 +5703,14 @@
           "about": "Pass on capability, values and structures, not just money.",
           "deliverable": "Your Sustainable Wealth Plan and a letter to the next generation."
         }
+      ],
+      "gains": [
+        "A true picture of your net worth and where your money really goes",
+        "Simple money rules that hold, whatever your income",
+        "A plan to turn income into assets that grow",
+        "The structures and advisers that protect and grow your wealth",
+        "Protection against the common ways wealth is lost",
+        "A legacy plan that passes on values and capability, not just money"
       ]
     },
     {
@@ -5600,7 +5720,7 @@
       "title": "Strategy & Business Model Renewal",
       "headline": "Strategy & Business Model Renewal",
       "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
-      "desc": "Seeing where the business really makes money, and where it should go next.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “Our core product is stalling. Where do we grow?”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Strategy & Business Model Renewal.",
+      "desc": "Every business reaches the point where what made it successful stops working. Sales flatten, a competitor changes the game, or the market moves on. This sprint teaches you to see where the business really makes money, and where it should go next, by doing it for a real company.\n\nYou won't learn from slides alone. You'll work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. A typical brief: “Our core product is stalling. Where do we grow?”\n\nPlan for about six to eight hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work. You're assessed on your portfolio, the client's signed evaluation and your contribution to the studio.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -5758,6 +5878,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Real experience solving a live problem for a real business",
+        "A portfolio of work that proves what you can do, not just a certificate",
+        "A signed evaluation from the client you worked for",
+        "Coaching from a Professor of Practice who has done it",
+        "A strong network of fellow senior professionals",
+        "The Awelen Practitioner Certificate in Strategy & Business Model Renewal"
       ]
     },
     {
@@ -5767,7 +5895,7 @@
       "title": "Financial Leadership & Capital",
       "headline": "Financial Leadership & Capital",
       "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
-      "desc": "Reading the numbers like a CFO, managing cash, raising and pricing capital.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “We need to raise funds. Are we ready, and on what terms?”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Financial Leadership & Capital.",
+      "desc": "Leaders who understand money make better decisions and raise capital on better terms. This sprint teaches you to read the numbers like a CFO, manage cash and raise and price capital, by working on a real company's finances.\n\nYou won't learn from slides alone. You'll work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. A typical brief: “We need to raise funds. Are we ready, and on what terms?”\n\nPlan for about six to eight hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work. You're assessed on your portfolio, the client's signed evaluation and your contribution to the studio.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -5925,6 +6053,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Real experience solving a live problem for a real business",
+        "A portfolio of work that proves what you can do, not just a certificate",
+        "A signed evaluation from the client you worked for",
+        "Coaching from a Professor of Practice who has done it",
+        "A strong network of fellow senior professionals",
+        "The Awelen Practitioner Certificate in Financial Leadership & Capital"
       ]
     },
     {
@@ -5934,7 +6070,7 @@
       "title": "Leading Leaders & Building Teams",
       "headline": "Leading Leaders & Building Teams",
       "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
-      "desc": "Moving from managing people to leading managers: culture, hiring and succession.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “Our managers are stretched and turnover is rising.”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Leading Leaders & Building Teams.",
+      "desc": "Leading people and leading leaders are different jobs. When your managers are stretched and good people are leaving, the answer is rarely another policy. This sprint teaches you to shape culture, hiring and succession by solving it for a real company.\n\nYou won't learn from slides alone. You'll work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. A typical brief: “Our managers are stretched and turnover is rising.”\n\nPlan for about six to eight hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work. You're assessed on your portfolio, the client's signed evaluation and your contribution to the studio.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -6092,6 +6228,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Real experience solving a live problem for a real business",
+        "A portfolio of work that proves what you can do, not just a certificate",
+        "A signed evaluation from the client you worked for",
+        "Coaching from a Professor of Practice who has done it",
+        "A strong network of fellow senior professionals",
+        "The Awelen Practitioner Certificate in Leading Leaders & Building Teams"
       ]
     },
     {
@@ -6101,7 +6245,7 @@
       "title": "Operations, Systems & Digital Transformation",
       "headline": "Operations, Systems & Digital Transformation",
       "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
-      "desc": "Making the business run without you: process, data and technology choices.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “We’re growing, but everything still depends on the founder.”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Operations, Systems & Digital Transformation.",
+      "desc": "If the business stops when you step away, you don't own a business, it owns you. This sprint teaches you to design processes, data and technology choices that make the business run without you, by fixing it for a real company.\n\nYou won't learn from slides alone. You'll work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. A typical brief: “We're growing, but everything still depends on the founder.”\n\nPlan for about six to eight hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work. You're assessed on your portfolio, the client's signed evaluation and your contribution to the studio.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -6259,6 +6403,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Real experience solving a live problem for a real business",
+        "A portfolio of work that proves what you can do, not just a certificate",
+        "A signed evaluation from the client you worked for",
+        "Coaching from a Professor of Practice who has done it",
+        "A strong network of fellow senior professionals",
+        "The Awelen Practitioner Certificate in Operations, Systems & Digital Transformation"
       ]
     },
     {
@@ -6268,7 +6420,7 @@
       "title": "Growth, Markets & Partnerships",
       "headline": "Growth, Markets & Partnerships",
       "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
-      "desc": "Customers, pricing, channels and the partnerships that open new markets.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “We want to enter a new state or country.”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Growth, Markets & Partnerships.",
+      "desc": "Growth comes from the right customers, the right price, the right channels and partners who open doors you can't open alone. This sprint teaches you to plan and test a real expansion for a real company.\n\nYou won't learn from slides alone. You'll work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. A typical brief: “We want to enter a new state or country.”\n\nPlan for about six to eight hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work. You're assessed on your portfolio, the client's signed evaluation and your contribution to the studio.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -6426,6 +6578,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Real experience solving a live problem for a real business",
+        "A portfolio of work that proves what you can do, not just a certificate",
+        "A signed evaluation from the client you worked for",
+        "Coaching from a Professor of Practice who has done it",
+        "A strong network of fellow senior professionals",
+        "The Awelen Practitioner Certificate in Growth, Markets & Partnerships"
       ]
     },
     {
@@ -6435,7 +6595,7 @@
       "title": "Turnaround, Risk & Governance",
       "headline": "Turnaround, Risk & Governance",
       "sub": "Six-week Studio Sprint · taught by a Professor of Practice",
-      "desc": "Steering through trouble: risk, boards, compliance and hard decisions.\n\nYou work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. Expect about 6–8 hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work.\n\nA typical brief: “Revenue fell 30% this year. What do we cut, keep and fix?”\n\nYou're assessed on your portfolio (50%), the client's signed evaluation (30%) and your studio contribution and reflection (20%). Pass, and you earn the Awelen Practitioner Certificate in Turnaround, Risk & Governance.",
+      "desc": "When revenue falls, every decision matters and there is little time to get it right. This sprint teaches you to steer through trouble: risk, boards, compliance and the hard calls, on a real company facing a real challenge.\n\nYou won't learn from slides alone. You'll work in a studio team of four to six on a live brief from a partner business, led by a Professor of Practice and supported by an Academic Facilitator. A typical brief: “Revenue fell 30% this year. What do we cut, keep and fix?”\n\nPlan for about six to eight hours a week: one evening masterclass, one evening studio session, a Saturday clinic every other week and your own team work. You're assessed on your portfolio, the client's signed evaluation and your contribution to the studio.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -6593,6 +6753,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Real experience solving a live problem for a real business",
+        "A portfolio of work that proves what you can do, not just a certificate",
+        "A signed evaluation from the client you worked for",
+        "Coaching from a Professor of Practice who has done it",
+        "A strong network of fellow senior professionals",
+        "The Awelen Practitioner Certificate in Turnaround, Risk & Governance"
       ]
     },
     {
@@ -6602,7 +6770,7 @@
       "title": "Executive Presence Foundation",
       "headline": "Be seen, heard and trusted in the rooms that matter",
       "sub": "Self-paced · six modules · 37 lessons · most finish in 8–12 weeks",
-      "desc": "A modern finishing school for leaders, at your own pace. You’ll sharpen how you speak, write, negotiate, host, dress, show up on camera and hold your ground under pressure, across Nigerian, African and international settings.\n\nEvery lesson comes with a short video, a practical exercise and a workbook page. You get feedback through self-assessment checklists and from peers on the Critique Wall, and you finish with an online capstone and a Certificate of Completion.\n\nWant live coaching? You can upgrade to the next Executive Presence Cohort and pay only the difference.",
+      "desc": "Some leaders walk into a room and people lean in. They speak and people listen. They are trusted with the hardest conversations. That isn't luck or personality. It is executive presence, and it can be learned.\n\nThis is a modern finishing school for leaders, at your own pace. You'll sharpen how you speak, write, negotiate, host, dress, show up on camera and hold your ground under pressure, in Nigerian, African and international settings. Every lesson pairs a short video with a practical exercise, and you get feedback through self-assessment and from peers on the Critique Wall.\n\nIf you later want live coaching, you can move up to the next Executive Presence Cohort and pay only the difference.",
       "icon": "🎓",
       "price": 150,
       "currency": "USD",
@@ -6886,6 +7054,14 @@
           "about": "Staying composed when the stakes and the cameras are on you.",
           "deliverable": "A recorded mock media interview, including a tough crisis question."
         }
+      ],
+      "gains": [
+        "Greater confidence and authority in meetings, boardrooms and on stage",
+        "Clear, persuasive writing and speaking that moves people to act",
+        "Board readiness and the diplomacy to handle senior stakeholders",
+        "Polished etiquette for local and international settings",
+        "A personal brand and digital presence that match your ambition",
+        "Calm under pressure, including with the media, and a Certificate of Completion"
       ]
     },
     {
@@ -6895,7 +7071,7 @@
       "title": "Executive Presence Cohort",
       "headline": "Ten weeks of live coaching with a small group of senior leaders",
       "sub": "Live · 10 weeks · up to 16 participants · by application",
-      "desc": "Everything in Executive Presence Foundation, plus live coaching on every module. You get personal video critiques from faculty, live roleplay, a 1:1 coaching session and live sessions with diplomats, media coaches, image consultants and CEOs.\n\nPlan for about 4–5 hours a week: one 90-minute live session, the lessons, and recording your practice pieces. The programme ends with the Presence Showcase and the Presence Dinner, a formal evening in Lagos or Abuja. You can present your capstone online if you can’t attend.\n\nPlaces are by short application to keep the group senior and well matched. Graduates receive the Awelen Executive Presence Certificate.",
+      "desc": "Reading about presence is not the same as practising it in front of people who will tell you the truth. The Executive Presence Cohort is for senior leaders who want to be coached live, in a small group of peers at their level.\n\nYou get everything in Executive Presence Foundation, plus live coaching on every module, personal video critiques from faculty, live roleplay, a one-to-one coaching session and sessions with diplomats, media coaches, image consultants and CEOs. Plan for about four to five hours a week: one 90-minute live session, the lessons and recording your practice pieces.\n\nThe programme ends with the Presence Showcase and the Presence Dinner, a formal evening in Lagos or Abuja. You can present your capstone online if you can't attend. Places are by short application, to keep the group senior and well matched.",
       "icon": "🎓",
       "price": 0,
       "currency": "NGN",
@@ -7089,6 +7265,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "Personal feedback from faculty on how you actually come across",
+        "Live practice in the situations that matter most to you",
+        "A one-to-one coaching session focused on your goals",
+        "Time with diplomats, media coaches, image consultants and CEOs",
+        "A network of senior peers who have grown alongside you",
+        "The Awelen Executive Presence Certificate"
       ]
     },
     {
@@ -7098,7 +7282,7 @@
       "title": "Executive Peer Circle",
       "headline": "Think together with peers at the top about the issues no single institution can solve",
       "sub": "For senior CEOs, board members and government policymakers.",
-      "desc": "A course for leaders at the top of business and government who face issues no single institution can solve. Across eight modules you learn how senior leaders think together, exercise judgement in complexity, work where business meets government, govern at the highest level, allocate capital for the long term, build institutions that outlast their founders, and sustain yourself at the summit.\n\nThe final module puts the circle into action on a grand challenge, and ends with the commitments your circle makes together.",
+      "desc": "At the top, the hardest issues don't belong to any one institution. Youth unemployment, food security, power, the cost of capital, trust between business and government: no CEO, board or ministry can solve them alone. And the higher you rise, the fewer people you can think out loud with.\n\nThis course is for leaders at the top of business and government who want to think together with peers about the issues that shape nations. You'll learn how senior leaders build trust and think together, exercise judgement in complexity, work where business meets government, govern at the highest level, allocate capital for the long term and build institutions that outlast their founders. You'll also look after the most important asset of all: yourself at the summit.\n\nThe course ends with your circle in action on a grand challenge, and the commitments you make together.",
       "icon": "🧠",
       "price": 150,
       "currency": "USD",
@@ -7444,6 +7628,14 @@
             }
           ]
         }
+      ],
+      "gains": [
+        "A trusted circle of peers to think with on the hardest issues",
+        "Sharper judgement for complex, high-stakes situations",
+        "Practical ways to work across the line between business and government",
+        "Governance and capital decisions that build long-term value",
+        "Ideas for building institutions that outlast their founders",
+        "Commitments to act on a grand challenge with your circle"
       ]
     }
   ],

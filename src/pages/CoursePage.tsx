@@ -67,10 +67,21 @@ export function CoursePage() {
 
   return (
     <>
-      <AccessBox c={c} st={st} access={access} nextUp={nextUp} />
+      {/* Learners who are in see their place and "Continue" first. Everyone else reads about the course first,
+          and the unlock box comes at the end as the invitation (the banner already shows the fee and the unlock button). */}
+      {access && <AccessBox c={c} st={st} access={access} nextUp={nextUp} />}
       {lesson && <LessonView c={c} lesson={lesson} open={isOpen(lesson)} access={access} done={st.done.has(lesson.id)} flat={flat} onDone={st.refresh} />}
       {!lesson && c.desc && (
-        <section className="card"><h2>About this course</h2>{c.desc.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}</section>
+        <section className="card">
+          <h2>About this course</h2>
+          {c.desc.split('\n\n').map((p, i) => <p key={i} className={i === 0 ? 'lead' : undefined}>{p}</p>)}
+          {!!c.gains?.length && (
+            <>
+              <h3 style={{ margin: '18px 0 8px' }}>What you'll walk away with</h3>
+              <ul className="gains">{c.gains.map((g) => <li key={g}>{g}</li>)}</ul>
+            </>
+          )}
+        </section>
       )}
       <section className="card">
         <div className="spread"><h2 style={{ margin: 0 }}>Course content</h2>{access && <span className="small muted">{pct}% complete</span>}</div>
@@ -85,11 +96,13 @@ export function CoursePage() {
       {c.downloads.length > 0 && (
         <section className="card">
           <h2>Downloads</h2>
+          <p className="small muted" style={{ margin: '-4px 0 8px' }}>{access ? 'Each one is shared inside the lesson where you use it.' : 'Included with the course, alongside the lessons.'}</p>
           {c.downloads.map((d) => (
-            <div key={d} className="dlrow"><span>📎 {d.split('|')[0]}</span><span className="small muted" style={{ marginLeft: 'auto' }}>{access ? 'Shared inside the lessons' : '🔒 Unlocks with the course'}</span></div>
+            <div key={d} className="dlrow"><span>📎 {d.split('|')[0]}</span></div>
           ))}
         </section>
       )}
+      {!access && <AccessBox c={c} st={st} access={access} nextUp={nextUp} />}
     </>
   );
 }
@@ -137,8 +150,8 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
     const sp = c.amld === 'sprint' ? 'amld' : 'presence';
     return (
       <section className="card enrolbox">
-        <h2 style={{ margin: 0 }}>Places on this course are by application</h2>
-        <p style={{ margin: '6px 0 12px' }}>It is part of an advanced programme. Once your application is accepted, the course opens here for you.</p>
+        <h2 style={{ margin: 0 }}>Ready to take your place?</h2>
+        <p style={{ margin: '6px 0 12px' }}>Places are by application, to keep each group senior and well matched. Once your application is accepted, the course opens here for you.</p>
         <Link className="btn" to={'/space/' + sp}>Learn about the programme and apply</Link>
       </section>
     );
@@ -147,8 +160,8 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
   if (!session) {
     return (
       <section className="card enrolbox">
-        <h2 style={{ margin: 0 }}>{c.mode === 'free' ? 'This course is free' : priceText(c)}</h2>
-        <p style={{ margin: '6px 0 12px' }}>{c.mode === 'free' ? 'Create a free account or sign in to start learning.' : 'Create a free account or sign in, then unlock the course to open every lesson.'}</p>
+        <h2 style={{ margin: 0 }}>Ready to begin?</h2>
+        <p style={{ margin: '6px 0 12px' }}>{c.mode === 'free' ? 'Create a free account or sign in, and start learning straight away.' : 'Create a free account or sign in, then unlock the course to open every lesson, the downloads and your certificate. Your progress is saved as you go.'}</p>
         <div className="row"><button className="btn lemon" onClick={() => openAccount('up')}>Create a free account</button><button className="btn quiet" onClick={() => openAccount('in')}>Sign in</button></div>
       </section>
     );
@@ -197,8 +210,8 @@ function Checkout(p: {
   };
   return (
     <section className="card enrolbox">
-      <h2 style={{ margin: 0 }}>Unlock this course</h2>
-      <p style={{ margin: '6px 0 12px' }}>Unlocking opens every lesson, the downloads and your certificate.</p>
+      <h2 style={{ margin: 0 }}>Ready to begin? Unlock this course</h2>
+      <p style={{ margin: '6px 0 12px' }}>Unlocking opens every lesson, the downloads and your certificate. Learn at your own pace; your progress is saved as you go.</p>
       {hasInst ? (
         <div className="stack" role="radiogroup" aria-label="How would you like to pay?" style={{ gap: 6, marginBottom: 12 }}>
           <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay once: <b>{was(full, c.price)}{cm(c, full)}</b>{full < inst! * c.instN - 0.004 && <span className="small muted"> · saves {cm(c, Math.round((inst! * c.instN - full) * 100) / 100)} on installments</span>}</label>
@@ -353,7 +366,6 @@ function Outline({ c, lessonId, isOpen, done }: { c: Course; lessonId?: string; 
     <>
       {(long || sums) && (
         <div className="ctools">
-          <span className="small muted">{c.modules.length} modules · {flat.length} lessons</span>
           {long && <><button className="btn ghost sm" onClick={() => setOpen(Object.fromEntries(c.modules.map((m) => [m.id, true])))}>⊞ Expand all</button>
             <button className="btn ghost sm" onClick={() => setOpen(Object.fromEntries(c.modules.map((m) => [m.id, false])))}>⊟ Collapse all</button></>}
           {sums && <button className="btn ghost sm" aria-pressed={allSums} onClick={() => { setAllSums(!allSums); setEx({}); }}>☰ {allSums ? 'Hide' : 'Show'} lesson summaries</button>}

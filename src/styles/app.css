@@ -520,3 +520,9 @@ details.mod summary .mmeta{display:block;font-weight:400;font-size:.8rem;color:v
 .lw.ex .lsum{display:block}
 .lcov{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:var(--page);border:1px solid var(--line);font-size:.92rem}
 .lcov b{display:block;font-size:.8rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+
+/* Course page: what you'll walk away with */
+.gains{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.gains li{position:relative;padding:10px 12px 10px 36px;background:var(--page);border-radius:10px;font-size:.92rem;line-height:1.4}
+.gains li:before{content:"✓";position:absolute;left:12px;top:9px;color:var(--purple);font-weight:700}
+.card>p.lead{font-size:1.05rem;color:var(--ink)}

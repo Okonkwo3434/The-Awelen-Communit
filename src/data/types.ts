@@ -31,6 +31,7 @@ export type Course = {
   headline?: string;
   sub?: string;
   desc?: string;
+  gains?: string[];     // "What you'll walk away with" on the course page
   icon?: string;
   price: number;        // full price, in the course currency
   currency: 'USD' | 'NGN';
