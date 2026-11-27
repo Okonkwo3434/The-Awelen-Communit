@@ -1,27 +1,41 @@
 import { Link, useParams } from 'react-router-dom';
-import { site, spaceById, trackById, coursesInTrack, cm, lessonCount } from '../data/site';
+import { site, spaceById, trackById, coursesInTrack, lessonCount } from '../data/site';
+import { priceLine } from '../components/Kit';
+import { useAuth } from '../lib/auth';
+import { IntroPage, PostSpacePage } from './community/Feed';
+import { EventSpacePage } from './community/Events';
+import { AffiliatesPage, MembersPage } from './community/People';
+import { ConsultPage, CruciblePage } from './community/Solve';
+import { EbooksPage } from './community/Library';
+import { AmldPage, PresencePage } from './community/Programmes';
 import { AnnouncementsPage, ContactPage, LinksPage, WelcomePage } from './PublicPages';
 
-/* Phase 1 pages: structure and content carried over from seed.json.
-   Each space gets its full features as it moves over (see PROGRESS.md). */
+/* Space pages: each space type has its own page (Phase 2 public side, Phase 4 community and programmes). */
 
 function Moving({ what }: { what: string }) {
-  return (
-    <p className="small muted" style={{ margin: '12px 0 0' }}>
-      🚧 {what} is being moved over from the original build. The full features arrive in a later phase.
-    </p>
-  );
+  return <p className="small muted" style={{ margin: '12px 0 0' }}>🚧 {what} arrives in a later phase.</p>;
 }
 
 export function SpacePage() {
   const { id = 'welcome' } = useParams();
   const s = spaceById(id);
-  if (!s || s.hidden) return <div className="card empty">This space no longer exists. <Link to="/">Go to Welcome</Link></div>;
+  const { teamRole } = useAuth();
+  if (!s || (s.hidden && !teamRole)) return <div className="card empty">This space no longer exists. <Link to="/">Go to Welcome</Link></div>;
 
   if (s.type === 'welcome') return <WelcomePage s={s} />;
   if (s.type === 'announce') return <AnnouncementsPage s={s} />;
   if (s.type === 'contact') return <ContactPage s={s} />;
   if (s.type === 'links') return <LinksPage s={s} />;
+  if (s.type === 'intro') return <IntroPage s={s} />;
+  if (s.type === 'post' || s.type === 'peer') return <PostSpacePage s={s} />;
+  if (s.type === 'event') return <EventSpacePage s={s} />;
+  if (s.type === 'members') return <MembersPage s={s} />;
+  if (s.type === 'affiliates') return <AffiliatesPage s={s} />;
+  if (s.type === 'crucible') return <CruciblePage s={s} />;
+  if (s.type === 'consult') return <ConsultPage s={s} />;
+  if (s.type === 'ebooks') return <EbooksPage s={s} />;
+  if (s.type === 'amld') return <AmldPage s={s} />;
+  if (s.type === 'presence') return <PresencePage s={s} />;
 
   if (s.type === 'course') {
     return (
@@ -44,7 +58,6 @@ export function SpacePage() {
       {s.id === 'welcome' && <div className="pin-head"><span className="pin-flag">📌 Pinned · Please read first</span></div>}
       <h1>{s.headline || s.name}</h1>
       {s.desc && s.desc.split('\n\n').map((para, i) => <p key={i} className={i === 0 ? 'lead' : ''}>{para}</p>)}
-      {s.id !== 'welcome' && <Moving what={`The ${s.name} space`} />}
     </article>
   );
 }
@@ -63,7 +76,13 @@ export function TrackPage() {
         {coursesInTrack(t.id).map((c) => (
           <Link key={c.id} className="mini" to={'/course/' + c.id} style={{ display: 'block' }}>
             <b>{c.title}</b><br />
-            <span className="small muted">{c.modules.length} modules · {lessonCount(c)} lessons · {c.mode === 'application' ? 'By application' : c.price > 0 ? cm(c, c.price) : 'Free'}</span>
+            <span className="small muted">{c.modules.length} modules · {lessonCount(c)} lessons · {priceLine(c)}</span>
+          </Link>
+        ))}
+        {site.spaces.filter((sp) => sp.track === t.id && !sp.hidden).map((sp) => (
+          <Link key={sp.id} className="mini" to={'/space/' + sp.id} style={{ display: 'block' }}>
+            <b>{sp.icon} {sp.name}</b><br />
+            <span className="small muted">{sp.navSub || sp.headline}</span>
           </Link>
         ))}
       </div>

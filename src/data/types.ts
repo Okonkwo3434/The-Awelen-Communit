@@ -14,12 +14,15 @@ export type Space = {
   navSub?: string;
   hidden?: boolean;
   style?: string;
+  layout?: string;
+  track?: string;
 };
 
 export type Track = { id: string; space: string; title: string; desc?: string };
 
 export type Lesson = { id: string; title: string; kind: 'video' | 'pdf' | 'quiz'; mins: number; sum?: string };
-export type Module = { id: string; title: string; lessons: Lesson[] };
+export type Module = { id: string; title: string; lessons: Lesson[]; part?: string; about?: string; outcome?: string; worksheet?: string; deliverable?: string };
+export type CoursePart = { id: string; title: string; desc?: string };
 export type Course = {
   id: string;
   space: string;
@@ -37,6 +40,7 @@ export type Course = {
   mode: 'paid' | 'free' | 'application';
   downloads: string[];
   modules: Module[];
+  parts?: CoursePart[];
 };
 export type PaymentSettings = { bankName: string; accountName: string; accountNumber: string; linpayUrl: string };
 
@@ -61,6 +65,13 @@ export type Announcement = {
   important: boolean; pinned: boolean; published_at: string;
 };
 
+export type Service = { id: string; icon: string; title: string; tag: string; desc: string };
+export type Ebook = {
+  id: string; space: string; title: string; sub: string; cat: string; price: number; pages?: number;
+  color?: string; course?: string; desc: string; toc?: string[]; author?: string; img?: string;
+};
+export type AffiliateSettings = { rate: number; cookie: number; min: number };
+
 export type SiteData = {
   rules: Rule[];
   links: SiteLink[];
@@ -72,4 +83,7 @@ export type SiteData = {
   courses: Course[];
   payments: PaymentSettings;
   creator: Creator;
+  services: Service[];
+  ebooks: Ebook[];
+  affiliate: AffiliateSettings;
 };

@@ -32,6 +32,22 @@ This file is the project's memory. Read it at the start of every session and upd
 - Supabase client is set up in `src/lib/supabase.ts`. It reads the URL and key from `.env.production` / `.env.development` (or Vercel environment variables, which take priority).
 - The original single-file build (Awelen_Community_Edited_3.html) is the blueprint. It is kept privately by Awele, not in this public repository, because it contains the admin passcode check. Upload it to the session when a phase needs it.
 
+## Phase 4: community and special spaces (27 November 2026)
+**Built and pushed.** Awele needs to run `supabase/migrations/20261127_phase4_community.sql` once (after the courses_usd script), and redeploy `paystack-verify` (it now also handles eBooks).
+- **Posts:** Community, Introduce yourself (with the template button), Portfolio Showcase, Faculty Lounge (team only) and the Executive Presence Critique Wall (EP learners and the team). Comments, likes, pin and delete for the team; members delete their own. Awele's four opening posts are carried over; the sample members' posts are not.
+- **Events:** Hangout, Live events and Private coaching sessions read from the `events` table (11 carried over: check their dates in Table Editor). Free events book straight away; paid coaching sessions are held as "awaiting payment" and the team confirms (set status to `paid` in `event_bookings`). Members can release a place.
+- **Private coaching & mentoring:** Overview, Financial coaching, Leadership coaching (each area opens at /space/coaching/<programme>/<area>), Book a session, and the free discovery-call form.
+- **Member database:** listed members (visitors see names, headline, city and stage only). "Edit my profile" with a "Show me in the Member database" switch.
+- **Affiliate members:** Find an expert (approved affiliates), Request an introduction, Apply to be an affiliate; the Affiliate marketing tab with the courses and commission. When an admin sets an application to `approved`, a referral code is made (e.g. KEMI20) and the member sees their links. Not yet: counting clicks and referred sales from `?ref=` links, and payouts.
+- **The Crucible Circle:** About, Submit a challenge (no account needed), the public Challenge board (shows a challenge once the team moves it past Received; private organisations show as "An organisation in <sector>"), Join as an expert.
+- **Business Solutions:** services, Book a consultation, and the member's own requests.
+- **eBook Collection:** designed covers, search and topics; free eBooks go on the member's shelf; paid eBooks are bought with Paystack (naira) and confirmed by `paystack-verify`. Put each PDF link in Table Editor > ebooks > pdf_url.
+- **AMLD Programme** (Overview, Studio Sprints, Faculty, For organisations) and **Executive Presence** (Overview, Curriculum, The Cohort, Critique Wall, Apply) with the four application forms.
+- **All forms** (challenges, expert interest, consultations, discovery calls, programme applications, introductions) go to one table, `enquiries`, each with a reference (CC-, EX-, BS-, PC-, AM-, IN-). The team reads them in Supabase > Table Editor > enquiries until the admin portal arrives; changing `status` there is what members see.
+- **Courses:** lesson summaries ("What this lesson covers"), module outcomes, worksheets and deliverables, Part headings for Business Model Development 1, Expand/Collapse all, from the 27 Nov single-file app.
+- **Sidebar:** Track 5 (Solve) removed. Business Solutions stays under Solve. Track 4's page lists Executive Presence, Portfolio Showcase and The Crucible Circle under its courses.
+- Tested: the SQL on a local Postgres (scripts in order, run twice) with security checks for visitors, members, an EP learner and an admin; every space and tab rendered in a browser; two forms sent and checked.
+
 ## Course update and dollar fees (27 November 2026)
 **Built and pushed.** Awele needs to run `supabase/migrations/20261127_courses_usd.sql` once in the SQL Editor (after Phase 2 and 3), and redeploy the `paystack-verify` Edge Function with the new code.
 - 24 courses across 5 tracks from the 27 Nov single-file app, including Deciding in the Fog. Lesson summaries show under each lesson title.
@@ -45,7 +61,7 @@ This file is the project's memory. Read it at the start of every session and upd
 
 2. **Public side.** Built (see above). Still to add when the admin portal arrives: a screen for reading visitor sign-ups and contact messages (they can be read in Supabase > Table Editor meanwhile).
 3. **Learning.** Built (see above). Later: certificates, a Paystack webhook as a backup confirmation, course outlines moved into the database for editing.
-4. **Community and special spaces.** Posts, events and bookings, Member database, Affiliates, eBooks, The Crucible Circle, Business Solutions, AMLD, Executive Presence, Peer-Circle.
+4. **Community and special spaces.** Built (see above).
 5. **Admin portal.** Team sign-in through Supabase (admin and editor roles), content editing, people, money, visitors list. Then switch on the locked spaces for public launch.
 
 ## Decisions made
@@ -74,6 +90,7 @@ This file is the project's memory. Read it at the start of every session and upd
 - `vercel.json` sends every address to the app, so links like `/track/t-exec` work on refresh.
 
 ## Session log
+- 2026-11-27: Phase 4 built (community and special spaces), Track 5 removed from the sidebar, course outlines brought fully in line with the 27 Nov single-file app. Next: Awele runs the courses_usd and phase4 SQL and redeploys paystack-verify; then Phase 5 (admin portal: enquiries inbox, events, bookings, affiliates, eBook files, promos).
 - 2026-11-27: Courses, tracks and USD fees brought into the React app from the 27 Nov single-file app; currency and cents added to payments. Next: Awele runs the new SQL and redeploys paystack-verify, then adds Paystack keys; then Phase 4 (community and special spaces).
 - 2026-11-24: All courses updated track by track in the single-file app (Edited_11) and saved to `docs/reference/` with a JSON export of tracks and courses. Courses now carry USD fees. Next: bring the new courses into `src/data/seed.json` and the database, and add a currency field to payments and `paystack-verify` (the Phase 3 installment plans for Starting Your New Idea and Leading Yourself First no longer apply; those courses were replaced or removed). See `docs/reference/README.md`.
 - 2026-11-20: Phase 3 learning and payments built and pushed. Awele ran the Phase 3 SQL (step 1). Paystack (steps 2 to 5) postponed to Monday 23 November; until then only bank transfer / LinPay notices show, which works without Paystack.

@@ -94,7 +94,8 @@ const TYPE_TAG: Record<string, string> = {
 export function LeftNav({ onNavigate }: { onNavigate: () => void }) {
   const [closed, setClosed] = useState<Record<string, boolean>>({});
   const toggle = (k: string) => setClosed((c) => ({ ...c, [k]: !c[k] }));
-  const spaces = site.spaces.filter((s) => !s.hidden);
+  const { teamRole } = useAuth();
+  const spaces = site.spaces.filter((s) => !s.hidden || !!teamRole);   // hidden spaces (Faculty Lounge) show for the team only
 
   return (
     <nav className="nav" aria-label="Categories, tracks and spaces">

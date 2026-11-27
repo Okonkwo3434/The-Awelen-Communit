@@ -497,3 +497,26 @@ form[data-f=prices] input{padding:6px 8px;font-size:.88rem}
 .enrolbox{border:2px solid var(--purple)}
 .paybox{border:1px dashed var(--line-strong);border-radius:10px;padding:12px}
 .lnotes p{margin:0 0 .7em}
+
+/* ---------- From the 27 Nov single-file app: course outline parts, module notes, lesson summaries ---------- */
+.ctools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.ctools .small{margin-right:auto}
+.mpart{margin:18px 0 8px;padding:10px 14px;border-left:4px solid var(--lemon-2);background:var(--lemon-soft);border-radius:8px}
+.mpart:first-child{margin-top:0}
+.mpart b{display:block;font-family:var(--serif);font-weight:400;font-size:1.05rem}
+.mpart p{margin:4px 0 0;font-size:.85rem;color:var(--ink-2)}
+.mpart+details.mod{margin-top:0}
+details.mod summary .mmeta{display:block;font-weight:400;font-size:.8rem;color:var(--ink-3);margin-top:2px}
+.minfo{padding:2px 14px 10px;font-size:.85rem;color:var(--ink-2)}
+.minfo p{margin:0 0 4px}
+.minfo p:last-child{margin:0}
+.lw .lrow{display:flex;align-items:stretch;border-top:1px solid var(--line)}
+.lw .lrow>.les{flex:1;min-width:0;border-top:0}
+.lx{border:0;background:none;padding:0 14px;color:var(--ink-3);font-size:.8rem;min-width:44px}
+.lx:hover{color:var(--purple);background:var(--page)}
+.lx span{display:inline-block;transition:transform .15s}
+.lw.ex .lx span{transform:rotate(180deg)}
+.lsum{display:none;margin:0;padding:0 14px 12px 48px;font-size:.85rem;color:var(--ink-2)}
+.lw.ex .lsum{display:block}
+.lcov{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:var(--page);border:1px solid var(--line);font-size:.92rem}
+.lcov b{display:block;font-size:.8rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}

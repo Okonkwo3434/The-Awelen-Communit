@@ -109,17 +109,20 @@ function loadPaystack(): Promise<PaystackPopType> {
   });
 }
 
-/** Opens Paystack, then asks our server to confirm the payment with Paystack and unlock the course. */
-export async function payWithPaystack(o: { courseId: string; courseTitle: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string }): Promise<'paid' | 'cancelled'> {
+/** Opens Paystack, then asks our server to confirm the payment with Paystack and unlock the item. */
+async function paystackCheckout(o: {
+  item: { course_id: string } | { ebook_id: string }; title: string; label: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string;
+}): Promise<'paid' | 'cancelled'> {
   if (!paystackKey) throw new Error('Card payments are not switched on yet.');
   const Pop = await loadPaystack();
-  const reference = 'AWL-' + o.courseId.toUpperCase().replace(/[^A-Z0-9]/g, '') + '-' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2, 6).toUpperCase();
+  const id = 'course_id' in o.item ? o.item.course_id : o.item.ebook_id;
+  const reference = 'AWL-' + id.toUpperCase().replace(/[^A-Z0-9]/g, '') + '-' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2, 6).toUpperCase();
   const ref = await new Promise<string | null>((resolve, reject) => {
     new Pop().newTransaction({
       key: paystackKey, email: o.email, amount: Math.round(o.amount * 100), currency: o.currency, reference,  // Paystack counts cents / kobo
       metadata: {
-        user_id: o.userId, course_id: o.courseId,
-        custom_fields: [{ display_name: 'Course', variable_name: 'course', value: o.courseTitle }],
+        user_id: o.userId, ...o.item,
+        custom_fields: [{ display_name: o.label, variable_name: o.label.toLowerCase(), value: o.title }],
       },
       onSuccess: (t) => resolve(t.reference || reference),
       onCancel: () => resolve(null),
@@ -127,7 +130,7 @@ export async function payWithPaystack(o: { courseId: string; courseTitle: string
     });
   });
   if (!ref) return 'cancelled';
-  const { data, error } = await db().functions.invoke('paystack-verify', { body: { reference: ref, course_id: o.courseId } });
+  const { data, error } = await db().functions.invoke('paystack-verify', { body: { reference: ref, ...o.item } });
   if (error) {
     let msg = error.message;
     try { const j = await (error as { context?: Response }).context?.json(); if (j?.error) msg = j.error; } catch { /* keep message */ }
@@ -135,6 +138,14 @@ export async function payWithPaystack(o: { courseId: string; courseTitle: string
   }
   if (!data?.ok) throw new Error('We could not confirm the payment. Reference: ' + ref);
   return 'paid';
+}
+
+export function payWithPaystack(o: { courseId: string; courseTitle: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string }) {
+  return paystackCheckout({ item: { course_id: o.courseId }, title: o.courseTitle, label: 'Course', amount: o.amount, currency: o.currency, email: o.email, userId: o.userId });
+}
+
+export function payEbookWithPaystack(o: { ebookId: string; title: string; amount: number; email: string; userId: string }) {
+  return paystackCheckout({ item: { ebook_id: o.ebookId }, title: o.title, label: 'eBook', amount: o.amount, currency: 'NGN', email: o.email, userId: o.userId });
 }
 
 /* ---------- Video and PDF links ---------- */

@@ -22,6 +22,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<SpacePage />} />
         <Route path="/space/:id" element={<SpacePage />} />
+        <Route path="/space/:id/:sub" element={<SpacePage />} />
+        <Route path="/space/:id/:sub/:sub2" element={<SpacePage />} />
         <Route path="/track/:id" element={<TrackPage />} />
         <Route path="/course/:id" element={<CoursePage />} />
         <Route path="/course/:id/:lessonId" element={<CoursePage />} />

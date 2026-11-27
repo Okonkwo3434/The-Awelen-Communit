@@ -293,8 +293,7 @@
       "img": "",
       "theme": "lemon",
       "headline": "Hands-on help for real businesses",
-      "desc": "Sometimes you don't need another course. You need a partner. Book a consultation for business setup, turnaround, investors, talent, incubation or private coaching.",
-      "track": "t-solve"
+      "desc": "Sometimes you don't need another course. You need a partner. Book a consultation for business setup, turnaround, investors, talent, incubation or private coaching."
     },
     {
       "group": "programmes",
@@ -369,12 +368,6 @@
       "space": "courses",
       "title": "Advanced Management & Leadership Development (AMLD)",
       "desc": "For founders and senior managers ready to run the business and lead leaders. Six-week Studio Sprints taught by Professors of Practice, finished with the Executive Presence capstone."
-    },
-    {
-      "id": "t-solve",
-      "space": "courses",
-      "title": "Solve",
-      "desc": "Bring a real challenge and get hands-on help for your business from experienced practitioners."
     }
   ],
   "creator": {
@@ -756,7 +749,10 @@
               "mins": 0,
               "sum": "How milestones, tasks and assumptions couple together: each assumption lands on a block of the Business Model Canvas, each milestone becomes a test, and each task becomes a key activity. A first look at the nine blocks the rest of the course will walk through."
             }
-          ]
+          ],
+          "part": "Part A",
+          "outcome": "The participant has their idea on one page, a first set of milestones, a task list and a written list of assumptions. These are the raw materials that later get coupled together into the business model.",
+          "worksheet": "Founder's starter pack (idea on a page, milestone map, task list and assumptions register)."
         },
         {
           "id": "m-snb-2",
@@ -804,7 +800,10 @@
               "mins": 0,
               "sum": "A check that the business you are about to design actually serves the vision, mission and values you wrote."
             }
-          ]
+          ],
+          "part": "Part A",
+          "outcome": "The participant has a clear vision, mission and set of values, a mantra, tagline and motto that people can remember, and first-year goals that act as filters for every model decision that follows.",
+          "worksheet": "Purpose statement (vision, mission, values, mantra, tagline, motto and three goals for year one). The tagline is carried forward into Module 5, Brand Identity."
         },
         {
           "id": "m-snb-3",
@@ -852,7 +851,10 @@
               "mins": 0,
               "sum": "How to talk to real people without leading them, and how to record what you learn."
             }
-          ]
+          ],
+          "part": "Part B",
+          "outcome": "The participant can name their priority customer segment, describe them as a persona, and explain the job they are trying to get done.",
+          "worksheet": "Customer profile and persona for the first segment."
         },
         {
           "id": "m-snb-4",
@@ -900,7 +902,10 @@
               "mins": 0,
               "sum": "A one-sentence promise that customers understand in five seconds."
             }
-          ]
+          ],
+          "part": "Part B",
+          "outcome": "The participant has a clear value proposition that fits their customer profile and stands apart from alternatives.",
+          "worksheet": "Value Proposition Canvas and statement."
         },
         {
           "id": "m-snb-5",
@@ -948,7 +953,10 @@
               "mins": 0,
               "sum": "Finding your brand voice, turning the value proposition and tagline into key messages, writing the elevator pitch, and keeping every channel consistent through a simple communication plan."
             }
-          ]
+          ],
+          "part": "Part B",
+          "outcome": "The participant has a name, logo, stationery, web presence, workspace plan and core messages that all express the same promise, ready to use with customers, partners and investors.",
+          "worksheet": "Brand identity kit (name checks, logo brief, stationery list, website plan, workspace choice and key messages)."
         },
         {
           "id": "m-snb-6",
@@ -996,7 +1004,10 @@
               "mins": 0,
               "sum": "Keeping customers coming back, and why keeping a customer is cheaper than finding a new one."
             }
-          ]
+          ],
+          "part": "Part B",
+          "outcome": "The participant knows how customers will find, buy, receive and stay with the product, and what kind of relationship each segment expects.",
+          "worksheet": "Customer journey map with channels and relationship type at each stage."
         },
         {
           "id": "m-snb-7",
@@ -1044,7 +1055,10 @@
               "mins": 0,
               "sum": "A simple, honest first forecast built from customer numbers and price, not hope."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant has chosen their revenue streams and set a starting price they can defend.",
+          "worksheet": "Revenue stream choices, price sheet and 12-month revenue estimate."
         },
         {
           "id": "m-snb-8",
@@ -1092,7 +1106,10 @@
               "mins": 0,
               "sum": "Setting a few key performance indicators and checking whether you have the capacity to deliver as you grow."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant knows the few things the business must do excellently, and how those activities will be run and measured.",
+          "worksheet": "Key activities map (core, supporting, in-house, outsourced, with KPIs)."
         },
         {
           "id": "m-snb-9",
@@ -1140,7 +1157,10 @@
               "mins": 0,
               "sum": "Choosing how to get each resource on a lean budget, and when to own rather than access."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant has listed the assets the model depends on, knows which ones they already have, and has a plan to close the gaps.",
+          "worksheet": "Resource inventory and gap list."
         },
         {
           "id": "m-snb-10",
@@ -1188,7 +1208,10 @@
               "mins": 0,
               "sum": "Regular reviews, handling disagreements, and keeping partnerships healthy as both sides grow."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant has a partner map, knows what each partner brings and gets, and has a plan to manage those relationships.",
+          "worksheet": "Partner map and partner evaluation scorecard."
         },
         {
           "id": "m-snb-11",
@@ -1236,7 +1259,10 @@
               "mins": 0,
               "sum": "Turning costs into a monthly budget and a 12-month cash flow, and why profitable businesses still fail when cash runs out."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant knows what the business costs to start and to run, and how those costs behave as the business grows.",
+          "worksheet": "Start-up cost list, monthly cost budget and 12-month cash flow."
         },
         {
           "id": "m-snb-12",
@@ -1284,7 +1310,9 @@
               "mins": 0,
               "sum": "The four levers (raise the price, cut the variable cost, keep customers longer and win them more cheaply) and what to watch as you scale."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant can calculate contribution margin, break-even, customer acquisition cost, lifetime value and payback for their own business, and knows which levers improve them."
         },
         {
           "id": "m-snb-13",
@@ -1318,7 +1346,27 @@
               "mins": 0,
               "sum": "Giving and receiving structured feedback, and choosing the riskiest beliefs to carry into testing."
             }
-          ]
+          ],
+          "part": "Part C",
+          "outcome": "The participant presents a complete first-draft business model, backed by a finished Course 1 workbook, and is ready to test it in Course 2.",
+          "deliverable": "Completed Course 1 workbook and a five-minute presentation of the first-draft model."
+        }
+      ],
+      "parts": [
+        {
+          "id": "Part A",
+          "title": "Part A — Foundations: think before you build",
+          "desc": "Part A captures the first thinking of a new business owner as milestones, tasks and assumptions, and then sets the purpose that will steer every later choice."
+        },
+        {
+          "id": "Part B",
+          "title": "Part B — Designing the model: who you serve, what you give them and how they know you",
+          "desc": "Part B builds the customer side of the canvas, and the identity customers will recognise. Everything here is about desirability: will anyone want this, and will they remember you?"
+        },
+        {
+          "id": "Part C",
+          "title": "Part C — Making the model work: money in, operations, money out",
+          "desc": "Part C builds the business side of the canvas. It answers two questions: can we deliver this (feasibility), and can we make money doing it (viability)? The order matters: revenue first, then what we must do, own and share with others to deliver it, then what all of that costs, then whether each sale makes money."
         }
       ]
     },
@@ -1390,7 +1438,8 @@
               "mins": 0,
               "sum": "Placing each statement by how important it is and how little evidence you have, rating each lens red, amber or green, and choosing which statements to test first."
             }
-          ]
+          ],
+          "outcome": "The participant has rewritten every key assumption as a testable \"We believe…\" statement, sorted each one under desirability, feasibility or viability, and ranked them by risk."
         },
         {
           "id": "m-bmd2-2",
@@ -1438,7 +1487,9 @@
               "mins": 0,
               "sum": "Marking each statement as confirmed, disproved or unclear, updating the scorecard, and keeping a simple learning log."
             }
-          ]
+          ],
+          "outcome": "The participant has run at least one cheap test on each of their riskiest \"We believe…\" statements and updated the scorecard with the results.",
+          "worksheet": "Test cards and learning log."
         },
         {
           "id": "m-bmd2-3",
@@ -1486,7 +1537,9 @@
               "mins": 0,
               "sum": "Running user tests, gathering feedback and updating the scorecard."
             }
-          ]
+          ],
+          "outcome": "The participant has built a prototype of the product and of the business model, and put both in front of real customers.",
+          "worksheet": "Prototype plan and user test notes."
         },
         {
           "id": "m-bmd2-4",
@@ -1534,7 +1587,9 @@
               "mins": 0,
               "sum": "Keeping the team, customers and partners with you when the model shifts."
             }
-          ]
+          ],
+          "outcome": "The participant can spot outside forces that threaten their model and has a plan for how the model would bend rather than break.",
+          "worksheet": "Environment scan, three scenarios with scorecards, and a resilience plan."
         },
         {
           "id": "m-bmd2-5",
@@ -1582,7 +1637,9 @@
               "mins": 0,
               "sum": "What changes when you grow, and how to know you are ready to scale."
             }
-          ]
+          ],
+          "outcome": "The participant can decide when to persevere, adjust or pivot, and has a routine for reviewing the model regularly.",
+          "worksheet": "Model review routine and pivot decision record."
         },
         {
           "id": "m-bmd2-6",
@@ -1616,7 +1673,9 @@
               "mins": 0,
               "sum": "Setting the next milestones, tasks and \"We believe…\" tests after the course ends."
             }
-          ]
+          ],
+          "outcome": "The participant presents a complete, evidence-backed business model for their own venture.",
+          "deliverable": "Final business model pack and short presentation."
         }
       ]
     },
@@ -2351,7 +2410,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Finance as a leadership skill, and how a business records what happens to its money."
         },
         {
           "id": "m-fin-2",
@@ -2393,7 +2453,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "The three statements as three camera angles on one business."
         },
         {
           "id": "m-fin-3",
@@ -2435,7 +2496,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Moving from reading the numbers to interpreting them."
         },
         {
           "id": "m-fin-4",
@@ -2477,7 +2539,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Budgets, forecasts and measures as steering tools, not accounting chores."
         },
         {
           "id": "m-fin-5",
@@ -2519,7 +2582,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Using the diagnosis to make real money decisions."
         },
         {
           "id": "m-fin-6",
@@ -2561,7 +2625,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Reporting numbers so a unit, department or group understands them in a minute."
         },
         {
           "id": "m-fin-7",
@@ -2603,7 +2668,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Making sure the business survives shocks and the habit lasts."
         }
       ]
     },
@@ -3290,7 +3356,8 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Growth adds revenue; scaling adds revenue faster than cost and complexity."
         },
         {
           "id": "m-scale-2",
@@ -3603,7 +3670,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Move leaders from reacting to events to seeing the structures that produce them.",
+          "deliverable": "A reframed problem statement for the Live Challenge."
         },
         {
           "id": "m-systems-2",
@@ -3645,7 +3714,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Give leaders simple mapping tools they can use alone or with their teams, with pen, paper and a flip chart.",
+          "deliverable": "A causal loop map and an actor map of the Live Challenge."
         },
         {
           "id": "m-systems-3",
@@ -3687,7 +3758,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Teach the classic systems archetypes so leaders can recognise a trap early and know the way out.",
+          "deliverable": "An archetype diagnosis card (which trap, its warning signs and the way out)."
         },
         {
           "id": "m-systems-4",
@@ -3729,7 +3802,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Show leaders where small, well-placed changes make large, lasting differences, and how to test an intervention before scaling it.",
+          "deliverable": "A tested intervention and a 90-day pilot plan."
         },
         {
           "id": "m-systems-5",
@@ -3771,7 +3846,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Align structure, processes and culture around the intervention, and remove the hidden forces that pull the organisation back to its old ways.",
+          "deliverable": "A redesign blueprint for the Live Challenge."
         },
         {
           "id": "m-systems-6",
@@ -3813,7 +3890,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Equip leaders to lead systemic change, learn from it as it unfolds, scale what works and make it survive their own departure.",
+          "deliverable": "The Systems Change Brief."
         }
       ]
     },
@@ -3874,7 +3953,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Build the habit of reaching for a pen and a shared surface the moment a problem gets complicated, and give leaders the basic shapes and first tools to do it.",
+          "deliverable": "A one-page picture of the Live Challenge."
         },
         {
           "id": "m-visual-2",
@@ -3916,7 +3997,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Help leaders see the whole before they act on the parts: the strategy, the vision, the model and the place.",
+          "deliverable": "A big-picture map of the Live Challenge."
         },
         {
           "id": "m-visual-3",
@@ -3958,7 +4041,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Give leaders visual tools to see the truth about their situation, inside and out, past and present, before they decide.",
+          "deliverable": "A diagnosis wall for the Live Challenge."
         },
         {
           "id": "m-visual-4",
@@ -4000,7 +4085,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Give leaders visual tools to choose well, under pressure and uncertainty, and to make the choice clear to everyone.",
+          "deliverable": "A decision canvas for the Live Challenge."
         },
         {
           "id": "m-visual-5",
@@ -4042,7 +4129,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Help leaders see the people side of every decision: who holds influence, how they connect, what they experience and how to bring them along.",
+          "deliverable": "An engagement plan for the Live Challenge."
         },
         {
           "id": "m-visual-6",
@@ -4084,7 +4173,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Help leaders communicate decisions so they land and travel, and turn visual thinking into a daily habit and a team culture.",
+          "deliverable": "The Visual Leadership Playbook."
         }
       ]
     },
@@ -4729,7 +4820,8 @@
               "mins": 0,
               "sum": "Workshop: review three of your own big decisions honestly, using the Head, the Heart, Models and Tools."
             }
-          ]
+          ],
+          "about": "This module frames the problem and introduces Head, Heart, Models and Tools."
         },
         {
           "id": "m-decide-2",
@@ -4777,7 +4869,8 @@
               "mins": 0,
               "sum": "Breaking a problem down to what is certainly true, challenging the rest and rebuilding. Told through SpaceX and the cost of a rocket, the Challenger launch decision, and the Currency Redesign's assumption of \"enough new cash\"."
             }
-          ]
+          ],
+          "about": "This module is about the reasoning side of judgement, and how it fails senior leaders."
         },
         {
           "id": "m-decide-3",
@@ -4839,7 +4932,8 @@
               "mins": 0,
               "sum": "Living with hard decisions, \"moral residue\" and staying whole as a leader. Told through the Boeing 737 MAX: what happens when schedule pressure silences conscience."
             }
-          ]
+          ],
+          "about": "Before a leader can decide well for others, they need to know what is going on inside themselves."
         },
         {
           "id": "m-decide-4",
@@ -4922,7 +5016,8 @@
               "mins": 0,
               "sum": "Layoffs, closures, restructuring and hard people decisions done with dignity: fairness first, courage to act, empathy in execution. Pandemic-era layoffs handled well and badly, the alternatives to layoffs, and the toxic high performer."
             }
-          ]
+          ],
+          "about": "When a leader decides for millions of people, the question is no longer only whether the decision is right, but who carries its cost, when, and with what dignity. This is where policymakers must pause."
         },
         {
           "id": "m-decide-5",
@@ -4991,7 +5086,8 @@
               "mins": 0,
               "sum": "Awareness, Desire, Knowledge, Ability and Reinforcement. Desire is an emotional stage that links back to the Heart. The slow uptake of central bank digital currencies set beside M-Pesa's rapid spread."
             }
-          ]
+          ],
+          "about": "Models help you understand what you are facing: first the situation itself, then the people who must move once the decision is made, because a decision nobody adopts hasn't really been made."
         },
         {
           "id": "m-decide-6",
@@ -5053,7 +5149,8 @@
               "mins": 0,
               "sum": "Mapping who benefits, who is harmed and who holds influence and interest, putting Module 4 into practice. An impact-scan exercise on the Subsidy Reform: urban commuters, rural farmers, transporters, the state and future generations."
             }
-          ]
+          ],
+          "about": "Tools help leaders act: test the decision, weigh it, commit to it, and learn from it."
         },
         {
           "id": "m-decide-7",
@@ -5115,7 +5212,8 @@
               "mins": 0,
               "sum": "Write your personal charter across Head, Heart, Models and Tools, a 90-day roadmap for self, team and organisation, and a policy brief on one anchor case for an incoming government. Then the legacy close."
             }
-          ]
+          ],
+          "about": "The four parts joined in the conditions leaders actually face: groups, pressure and public scrutiny. It closes with the culture that sustains good decisions and your own plan."
         }
       ]
     },
@@ -5182,7 +5280,9 @@
               "mins": 0,
               "sum": "Review your past breakthroughs, see why they faded, and complete your balance sheet."
             }
-          ]
+          ],
+          "about": "Why big wins fade, and how to measure what you really own.",
+          "deliverable": "Your breakthrough history and a one-page personal balance sheet."
         },
         {
           "id": "m-wealth-2",
@@ -5230,7 +5330,9 @@
               "mins": 0,
               "sum": "Write the rules you, your household and your business will live by."
             }
-          ]
+          ],
+          "about": "Put rules, not willpower, between your money and your spending.",
+          "deliverable": "Your money rules on one page."
         },
         {
           "id": "m-wealth-3",
@@ -5278,7 +5380,9 @@
               "mins": 0,
               "sum": "Audit what you earn and own, and set a five-year plan to shift the balance."
             }
-          ]
+          ],
+          "about": "Turn income that stops when you stop into assets that keep working.",
+          "deliverable": "An income-versus-assets audit and a five-year asset plan."
         },
         {
           "id": "m-wealth-4",
@@ -5326,7 +5430,9 @@
               "mins": 0,
               "sum": "Draw who owns what, who decides, and who advises."
             }
-          ]
+          ],
+          "about": "Set up the ownership, rules and advisers that let wealth grow without depending on you.",
+          "deliverable": "A one-page map of your wealth structure."
         },
         {
           "id": "m-wealth-5",
@@ -5374,7 +5480,9 @@
               "mins": 0,
               "sum": "Set your spending rule, your diversification targets and the documents to complete."
             }
-          ]
+          ],
+          "about": "Protect wealth from the three things that destroy it: overspending, concentration and the unexpected.",
+          "deliverable": "Your wealth preservation plan and documents checklist."
         },
         {
           "id": "m-wealth-6",
@@ -5422,7 +5530,9 @@
               "mins": 0,
               "sum": "Choose three initiatives that strengthen your business and the people around it."
             }
-          ]
+          ],
+          "about": "Build wealth with the people around you, not at their expense.",
+          "deliverable": "A stakeholder map and a three-initiative impact plan."
         },
         {
           "id": "m-wealth-7",
@@ -5470,7 +5580,9 @@
               "mins": 0,
               "sum": "Bring every worksheet together into one plan, and write a letter to the next generation."
             }
-          ]
+          ],
+          "about": "Pass on capability, values and structures, not just money.",
+          "deliverable": "Your Sustainable Wealth Plan and a letter to the next generation."
         }
       ]
     },
@@ -6537,7 +6649,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "What presence really is, why it matters, and where you stand today.",
+          "deliverable": "A clear, honest picture of your current presence and a plan to grow it."
         },
         {
           "id": "m-ep-found-2",
@@ -6579,7 +6693,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Speaking and writing so that busy, senior people listen and act.",
+          "deliverable": "A three-minute recorded executive briefing, reviewed against the programme rubric."
         },
         {
           "id": "m-ep-found-3",
@@ -6621,7 +6737,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Holding your own where decisions are made.",
+          "deliverable": "A recorded mock board presentation with live Q&A."
         },
         {
           "id": "m-ep-found-4",
@@ -6663,7 +6781,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "The quiet skills that open doors across cultures.",
+          "deliverable": "A hosting plan for a high-level visit, and (Cohort) live practice at the Presence Dinner."
         },
         {
           "id": "m-ep-found-5",
@@ -6705,7 +6825,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Making sure what people see matches who you are and where you’re going.",
+          "deliverable": "A refreshed LinkedIn profile and a one-page personal brand statement."
         },
         {
           "id": "m-ep-found-6",
@@ -6753,7 +6875,9 @@
               "kind": "video",
               "mins": 0
             }
-          ]
+          ],
+          "about": "Staying composed when the stakes and the cameras are on you.",
+          "deliverable": "A recorded mock media interview, including a tough crisis question."
         }
       ]
     },
@@ -7432,5 +7556,163 @@
     "accountName": "",
     "accountNumber": "",
     "linpayUrl": ""
+  },
+  "services": [
+    {
+      "id": "setup",
+      "icon": "🏗️",
+      "title": "Structure setup",
+      "tag": "Strong businesses are built on strong structures.",
+      "desc": "Get your business set up properly: the right legal and organisational structure, governance, roles, policies and systems, so you can grow, raise capital and operate with confidence."
+    },
+    {
+      "id": "turn",
+      "icon": "🔄",
+      "title": "Business renewal & turnaround",
+      "tag": "Struggling isn’t the end of the story.",
+      "desc": "When a business is losing money, momentum or direction, we diagnose what is wrong, stabilise the situation and build a practical plan for renewal and recovery. Handled in strict confidence."
+    },
+    {
+      "id": "invest",
+      "icon": "🤝",
+      "title": "Investors network management",
+      "tag": "The right investor is more than money.",
+      "desc": "We help businesses prepare for, find and manage relationships with investors, and help investors find well-prepared opportunities. Clear reporting, strong relationships and trust on both sides."
+    },
+    {
+      "id": "incub",
+      "icon": "🚀",
+      "title": "Incubator & accelerator programmes",
+      "tag": "Great startups aren’t built alone.",
+      "desc": "Structure, mentoring, tools and a community for early-stage and growing businesses to move faster, from validating an idea to becoming investor-ready."
+    },
+    {
+      "id": "talent",
+      "icon": "🎯",
+      "title": "Talent hunt",
+      "tag": "Your business is only as strong as your people.",
+      "desc": "We help you find, assess and attract the right people for key roles, from leadership positions to specialist skills, so your team keeps up with your growth."
+    },
+    {
+      "id": "coach",
+      "icon": "🧑‍🏫",
+      "title": "Private coaching",
+      "tag": "Your goals. Your pace. One-to-one.",
+      "desc": "Work one-to-one with Awele on your money and your leadership: financial planning, investments, insurance and estate planning, or management, strategy, communication, presence and sales leadership. Starts with a free discovery call."
+    }
+  ],
+  "ebooks": [
+    {
+      "id": "eb1",
+      "space": "ebooks",
+      "title": "The Strategic Advisor’s Framework",
+      "sub": "How to think clearly about hard business decisions",
+      "cat": "Leadership & strategy",
+      "price": 0,
+      "pages": 42,
+      "color": "ink",
+      "course": "",
+      "desc": "A short, practical guide to framing a hard decision, weighing your options and choosing a course of action you can explain to others.",
+      "toc": [
+        "Start with the real question",
+        "Separate facts from fears",
+        "Three options, not one",
+        "Deciding and moving on"
+      ]
+    },
+    {
+      "id": "eb2",
+      "space": "ebooks",
+      "title": "Finding Meaning in Life",
+      "sub": "A companion workbook to Idea Discovery",
+      "cat": "Idea discovery",
+      "price": 5000,
+      "pages": 68,
+      "color": "purple",
+      "course": "idea",
+      "desc": "Exercises and reflection pages that walk alongside Module 1 of Idea Discovery, from your desire for a new life to the idea that is truly yours.",
+      "toc": [
+        "Your desire for a new life",
+        "Passion and purpose",
+        "Your clear vision",
+        "Your first idea on paper"
+      ]
+    },
+    {
+      "id": "eb3",
+      "space": "ebooks",
+      "title": "Power in What You Know",
+      "sub": "Turning knowledge into business momentum",
+      "cat": "Idea discovery",
+      "price": 5000,
+      "pages": 74,
+      "color": "lemon",
+      "course": "idea",
+      "desc": "Why what you already know is worth more than you think, and how to put it to work in a business of your own.",
+      "toc": [
+        "The four dimensions of knowledge power",
+        "Knowing your value",
+        "Knowledge beats research",
+        "Applying your knowledge"
+      ]
+    },
+    {
+      "id": "eb4",
+      "space": "ebooks",
+      "title": "The Entrepreneurial Mindset",
+      "sub": "Thinking like the first business",
+      "cat": "Mindset",
+      "price": 6500,
+      "pages": 90,
+      "color": "crimson",
+      "course": "idea",
+      "desc": "Failure, patience, focus and staying power: the inner work that keeps founders going when nothing seems to be working.",
+      "toc": [
+        "You are the first business",
+        "The war between your two selves",
+        "Patience as strategy",
+        "What keeps you going"
+      ]
+    },
+    {
+      "id": "eb5",
+      "space": "ebooks",
+      "title": "Leading Yourself First",
+      "sub": "Discipline, decisions and character",
+      "cat": "Leadership & strategy",
+      "price": 7500,
+      "pages": 110,
+      "color": "lilac",
+      "course": "",
+      "desc": "Build the habits, judgement and character that make people want to follow you, starting with how you lead yourself when no one is watching.",
+      "toc": [
+        "Leading when no one is watching",
+        "Decisions under pressure",
+        "Your leadership commitments"
+      ]
+    },
+    {
+      "id": "eb6",
+      "space": "ebooks",
+      "title": "Pricing for Profit",
+      "sub": "Setting prices that keep you in business",
+      "cat": "Starting a business",
+      "price": 4500,
+      "pages": 56,
+      "color": "purple",
+      "course": "snb",
+      "desc": "How to price for a Nigerian market without racing to the bottom, with worked examples for products and services.",
+      "toc": [
+        "Why cheapest rarely wins",
+        "Know your real costs",
+        "Pricing a service",
+        "When and how to raise prices"
+      ]
+    }
+  ],
+  "affiliate": {
+    "rate": 20,
+    "cookie": 30,
+    "min": 10000
   }
 }

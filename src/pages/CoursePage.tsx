@@ -1,4 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react';
+import type { Module } from '../data/types';
 import { Link, useParams } from 'react-router-dom';
 import { cm, courseById, flatLessons, site, trackById } from '../data/site';
 import type { Course, Lesson } from '../data/types';
@@ -63,18 +64,7 @@ export function CoursePage() {
       <section className="card">
         <div className="spread"><h2 style={{ margin: 0 }}>Course content</h2>{access && <span className="small muted">{pct}% complete</span>}</div>
         {access && <div className="progress" style={{ margin: '10px 0 14px' }}><span style={{ width: pct + '%' }} /></div>}
-        {c.modules.map((m) => (
-          <details className="mod" open key={m.id}>
-            <summary>{m.title}</summary>
-            {m.lessons.map((l) => {
-              const i = flat.indexOf(l), open = isOpen(l), ok = st.done.has(l.id);
-              const inner = <><span className={'st' + (ok ? ' ok' : '')}>{ok ? '✓' : open ? i + 1 : '🔒'}</span>{l.title}<span className="k">{l.kind}{l.mins ? ' · ' + l.mins + ' min' : ''}</span></>;
-              return open
-                ? <Link key={l.id} className={'les' + (l.id === lessonId ? ' cur' : '')} to={`/course/${c.id}/${l.id}`}>{inner}</Link>
-                : <div key={l.id} className="les locked">{inner}</div>;
-            })}
-          </details>
-        ))}
+        <Outline c={c} lessonId={lessonId} isOpen={isOpen} done={st.done} />
         {access && pct === 100 && (
           <div className="notice" style={{ marginTop: 14 }}>
             🎉 You completed every lesson.{st.enrollment && st.enrollment.amount_paid < st.enrollment.amount_due ? ' Your certificate is ready once all installments are paid.' : ' Well done!'}
@@ -294,7 +284,7 @@ function LessonView({ c, lesson, open, access, done, flat, onDone }: { c: Course
     <div className="card" id="lesson">
       <span className="small muted">Lesson {i + 1} of {flat.length}</span>
       <h2>{lesson.title}</h2>
-      {lesson.sum && <p className="muted" style={{ marginTop: -4 }}>{lesson.sum}</p>}
+      {lesson.sum && <div className="lcov"><b>What this lesson covers</b><span>{lesson.sum}</span></div>}
       {body}
       {msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{msg}</p>}
       {open && (
@@ -304,5 +294,71 @@ function LessonView({ c, lesson, open, access, done, flat, onDone }: { c: Course
         </div>
       )}
     </div>
+  );
+}
+
+/* ---------- Course outline: parts, module notes, collapsible modules and lesson summaries ---------- */
+function Outline({ c, lessonId, isOpen, done }: { c: Course; lessonId?: string; isOpen: (l: Lesson) => boolean; done: Set<string> }) {
+  const flat = flatLessons(c);
+  const long = c.modules.length > 3 || flat.length > 18, sums = flat.some((l) => l.sum);
+  const focus = lessonId || flat.find((l) => !done.has(l.id))?.id || '';
+  const focusMi = Math.max(0, c.modules.findIndex((m) => m.lessons.some((l) => l.id === focus)));
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [ex, setEx] = useState<Record<string, boolean>>({});
+  const [allSums, setAllSums] = useState(false);
+  const isMod = (m: Module, mi: number) => m.lessons.some((l) => l.id === lessonId) || (m.id in open ? open[m.id] : (!long || mi === focusMi));
+  let lastPart = '';
+  return (
+    <>
+      {(long || sums) && (
+        <div className="ctools">
+          <span className="small muted">{c.modules.length} modules · {flat.length} lessons</span>
+          {long && <><button className="btn ghost sm" onClick={() => setOpen(Object.fromEntries(c.modules.map((m) => [m.id, true])))}>⊞ Expand all</button>
+            <button className="btn ghost sm" onClick={() => setOpen(Object.fromEntries(c.modules.map((m) => [m.id, false])))}>⊟ Collapse all</button></>}
+          {sums && <button className="btn ghost sm" aria-pressed={allSums} onClick={() => { setAllSums(!allSums); setEx({}); }}>☰ {allSums ? 'Hide' : 'Show'} lesson summaries</button>}
+        </div>
+      )}
+      {c.modules.map((m, mi) => {
+        let head = null;
+        if (m.part && m.part !== lastPart) {
+          lastPart = m.part;
+          const p = (c.parts || []).find((x) => x.id === m.part);
+          head = <div className="mpart"><b>{p ? p.title : m.part}</b>{p?.desc && <p>{p.desc}</p>}</div>;
+        }
+        const meta = [`${m.lessons.length} lesson${m.lessons.length === 1 ? '' : 's'}`, m.worksheet && 'worksheet', m.deliverable && 'deliverable'].filter(Boolean).join(' · ');
+        const info = m.about || m.outcome || m.worksheet || m.deliverable;
+        return (
+          <div key={m.id}>
+            {head}
+            <details className="mod" open={isMod(m, mi)} onToggle={(e) => { const v = (e.currentTarget as HTMLDetailsElement).open; if (v !== isMod(m, mi)) setOpen((o) => ({ ...o, [m.id]: v })); }}>
+              <summary><span>{m.title}</span><span className="mmeta">{meta}</span></summary>
+              {info && (
+                <div className="minfo">
+                  {m.about && <p><i>{m.about}</i></p>}
+                  {m.outcome && <p><b>By the end:</b> {m.outcome}</p>}
+                  {m.worksheet && <p><b>📝 Worksheet:</b> {m.worksheet}</p>}
+                  {m.deliverable && <p><b>🎯 Deliverable:</b> {m.deliverable}</p>}
+                </div>
+              )}
+              {m.lessons.map((l) => {
+                const i = flat.indexOf(l), op = isOpen(l), ok = done.has(l.id);
+                const inner = <><span className={'st' + (ok ? ' ok' : '')}>{ok ? '✓' : op ? i + 1 : '🔒'}</span>{l.title}<span className="k">{l.kind}{l.mins ? ' · ' + l.mins + ' min' : ''}</span></>;
+                const row = op
+                  ? <Link className={'les' + (l.id === lessonId ? ' cur' : '')} to={`/course/${c.id}/${l.id}`}>{inner}</Link>
+                  : <div className="les locked">{inner}</div>;
+                if (!l.sum) return <div key={l.id}>{row}</div>;
+                const shown = l.id in ex ? ex[l.id] : allSums;
+                return (
+                  <div className={'lw' + (shown ? ' ex' : '')} key={l.id}>
+                    <div className="lrow">{row}<button className="lx" aria-expanded={shown} aria-label={`What “${l.title}” covers`} title="What this lesson covers" onClick={() => setEx((x) => ({ ...x, [l.id]: !shown }))}><span aria-hidden="true">▾</span></button></div>
+                    <p className="lsum">{l.sum}</p>
+                  </div>
+                );
+              })}
+            </details>
+          </div>
+        );
+      })}
+    </>
   );
 }
