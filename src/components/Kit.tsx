@@ -5,15 +5,10 @@ import type { Course, Space } from '../data/types';
 import { cm, lessonCount } from '../data/site';
 import { initials } from '../pages/PublicPages';
 
-/** Space heading card: headline, description and anything extra (stats, tabs, buttons). */
-export function SpaceHead({ s, children }: { s: Space; children?: ReactNode }) {
-  return (
-    <section className="card">
-      <h1>{s.headline || s.name}</h1>
-      {s.desc && s.desc.split('\n\n').map((p, i) => <p key={i} className={i === 0 ? 'lead' : ''} style={{ marginBottom: 0 }}>{p}</p>)}
-      {children}
-    </section>
-  );
+/** Space heading: the headline and description are in the space banner above, so this only shows extras
+    (stats, tabs, buttons) in a card, as in the single-file app. */
+export function SpaceHead({ children }: { s: Space; children?: ReactNode }) {
+  return children ? <section className="card xtra">{children}</section> : null;
 }
 
 /** Tabs inside a space: /space/:id, /space/:id/:sub */

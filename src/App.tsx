@@ -4,6 +4,7 @@ import { Layout } from './components/Shell';
 import { SimplePage, SpacePage, TrackPage } from './pages/Pages';
 import { CoursePage } from './pages/CoursePage';
 import { AccountPage, JoinPage, ResetPasswordPage } from './pages/PublicPages';
+import { AdminPage } from './pages/admin/Admin';
 
 function ScrollTop() {
   const { pathname } = useLocation();
@@ -31,7 +32,8 @@ export default function App() {
         <Route path="/account" element={<AccountPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/plans" element={<SimplePage title="Teach on Awelen" text="Plans for other creators who want to teach on Awelen." />} />
-        <Route path="/admin/*" element={<SimplePage title="Admin access" text="The admin portal will open only after a team sign-in through Supabase." />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/admin/:tab" element={<AdminPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>

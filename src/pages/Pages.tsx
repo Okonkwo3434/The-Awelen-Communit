@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { site, spaceById, trackById, coursesInTrack, lessonCount } from '../data/site';
+import { site, spaceById, trackById, trackHref, trackItems, lessonCount } from '../data/site';
 import { priceLine } from '../components/Kit';
 import { useAuth } from '../lib/auth';
 import { IntroPage, PostSpacePage } from './community/Feed';
@@ -40,14 +40,17 @@ export function SpacePage() {
   if (s.type === 'course') {
     return (
       <section className="card">
-        <h1>{s.headline || s.name}</h1>
-        {s.desc && <p className="lead">{s.desc}</p>}
+        <h2 style={{ marginTop: 0 }}>All tracks at a glance</h2>
         <div className="stack">
-          {site.tracks.map((t, i) => (
-            <Link key={t.id} className="mini" to={'/track/' + t.id} style={{ display: 'block' }}>
-              <b>Track {i + 1}: {t.title}</b><br /><span className="small muted">{coursesInTrack(t.id).length} courses</span>
-            </Link>
-          ))}
+          {site.tracks.filter((t) => t.space === s.id).map((t, i) => {
+            const its = trackItems(t), nc = its.filter((x) => x.k === 'course').length;
+            return (
+              <Link key={t.id} className="mini" to={trackHref(t)} style={{ display: 'block' }}>
+                <b>Track {i + 1}: {t.title}</b><br />
+                <span className="small muted">{t.home ? its.map((x) => x.title).join(' · ') : `${nc} course${nc === 1 ? '' : 's'}`}</span>
+              </Link>
+            );
+          })}
         </div>
       </section>
     );
@@ -66,27 +69,38 @@ export function TrackPage() {
   const { id = '' } = useParams();
   const t = trackById(id);
   if (!t) return <div className="card empty">This track no longer exists. <Link to="/">Go to Welcome</Link></div>;
-  const n = site.tracks.indexOf(t) + 1;
+  const items = trackItems(t), i = site.tracks.indexOf(t), prev = site.tracks[i - 1], next = site.tracks[i + 1];
+  const nc = items.filter((x) => x.k === 'course').length, home = t.home ? spaceById(t.home) : undefined;
+  const first = (x?: string) => String(x || '').split(/\n\s*\n/)[0];
   return (
-    <section className="card">
-      <span className="badge lemon">Track {n}</span>
-      <h1 style={{ marginTop: 8 }}>{t.title}</h1>
-      {t.desc && <p className="lead">{t.desc}</p>}
-      <div className="stack">
-        {coursesInTrack(t.id).map((c) => (
-          <Link key={c.id} className="mini" to={'/course/' + c.id} style={{ display: 'block' }}>
-            <b>{c.title}</b><br />
-            <span className="small muted">{c.modules.length} modules · {lessonCount(c)} lessons · {priceLine(c)}</span>
-          </Link>
-        ))}
-        {site.spaces.filter((sp) => sp.track === t.id && !sp.hidden).map((sp) => (
-          <Link key={sp.id} className="mini" to={'/space/' + sp.id} style={{ display: 'block' }}>
-            <b>{sp.icon} {sp.name}</b><br />
-            <span className="small muted">{sp.navSub || sp.headline}</span>
-          </Link>
-        ))}
+    <>
+      {home && (
+        <section className="card guide spread"><span><b>{home.icon} {home.name}</b><br /><span className="small">{home.headline}</span></span>
+          <Link className="btn sm" to={'/space/' + home.id}>Open {home.name} →</Link></section>
+      )}
+      {nc > 0 && <div className="notice small"><b>🔒 Browse freely, unlock to learn.</b> Open any course to read its full description and outline. The lessons open once you unlock it.</div>}
+      {items.length ? items.map((it, k) => {
+        const course = it.k === 'course' ? it.c : null, sp = it.k === 'space' ? it.s : null;
+        const sub = course ? course.sub : sp!.headline, desc = course ? course.desc : sp!.desc;
+        return (
+          <article className="card offer" key={it.href}>
+            <span className="oi" aria-hidden="true">{it.icon}</span>
+            <div style={{ minWidth: 0, flex: 1 }}>
+              <span className="tnum">{k + 1} of {items.length}</span>
+              <h2>{it.title}</h2>
+              {sub && <p className="muted" style={{ margin: '0 0 10px' }}>{sub}</p>}
+              {desc && <p>{first(desc)}</p>}
+              {course && <div className="small muted">{course.modules.length} modules · {lessonCount(course)} lessons · <span className="price">{priceLine(course)}</span></div>}
+              <div className="row" style={{ marginTop: 12 }}><Link className="btn" to={it.href}>{course ? 'Read about this course' : 'Open ' + it.title} →</Link></div>
+            </div>
+          </article>
+        );
+      }) : <div className="card empty">No courses in this track yet.</div>}
+      <div className="spread">
+        {prev ? <Link className="btn quiet sm" to={trackHref(prev)}>← Track {i}: {prev.title}</Link> : <span />}
+        {next ? <Link className="btn quiet sm" to={trackHref(next)}>Track {i + 2}: {next.title} →</Link> : <span />}
       </div>
-    </section>
+    </>
   );
 }
 

@@ -18,7 +18,7 @@ export type Space = {
   track?: string;
 };
 
-export type Track = { id: string; space: string; title: string; desc?: string };
+export type Track = { id: string; space: string; title: string; desc?: string; home?: string; order?: string[] };
 
 export type Lesson = { id: string; title: string; kind: 'video' | 'pdf' | 'quiz'; mins: number; sum?: string };
 export type Module = { id: string; title: string; lessons: Lesson[]; part?: string; about?: string; outcome?: string; worksheet?: string; deliverable?: string };

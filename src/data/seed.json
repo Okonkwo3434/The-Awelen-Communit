@@ -367,7 +367,14 @@
       "id": "t-adv",
       "space": "courses",
       "title": "Advanced Management & Leadership Development (AMLD)",
-      "desc": "For founders and senior managers ready to run the business and lead leaders. Six-week Studio Sprints taught by Professors of Practice, finished with the Executive Presence capstone."
+      "desc": "For founders and senior managers ready to run the business and lead leaders. Six-week Studio Sprints taught by Professors of Practice, finished with the Executive Presence capstone.",
+      "home": "amld",
+      "order": [
+        "s:presence",
+        "c:peerc",
+        "s:portfolio",
+        "s:crucible"
+      ]
     }
   ],
   "creator": {

@@ -1,11 +1,11 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import type { Module } from '../data/types';
 import { Link, useParams } from 'react-router-dom';
-import { cm, courseById, flatLessons, site, trackById } from '../data/site';
+import { cm, courseById, flatLessons, site, trackById, trackHref, trackNo } from '../data/site';
 import type { Course, Lesson } from '../data/types';
 import { niceError, useAuth } from '../lib/auth';
 import {
-  completeLesson, embedUrl, myPendingRequests, paystackKey, payWithPaystack, pdfSrc, sendPaymentRequest,
+  checkPromo, completeLesson, embedUrl, useCoursePrices, myPendingRequests, paystackKey, payWithPaystack, pdfSrc, sendPaymentRequest,
   startFreeCourse, useCourseState, useLessonMedia, type Enrollment,
 } from '../lib/learning';
 import { useModals } from '../components/Modals';
@@ -20,13 +20,12 @@ export function CourseBanner({ id }: { id: string }) {
   const c = courseById(id);
   if (!c) return null;
   const sp = site.spaces.find((s) => s.id === c.space), tr = trackById(c.track), n = flatLessons(c).length;
-  const trackNo = tr ? site.tracks.indexOf(tr) + 1 : 0;
   return (
     <section className="cbf" aria-label="Course banner">
       <div className="in">
         <nav className="small crumbs" aria-label="Breadcrumb">
           <Link to={'/space/' + c.space}>{sp?.name || 'Courses'}</Link> ›{' '}
-          {tr && <><Link to={'/track/' + tr.id}>Track {trackNo}: {tr.title}</Link> › </>}
+          {tr && <><Link to={trackHref(tr)}>Track {trackNo(tr)}: {tr.title}</Link> › </>}
           <b style={{ color: '#fff' }}>{c.title}</b>
         </nav>
         <div style={{ marginTop: 14 }}><span className="badge lemon">{tr ? tr.title : 'Course'}</span></div>
@@ -35,9 +34,21 @@ export function CourseBanner({ id }: { id: string }) {
         <div className="meta">
           <span>{c.modules.length} modules</span><span>{n} lessons</span><span>{priceText(c)}</span>
         </div>
+        <div className="row" style={{ marginTop: 16 }}><LockButton c={c} /></div>
       </div>
     </section>
   );
+}
+
+/* The button on the course banner: unlocked, unlock (from the lowest payment), free, or apply */
+function LockButton({ c }: { c: Course }) {
+  const st = useCourseState(c.id);
+  if (hasAccess(st.enrollment)) return <span className="btn sm onDark" style={{ cursor: 'default' }}>🔓 Unlocked</span>;
+  const go = () => document.querySelector('.enrolbox')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (c.mode === 'application') return <Link className="btn lemon" to={'/space/' + (c.amld === 'sprint' ? 'amld' : 'presence')}>📝 Apply for a place</Link>;
+  if (c.mode === 'free' || !(c.price > 0)) return <button className="btn lemon" onClick={go}>🔓 Unlock course · free</button>;
+  const inst = c.instN > 1 && c.instAmt > 0;
+  return <button className="btn lemon" onClick={go}>🔓 Unlock course · {inst ? 'from ' + cm(c, Math.min(c.instAmt, c.price)) + ' a month' : cm(c, c.price)}</button>;
 }
 
 /* ---------- Course page: access box, current lesson, outline, downloads ---------- */
@@ -109,12 +120,12 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
       <section className="card enrolbox">
         <div className="spread">
           <div><span className="badge">✓ {e.plan === 'free' ? 'Enrolled' : e.plan === 'granted' ? 'Place confirmed' : 'Unlocked'}</span>
-            {e.plan === 'installments' && <p className="small muted" style={{ margin: '6px 0 0' }}>Paid {cm(c, e.amount_paid)} of {cm(c, e.amount_due)}{owed > 0 ? ` · next installment ${cm(c, Math.min(c.instAmt, owed))}` : ' · fully paid'}</p>}
+            {e.plan === 'installments' && <p className="small muted" style={{ margin: '6px 0 0' }}>Paid {cm(c, e.amount_paid)} of {cm(c, e.amount_due)}{owed > 0 ? ` · next installment ${cm(c, Math.min(Number(e.inst_amt ?? c.instAmt), owed))}` : ' · fully paid'}</p>}
           </div>
           {continueLink}
         </div>
         {e.plan === 'installments' && owed > 0 && (
-          <PayOptions c={c} amount={Math.min(c.instAmt, owed)} label="Pay next installment" busy={busy} setBusy={setBusy} setMsg={setMsg}
+          <PayOptions c={c} amount={Math.min(Number(e.inst_amt ?? c.instAmt), owed)} label="Pay next installment" busy={busy} setBusy={setBusy} setMsg={setMsg}
             email={profile?.email || session?.user.email || ''} userId={session!.user.id} onPaid={st.refresh} manual={manual} setManual={setManual} />
         )}
         {msg && <p className="formmsg" role="alert">{msg}</p>}
@@ -157,29 +168,59 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
     );
   }
 
-  // Paid and not yet unlocked
-  const amount = plan === 'inst' && c.instN > 1 ? c.instAmt : c.price;
+  // Paid and not yet unlocked: the server says what each plan costs now (offers and promo code included)
+  return <Checkout c={c} plan={plan} setPlan={setPlan} pending={pending} setPending={setPending} busy={busy} setBusy={setBusy} msg={msg} setMsg={setMsg}
+    manual={manual} setManual={setManual} email={profile?.email || session.user.email || ''} userId={session.user.id} onPaid={st.refresh} />;
+}
+
+function Checkout(p: {
+  c: Course; plan: 'full' | 'inst'; setPlan: (v: 'full' | 'inst') => void; pending: { amount: number; method: string }[]; setPending: (v: { amount: number; method: string }[]) => void;
+  busy: boolean; setBusy: (b: boolean) => void; msg: string; setMsg: (m: string) => void; manual: boolean; setManual: (b: boolean) => void;
+  email: string; userId: string; onPaid: () => void;
+}) {
+  const { c, plan, setPlan, pending } = p;
+  const [code, setCode] = useState('');           // the applied code
+  const [typed, setTyped] = useState('');
+  const [codeMsg, setCodeMsg] = useState('');
+  const pr = useCoursePrices(c.id, code);
+  const full = pr?.full_amount ?? c.price, inst = pr?.inst_amount ?? (c.instN > 1 && c.instAmt > 0 ? c.instAmt : null);
+  const hasInst = inst != null && c.instN > 1;
+  const amount = plan === 'inst' && hasInst ? inst! : full;
+  const usedCode = code && ((plan === 'inst' ? pr?.inst_promo : pr?.full_promo) ? code : '');
+  const was = (now: number, base: number) => (now < base - 0.004 ? <><s className="muted" style={{ fontWeight: 400 }}>{cm(c, base)}</s> </> : null);
+  const apply = async (e: FormEvent) => {
+    e.preventDefault(); setCodeMsg('');
+    const t = typed.trim().toUpperCase();
+    if (!t) { setCode(''); return; }
+    try { const r = await checkPromo(t, c.id); if (r.ok) { setCode(t); setCodeMsg(`✓ ${r.name} applied.`); } else { setCode(''); setCodeMsg(r.message); } }
+    catch (err) { setCodeMsg(niceError(err)); }
+  };
   return (
     <section className="card enrolbox">
       <h2 style={{ margin: 0 }}>Unlock this course</h2>
       <p style={{ margin: '6px 0 12px' }}>Unlocking opens every lesson, the downloads and your certificate.</p>
-      {c.instN > 1 && (
+      {hasInst ? (
         <div className="stack" role="radiogroup" aria-label="How would you like to pay?" style={{ gap: 6, marginBottom: 12 }}>
-          <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay in full: <b>{cm(c, c.price)}</b></label>
-          <label className="row"><input type="radio" name="plan" checked={plan === 'inst'} onChange={() => setPlan('inst')} style={{ width: 'auto' }} /> {c.instN} installments of <b>{cm(c, c.instAmt)}</b> (total {cm(c, c.instN * c.instAmt)}). The course opens after the first.</label>
+          <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay once: <b>{was(full, c.price)}{cm(c, full)}</b>{full < inst! * c.instN - 0.004 && <span className="small muted"> · saves {cm(c, Math.round((inst! * c.instN - full) * 100) / 100)} on installments</span>}</label>
+          <label className="row"><input type="radio" name="plan" checked={plan === 'inst'} onChange={() => setPlan('inst')} style={{ width: 'auto' }} /> {c.instN} monthly installments of <b>{was(inst!, c.instAmt)}{cm(c, inst!)}</b> (total {cm(c, Math.round(inst! * c.instN * 100) / 100)}). The course opens after the first.</label>
         </div>
-      )}
+      ) : <p style={{ margin: '0 0 12px' }}><b>{was(full, c.price)}{cm(c, full)}</b></p>}
+      <form className="row" onSubmit={apply} style={{ marginBottom: 12, gap: 6 }}>
+        <input value={typed} onChange={(e) => setTyped(e.target.value)} placeholder="Promo code" aria-label="Promo code" style={{ maxWidth: 200, textTransform: 'uppercase' }} maxLength={30} />
+        <button className="btn quiet sm">Apply</button>
+        {codeMsg && <span className="small" role="status">{codeMsg}</span>}
+      </form>
       {pending.length > 0 && <div className="notice" style={{ marginBottom: 12 }}>⏳ We received your {pending[0].method.toLowerCase()} notice for {cm(c, pending[0].amount)}. The course opens as soon as we confirm it, usually within one working day.</div>}
-      <PayOptions c={c} amount={amount} label={'Pay ' + cm(c, amount)} busy={busy} setBusy={setBusy} setMsg={setMsg}
-        email={profile?.email || session.user.email || ''} userId={session.user.id} onPaid={st.refresh} manual={manual} setManual={setManual}
-        onRequested={() => myPendingRequests(c.id).then((r) => setPending(r as { amount: number; method: string }[]))} />
-      {msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{msg}</p>}
+      <PayOptions c={c} amount={amount} promo={usedCode || ''} label={'Pay ' + cm(c, amount)} busy={p.busy} setBusy={p.setBusy} setMsg={p.setMsg}
+        email={p.email} userId={p.userId} onPaid={p.onPaid} manual={p.manual} setManual={p.setManual}
+        onRequested={() => myPendingRequests(c.id).then((r) => p.setPending(r as { amount: number; method: string }[]))} />
+      {p.msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{p.msg}</p>}
     </section>
   );
 }
 
 function PayOptions(p: {
-  c: Course; amount: number; label: string; busy: boolean; setBusy: (b: boolean) => void; setMsg: (m: string) => void;
+  c: Course; amount: number; promo?: string; label: string; busy: boolean; setBusy: (b: boolean) => void; setMsg: (m: string) => void;
   email: string; userId: string; onPaid: () => void; manual: boolean; setManual: (b: boolean) => void; onRequested?: () => void;
 }) {
   const pay = site.payments;
@@ -188,7 +229,7 @@ function PayOptions(p: {
   const card = async () => {
     p.setBusy(true); p.setMsg('');
     try {
-      const r = await payWithPaystack({ courseId: p.c.id, courseTitle: p.c.title, amount: p.amount, currency: p.c.currency, email: p.email, userId: p.userId });
+      const r = await payWithPaystack({ courseId: p.c.id, courseTitle: p.c.title, amount: p.amount, currency: p.c.currency, promo: p.promo, email: p.email, userId: p.userId });
       if (r === 'paid') p.onPaid(); else p.setMsg('Payment window closed. You have not been charged.');
     } catch (err) { p.setMsg(niceError(err)); } finally { p.setBusy(false); }
   };
@@ -199,7 +240,7 @@ function PayOptions(p: {
     p.setBusy(true); p.setMsg('');
     try {
       await sendPaymentRequest({
-        course_id: p.c.id, currency: p.c.currency, method: (fd.get('method') as 'Bank transfer' | 'LinPay') || 'Bank transfer', amount: p.amount,
+        course_id: p.c.id, currency: p.c.currency, promo_code: p.promo || null, method: (fd.get('method') as 'Bank transfer' | 'LinPay') || 'Bank transfer', amount: p.amount,
         reference: String(fd.get('reference') || '').trim(), note: String(fd.get('note') || '').trim(),
       });
       setSent(true); p.onRequested?.();

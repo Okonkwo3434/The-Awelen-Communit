@@ -71,6 +71,7 @@ Deno.serve(async (req) => {
   const amount = Math.round(Number(tx.amount)) / 100;
   const { data, error } = await admin.rpc('apply_payment', {
     p_user: who.user.id, p_course: courseId, p_amount: amount, p_gateway: 'Paystack', p_reference: reference,
+    p_promo: typeof meta.promo === 'string' && meta.promo ? meta.promo : null,   // promo code typed at checkout (Phase 5)
     p_raw: { id: tx.id, paid_at: tx.paid_at, channel: tx.channel, email: tx.customer?.email, currency: tx.currency, amount_minor: tx.amount },
   });
   if (error) {

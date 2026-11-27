@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { supabase } from './supabase';
 import { useAuth } from './auth';
 
-export type Enrollment = { course_id: string; plan: 'free' | 'full' | 'installments' | 'granted'; amount_due: number; amount_paid: number; created_at: string };
+export type Enrollment = { course_id: string; plan: 'free' | 'full' | 'installments' | 'granted'; amount_due: number; amount_paid: number; inst_amt: number | null; created_at: string };
 export type LessonMedia = { lesson_id: string; video_url: string | null; pdf_url: string | null; notes: string | null };
 
 const db = () => {
@@ -22,7 +22,7 @@ export function useCourseState(courseId: string) {
     if (!supabase || !uid) { setEnrollment(null); setDone(new Set()); setLoading(false); return; }
     setLoading(true);
     const [e, p] = await Promise.all([
-      supabase.from('enrollments').select('course_id,plan,amount_due,amount_paid,created_at').eq('course_id', courseId).maybeSingle(),
+      supabase.from('enrollments').select('course_id,plan,amount_due,amount_paid,inst_amt,created_at').eq('course_id', courseId).maybeSingle(),
       supabase.from('lesson_progress').select('lesson_id').eq('course_id', courseId),
     ]);
     setEnrollment((e.data as Enrollment) || null);
@@ -42,7 +42,7 @@ export function useMyLearning() {
   useEffect(() => {
     if (!supabase || !uid) { setRows([]); return; }
     Promise.all([
-      supabase.from('enrollments').select('course_id,plan,amount_due,amount_paid,created_at').order('created_at', { ascending: false }),
+      supabase.from('enrollments').select('course_id,plan,amount_due,amount_paid,inst_amt,created_at').order('created_at', { ascending: false }),
       supabase.from('lesson_progress').select('course_id'),
     ]).then(([e, p]) => {
       const count: Record<string, number> = {};
@@ -75,8 +75,9 @@ export async function completeLesson(courseId: string, lessonId: string, answer?
   if (error && !/duplicate key/i.test(error.message)) throw error;
 }
 
-export async function sendPaymentRequest(r: { course_id: string; currency: 'USD' | 'NGN'; method: 'Bank transfer' | 'LinPay'; amount: number; reference: string; note: string }) {
-  const { error } = await db().from('payment_requests').insert({ ...r, reference: r.reference || null, note: r.note || null });
+export async function sendPaymentRequest(r: { course_id: string; currency: 'USD' | 'NGN'; promo_code: string | null; method: 'Bank transfer' | 'LinPay'; amount: number; reference: string; note: string }) {
+  const { currency: _c, ...row } = r; void _c;   // the server sets the currency from the course
+  const { error } = await db().from('payment_requests').insert({ ...row, reference: r.reference || null, note: r.note || null });
   if (error) throw error;
 }
 
@@ -84,6 +85,26 @@ export async function myPendingRequests(courseId: string) {
   if (!supabase) return [];
   const { data } = await supabase.from('payment_requests').select('id,amount,method,status,created_at').eq('course_id', courseId).eq('status', 'pending');
   return data || [];
+}
+
+/* ---------- Prices and promo offers (Phase 5): the server decides, the page shows ---------- */
+export type CoursePrices = { full_amount: number; full_promo: string | null; inst_amount: number | null; inst_promo: string | null };
+export function useCoursePrices(courseId: string, code: string) {
+  const [p, setP] = useState<CoursePrices | null>(null);
+  useEffect(() => {
+    if (!supabase) return;
+    supabase.rpc('course_prices', { p_course: courseId, p_code: code || null }).then(({ data }) => {
+      const r = (data as CoursePrices[] | null)?.[0];
+      setP(r ? { ...r, full_amount: Number(r.full_amount), inst_amount: r.inst_amount == null ? null : Number(r.inst_amount) } : null);
+    });
+  }, [courseId, code]);
+  return p;
+}
+export async function checkPromo(code: string, courseId: string): Promise<{ ok: boolean; message: string; name: string }> {
+  const { data, error } = await db().rpc('check_promo', { p_code: code, p_course: courseId });
+  if (error) throw error;
+  const r = (data as { ok: boolean; message: string; name: string }[])[0];
+  return r || { ok: false, message: 'We could not check that code.', name: '' };
 }
 
 /* ---------- Paystack ---------- */
@@ -111,7 +132,7 @@ function loadPaystack(): Promise<PaystackPopType> {
 
 /** Opens Paystack, then asks our server to confirm the payment with Paystack and unlock the item. */
 async function paystackCheckout(o: {
-  item: { course_id: string } | { ebook_id: string }; title: string; label: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string;
+  item: { course_id: string } | { ebook_id: string }; promo?: string; title: string; label: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string;
 }): Promise<'paid' | 'cancelled'> {
   if (!paystackKey) throw new Error('Card payments are not switched on yet.');
   const Pop = await loadPaystack();
@@ -121,7 +142,7 @@ async function paystackCheckout(o: {
     new Pop().newTransaction({
       key: paystackKey, email: o.email, amount: Math.round(o.amount * 100), currency: o.currency, reference,  // Paystack counts cents / kobo
       metadata: {
-        user_id: o.userId, ...o.item,
+        user_id: o.userId, ...o.item, ...(o.promo ? { promo: o.promo } : {}),
         custom_fields: [{ display_name: o.label, variable_name: o.label.toLowerCase(), value: o.title }],
       },
       onSuccess: (t) => resolve(t.reference || reference),
@@ -140,8 +161,8 @@ async function paystackCheckout(o: {
   return 'paid';
 }
 
-export function payWithPaystack(o: { courseId: string; courseTitle: string; amount: number; currency: 'USD' | 'NGN'; email: string; userId: string }) {
-  return paystackCheckout({ item: { course_id: o.courseId }, title: o.courseTitle, label: 'Course', amount: o.amount, currency: o.currency, email: o.email, userId: o.userId });
+export function payWithPaystack(o: { courseId: string; courseTitle: string; amount: number; currency: 'USD' | 'NGN'; promo?: string; email: string; userId: string }) {
+  return paystackCheckout({ item: { course_id: o.courseId }, promo: o.promo, title: o.courseTitle, label: 'Course', amount: o.amount, currency: o.currency, email: o.email, userId: o.userId });
 }
 
 export function payEbookWithPaystack(o: { ebookId: string; title: string; amount: number; email: string; userId: string }) {

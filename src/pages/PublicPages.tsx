@@ -49,7 +49,7 @@ function useAnnouncements() {
   return { list, live };
 }
 
-export function AnnouncementsPage({ s }: { s: Space }) {
+export function AnnouncementsPage(_p: { s: Space }) {
   const { list } = useAnnouncements();
   const [cat, setCat] = useState('All');
   const cats = ['All', ...Array.from(new Set(list.map((a) => a.category)))];
@@ -57,8 +57,6 @@ export function AnnouncementsPage({ s }: { s: Space }) {
   return (
     <>
       <section className="card">
-        <h1>{s.headline || s.name}</h1>
-        {s.desc && <p className="lead">{s.desc}</p>}
         <div className="row" role="group" aria-label="Filter by category">
           {cats.map((c) => <button key={c} className={'chip' + (c === cat ? ' on' : '')} aria-pressed={c === cat} onClick={() => setCat(c)}>{c}</button>)}
         </div>
@@ -76,7 +74,7 @@ export function AnnouncementsPage({ s }: { s: Space }) {
 }
 
 /* ---------- Contact: details plus a message form saved to Supabase ---------- */
-export function ContactPage({ s }: { s: Space }) {
+export function ContactPage(_p: { s: Space }) {
   const c = site.creator;
   const { profile } = useAuth();
   const [state, setState] = useState<'idle' | 'busy' | 'sent'>('idle');
@@ -99,8 +97,6 @@ export function ContactPage({ s }: { s: Space }) {
   return (
     <>
       <section className="card">
-        <h1>{s.headline || 'Get in touch'}</h1>
-        {s.desc && <p className="lead">{s.desc}</p>}
         <ul className="contactlist">
           <li>✉️ <a href={'mailto:' + c.email}>{c.email}</a></li>
           <li>📞 <a href={'tel:' + c.phone.replace(/\s/g, '')}>{c.phone}</a></li>
@@ -138,11 +134,9 @@ export function ContactPage({ s }: { s: Space }) {
 }
 
 /* ---------- Links ---------- */
-export function LinksPage({ s }: { s: Space }) {
+export function LinksPage(_p: { s: Space }) {
   return (
     <section className="card">
-      <h1>{s.headline || s.name}</h1>
-      {s.desc && <p className="lead">{s.desc}</p>}
       <div className="stack">
         {site.links.map((l) => <a key={l.id} className="mini" href={l.url} target="_blank" rel="noopener" style={{ display: 'block' }}><b>{l.label} ↗</b><br /><span className="small muted">{l.url}</span></a>)}
       </div>
