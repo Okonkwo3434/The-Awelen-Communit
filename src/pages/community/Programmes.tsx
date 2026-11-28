@@ -155,12 +155,13 @@ function AmOrgs({ btn }: { btn: Btn }) {
     <>
       <section className="card"><h2>Your new managers were promoted for their skill. Now help them lead.</h2>
         <p>Most managers are promoted because they were excellent at their old job. Then, overnight, they’re expected to lead people, speak for the team in senior meetings and make calls they’ve never made before. Many struggle quietly, and the cost shows up in team turnover, missed targets and lost talent.</p>
-        <p>The Awelen Leadership Transition Programme combines the best of AMLD and Executive Presence into a programme built for your organisation’s newly promoted and high-potential managers.</p>
+        <p>The Awelen Leadership Transition Programme is built on <Link to="/course/stepup">Stepping Up</Link>, our course for newly promoted managers, with AMLD and Executive Presence for those who go on to lead other managers. Each manager’s own boss is part of it from the start, and HR sees the results.</p>
         <div className="row">{btn('corporate', '🏢 Book a free discovery call for your organisation')}</div>
       </section>
       <section className="card"><h2>What we offer</h2>
         <Table head={['Option', 'What it includes', 'Best for']} min={720} rows={[
-          ['New Manager Transition (8 weeks)', 'Leading Leaders sprint content, Executive Communication and Boardroom Readiness modules, live coaching, a capstone presentation to your senior leaders', 'Newly promoted managers and team leads'],
+          ['Stepping Up Cohort (12 weeks)', 'The Stepping Up course, fortnightly live coaching clinics, peer learning pods, a guide and briefing for each manager’s boss, and a 90-day results presentation to your senior leaders', 'Newly promoted supervisors, team leads and first-line managers'],
+          ['Ready to Lead (pre-promotion)', 'Stepping Up Modules 1 to 4 with a readiness assessment, before the promotion', 'High-potential staff you plan to promote'],
           ['Executive Presence for Senior Leaders (10 weeks)', 'The full Executive Presence Cohort, run privately for your organisation', 'Directors, heads of department, high-potential leaders'],
           ['Company Studio Sprint (6 weeks)', 'A Practice-First sprint where your managers solve a real challenge your company sets', 'Leadership teams working on a live business problem']]} />
       </section>
@@ -318,7 +319,7 @@ function AppForm({ kind, inline }: { kind: AppKind; inline?: boolean }) {
       <div className="fg">{I('f_Expertise', 'Your areas of expertise', true, '', 'e.g. corporate finance, turnaround')}{I('f_Profile link', 'LinkedIn or profile link', false, '', 'https://')}</div>
       {T('f_Why', 'Why you, and what you’d bring to learners', true)}</>,
     corporate: <>{who}{job(true)}
-      <div className="fg">{Sel('f_Managers to train', 'Managers to train', ['5–10', '10–20', '20–50', '50+'])}{Sel('f_Programme of interest', 'Programme of interest', ['New Manager Transition', 'Executive Presence for Senior Leaders', 'Company Studio Sprint', 'Not sure yet'])}{Sel('f_Timing', 'When you’d like to start', ['This quarter', 'Next quarter', 'Later this year', 'Just exploring'])}</div>
+      <div className="fg">{Sel('f_Managers to train', 'Managers to train', ['5–10', '10–20', '20–50', '50+'])}{Sel('f_Programme of interest', 'Programme of interest', ['Stepping Up Cohort', 'Ready to Lead (pre-promotion)', 'Executive Presence for Senior Leaders', 'Company Studio Sprint', 'Not sure yet'])}{Sel('f_Timing', 'When you’d like to start', ['This quarter', 'Next quarter', 'Later this year', 'Just exploring'])}</div>
       {T('f_What they need', 'What are your managers facing?', true, 'A few sentences about the situation and what success looks like')}</>,
     brief: <>{who}{job(true, 'Business name')}
       <div className="fg">{I('f_Sector', 'Sector', true, '', 'e.g. Agriculture, Logistics')}{Sel('f_Best sprint', 'Which sprint fits best?', [...SPRINTS.map((x) => x[1]), 'Not sure'])}</div>

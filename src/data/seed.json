@@ -689,6 +689,473 @@
       ]
     },
     {
+      "id": "appr",
+      "space": "courses",
+      "track": "t-idea",
+      "title": "The Apprenticeship Road: From Apprentice to Master Trader",
+      "headline": "Serve well, learn the trade, and one day settle apprentices of your own",
+      "sub": "For apprentices, the masters who train them, their families, and the trade associations that support them. One course for both sides, because today's apprentice is tomorrow's master.",
+      "desc": "Not everyone starts a business with savings, a certificate or a rich uncle. For generations, young people across Nigeria have taken another road: they serve a master trader for four to seven years, learn the trade from the inside, and are settled with a shop of their own at the end. This system has produced more business owners than any business school, and it still works when it is done well.\n\nThis course teaches both sides of that relationship. You'll learn how to choose a master and agree fair terms, how to learn deliberately while you serve, and how to prepare for the day you open your own shop. Then you'll walk the master's road: choosing an apprentice well, training on purpose instead of by accident, and planning settlement from day one so the promise can be kept. Everyone takes both roads, because the apprentice of today becomes the master of tomorrow.\n\nYou'll follow Chidi as he serves Mr Ikenna, an auto spare parts dealer in Ladipo Market, and Bisi as she serves Madam Kudirat, a fabric trader in Balogun Market, through the good years, the hard seasons and the day each of them is settled.",
+      "icon": "🤝",
+      "price": 25,
+      "currency": "USD",
+      "instN": 3,
+      "instAmt": 9.17,
+      "amld": "",
+      "mode": "paid",
+      "downloads": [
+        "Apprenticeship agreement template",
+        "Choosing a master checklist",
+        "Apprentice's learning journal",
+        "Settlement-readiness checklist",
+        "First-year shop plan (one page)",
+        "Apprentice capacity calculator",
+        "Year-by-year training plan",
+        "Settlement fund and package planner",
+        "Dispute resolution guide"
+      ],
+      "modules": [
+        {
+          "id": "m-appr-1",
+          "title": "Module 1: Why the Apprenticeship Road Works",
+          "part": "Start",
+          "outcome": "The learner understands how the system works, why it produced so many entrepreneurs, and where it breaks today.",
+          "lessons": [
+            {
+              "id": "l209zrc",
+              "title": "Another road into business",
+              "kind": "video",
+              "mins": 0,
+              "sum": "When you start with nothing, apprenticeship lets you trade years of service for skill, customers and a shop. This links back to the extreme-disadvantage reason in Idea Discovery."
+            },
+            {
+              "id": "l4phyy",
+              "title": "How the apprenticeship system works",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The journey from joining a master's household to serving, learning, and being settled with a shop of your own. How the terms and customs vary between communities and trades."
+            },
+            {
+              "id": "lkq6s73",
+              "title": "Why it built a trade network",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Every settled apprentice becomes a new node: shared suppliers, shared information, shared risk and lasting loyalty. In effect it is a franchise system without the paperwork."
+            },
+            {
+              "id": "lih4t4o",
+              "title": "Apprenticeship around the world",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Yoruba artisan training, mechanic and tailoring workshops, medieval guilds with their apprentices and journeymen, and Germany's dual system. The same idea, learning under a master, keeps producing skilled owners."
+            },
+            {
+              "id": "lg7oz",
+              "title": "Where the system breaks today",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Masters who do not settle, apprentices who leave early or divert customers, unwritten terms, and impatience for quick money. The course takes these seriously."
+            },
+            {
+              "id": "l1n6ob26",
+              "title": "Two roads, one journey",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Why every learner walks both the servant's and the master's road, how to use the rest of the course, and the one-page plan you build towards."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-2",
+          "title": "Module 2: Entering Service Well",
+          "part": "Part A",
+          "outcome": "The apprentice has chosen a master carefully and agreed clear terms before the first day.",
+          "worksheet": "Choosing a master checklist and apprenticeship agreement template.",
+          "lessons": [
+            {
+              "id": "l1h1cucj",
+              "title": "Is apprenticeship right for you?",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Counting the real cost of four to seven years: time, distance from home, hard work and delayed reward. And weighing it against the alternatives."
+            },
+            {
+              "id": "l60oejm",
+              "title": "Choosing a master",
+              "kind": "video",
+              "mins": 0,
+              "sum": "What to look for: character, the trade's future, and above all whether past apprentices were actually settled. Who to ask and what to ask them."
+            },
+            {
+              "id": "l8cog93",
+              "title": "Agreeing the terms before you start",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Years of service, duties, what settlement will include, and what happens if things go wrong. Why it should be written down and witnessed by both families."
+            },
+            {
+              "id": "l1svcx3g",
+              "title": "Living in the master's house",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Respect, house rules, boundaries and your rights. Knowing what is normal service and what is not, and who to talk to if you are mistreated."
+            },
+            {
+              "id": "lbauvi4",
+              "title": "The first year: the humility season",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Sweeping the shop, carrying goods, running errands and watching everything. Why this season matters more than it looks."
+            },
+            {
+              "id": "ln3hkpj",
+              "title": "Character as your first capital",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Patience, honesty, faith and a good name. Why the market remembers how you served long after it forgets what you sold."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-3",
+          "title": "Module 3: Learning the Trade While You Serve",
+          "part": "Part A",
+          "outcome": "The apprentice is learning deliberately, not just working, and keeps a private learning journal.",
+          "worksheet": "Apprentice's learning journal.",
+          "lessons": [
+            {
+              "id": "l8tfnjg",
+              "title": "Learning with your eyes",
+              "kind": "video",
+              "mins": 0,
+              "sum": "What to watch: how your master prices, bargains, buys, extends credit and handles a difficult customer."
+            },
+            {
+              "id": "le25ztf",
+              "title": "Knowing the goods",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Product knowledge, quality grades, spotting fakes, and what sells in which season."
+            },
+            {
+              "id": "le6kuq",
+              "title": "Knowing the customers",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Names, needs and buying patterns. Building trust with customers honestly, on your master's behalf."
+            },
+            {
+              "id": "lcb46fz",
+              "title": "Knowing the market",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Suppliers, importers, credit lines, transport, the market union and the unwritten rules of the market."
+            },
+            {
+              "id": "l1t77gd1",
+              "title": "Money in the shop",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Simple records, cash handling and stock counts. Integrity when nobody is watching."
+            },
+            {
+              "id": "lp6yixi",
+              "title": "Your apprentice's journal",
+              "kind": "video",
+              "mins": 0,
+              "sum": "A notebook of what you learn each week: prices, contacts, lessons and mistakes. Learning the trade without stealing your master's customers or secrets."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-4",
+          "title": "Module 4: Preparing for Your Own Shop",
+          "part": "Part A",
+          "outcome": "The apprentice has a settlement-readiness plan and a simple first-year plan for their own shop.",
+          "worksheet": "Settlement-readiness checklist and first-year shop plan (one page).",
+          "lessons": [
+            {
+              "id": "l14r6e0z",
+              "title": "The middle years: from servant to trusted hand",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Taking more responsibility, running the shop when your master travels, and earning a larger role."
+            },
+            {
+              "id": "l6oieyy",
+              "title": "The temptations that cost you everything",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Diverting customers, secret side businesses and leaving before your time. Why shortcuts usually cost more than the years they save."
+            },
+            {
+              "id": "l1j1xagv",
+              "title": "Building small savings",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Saving from gifts, allowances or permitted side income, with your master's knowledge. Why even a small cushion matters on settlement day."
+            },
+            {
+              "id": "lxtk28b",
+              "title": "Planning your shop",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Location, starting stock, first customers, pricing and costs. A simple business model on one page, linked to Business Model Development."
+            },
+            {
+              "id": "lh9yrit",
+              "title": "When things go wrong",
+              "kind": "video",
+              "mins": 0,
+              "sum": "A master who struggles, delays settlement or treats you unfairly. How to raise it respectfully, and how to use family, elders and the market union."
+            },
+            {
+              "id": "lsbauxw",
+              "title": "Getting ready for settlement",
+              "kind": "video",
+              "mins": 0,
+              "sum": "What to ask for, what to expect, and how to show your master you are ready."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-5",
+          "title": "Module 5: Taking On an Apprentice",
+          "part": "Part B",
+          "outcome": "The master knows why they are taking an apprentice, has chosen well, and has signed a fair written agreement.",
+          "worksheet": "Apprentice capacity calculator and apprenticeship agreement template.",
+          "lessons": [
+            {
+              "id": "l11euk35",
+              "title": "Why take an apprentice?",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Growth, a trusted pair of hands, succession, a wider network and legacy. Being honest about your real reason."
+            },
+            {
+              "id": "lhzywbx",
+              "title": "How many can your business carry?",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Matching the number of apprentices to your income, space and ability to settle them later."
+            },
+            {
+              "id": "l12i8jcf",
+              "title": "Choosing well",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Character over connections, family referrals, and a short trial period before the full commitment."
+            },
+            {
+              "id": "loj4se4",
+              "title": "Writing a fair agreement",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Duties on both sides, the length of service, the settlement package, and what happens if either side breaks the terms. Signed and witnessed by both families."
+            },
+            {
+              "id": "lq4llxu",
+              "title": "Your duty of care",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Housing, feeding, health, safety and dignity. An apprentice is a trainee and a future partner, never a servant without rights."
+            },
+            {
+              "id": "l5jdy0",
+              "title": "Working with the apprentice's family",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Setting expectations early, staying in touch, and keeping the family on your side when things get hard."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-6",
+          "title": "Module 6: Training Deliberately",
+          "part": "Part B",
+          "outcome": "The master has a year-by-year training plan and knows how to judge when an apprentice is ready.",
+          "worksheet": "Year-by-year training plan.",
+          "lessons": [
+            {
+              "id": "lpqpik0",
+              "title": "From watching to teaching",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Most masters let apprentices learn by accident. A simple training plan for each year of service."
+            },
+            {
+              "id": "lg9xx9x",
+              "title": "Handing over step by step",
+              "kind": "video",
+              "mins": 0,
+              "sum": "From errands, to selling, to buying, to running a stall alone. Delegation in small, safe stages."
+            },
+            {
+              "id": "lrseqaj",
+              "title": "Teaching numbers and records",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Pricing, margins, stock and credit. Why an apprentice who understands the numbers becomes a stronger trader and a better partner."
+            },
+            {
+              "id": "l7peh7c",
+              "title": "Correcting without breaking",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Discipline, honest feedback and encouragement. What firm training looks like, and where it becomes abuse."
+            },
+            {
+              "id": "l4naya",
+              "title": "Trust and controls",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Protecting your cash and stock with simple checks, without treating your apprentice as a thief."
+            },
+            {
+              "id": "lw73av9",
+              "title": "Spotting readiness",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The signs that an apprentice can stand alone: judgement, customer trust, honesty with money and calm under pressure."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-7",
+          "title": "Module 7: Settlement as Strategy",
+          "part": "Part B",
+          "outcome": "The master has a settlement plan and fund, and sees former apprentices as a growing network.",
+          "worksheet": "Settlement fund and package planner.",
+          "lessons": [
+            {
+              "id": "l147ixzf",
+              "title": "Planning settlement from day one",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Setting aside a settlement fund every month, so the promise can be kept when the time comes."
+            },
+            {
+              "id": "l193si6n",
+              "title": "What a good settlement includes",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Shop rent, starting stock, supplier introductions, a credit guarantee and your blessing in public."
+            },
+            {
+              "id": "lmtgugw",
+              "title": "Compete or complement?",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Where to place a settled apprentice: a different market, a related product line or a supply role, so you grow together instead of fighting over the same customers."
+            },
+            {
+              "id": "l95ujt4",
+              "title": "Your network of former apprentices",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Buying together, sharing market information, standing surety for one another. How one master's apprentices become a trading family."
+            },
+            {
+              "id": "l1148c6y",
+              "title": "When you cannot settle on time",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Honest conversations, partial settlement, a clear new date, and other ways to keep your word."
+            },
+            {
+              "id": "lg9ufcu",
+              "title": "When the apprentice becomes the successor",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Handing over your own business to a trusted apprentice, and protecting your family's interest when you do. Linked to Building Sustainable Wealth."
+            }
+          ]
+        },
+        {
+          "id": "m-appr-8",
+          "title": "Module 8: Settlement and the Lifelong Bond",
+          "part": "Part C",
+          "outcome": "Both sides know how to close the service years well and keep the relationship strong afterwards.",
+          "worksheet": "Dispute resolution guide.",
+          "deliverable": "Your Apprenticeship Road plan: a settlement-readiness and first-year shop plan, or an apprenticeship programme for your business.",
+          "lessons": [
+            {
+              "id": "l1r4igq8",
+              "title": "Settlement day",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The handing over, the witnesses, the customs and the blessing. Why doing it publicly protects both sides."
+            },
+            {
+              "id": "l1b5mbia",
+              "title": "The first year alone",
+              "kind": "video",
+              "mins": 0,
+              "sum": "For the new owner: cash pressure, slow days, the loneliness of the first shop. For the master: when to help and when to step back."
+            },
+            {
+              "id": "l18azuhf",
+              "title": "From master to mentor",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Continuing guidance without control. How often to meet, what to discuss, and how the new owner asks for help without losing face."
+            },
+            {
+              "id": "lxkk7x8",
+              "title": "Settling disputes",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Family, elders, the extended family, market unions and mediation first, with the courts as the last resort. Bisi and Madam Kudirat's story."
+            },
+            {
+              "id": "l1li1guj",
+              "title": "Paying it forward",
+              "kind": "video",
+              "mins": 0,
+              "sum": "When and how a settled apprentice takes on apprentices of their own, and keeps the chain going."
+            },
+            {
+              "id": "l1c8uprz",
+              "title": "Capstone: your Apprenticeship Road plan",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The servant presents a settlement-readiness and first-year shop plan. The master presents an apprenticeship programme for their business: agreement, training plan and settlement fund."
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "Start",
+          "title": "Start here: why the apprenticeship road works",
+          "desc": "One module for everyone, before the two roads."
+        },
+        {
+          "id": "Part A",
+          "title": "Part A — The Servant's Road",
+          "desc": "Three modules that follow the apprentice's journey in order: entering service well, learning the trade while serving, and preparing for your own shop. Every learner takes them, masters included."
+        },
+        {
+          "id": "Part B",
+          "title": "Part B — The Master's Road",
+          "desc": "Three modules that treat apprenticeship as a deliberate growth strategy, not a favour or a source of cheap labour. Every learner takes them, apprentices included."
+        },
+        {
+          "id": "Part C",
+          "title": "Part C — Together",
+          "desc": "Settlement day and the relationship that lasts long after it."
+        }
+      ],
+      "gains": [
+        "A clear picture of how the apprenticeship road works, and why it builds business owners",
+        "The right questions to ask before choosing a master or taking on an apprentice",
+        "A fair written apprenticeship agreement that protects both sides",
+        "A practical way to learn the trade while you serve, or to train an apprentice on purpose",
+        "A settlement plan and fund, so the promise at the end is kept",
+        "Your own Apprenticeship Road plan, for the side of the road you are on today"
+      ]
+    },
+    {
       "id": "snb",
       "space": "courses",
       "track": "t-idea",
@@ -2038,12 +2505,450 @@
       ]
     },
     {
+      "id": "stepup",
+      "space": "courses",
+      "track": "t-lead",
+      "title": "Stepping Up: From Great at the Work to Great at Leading It",
+      "headline": "You were promoted for your skill. Now learn to lead the people who do the work.",
+      "sub": "For individual contributors newly promoted to supervisor, team lead or first-line manager, high-potential staff about to step up, and the HR teams who promote them.",
+      "desc": "You were the best at your job, so they promoted you. Now you lead people who were your colleagues last month, one of them wanted your job, your boss expects results, and nobody taught you how to do any of it. Most new managers struggle quietly in this gap, and many organisations lose a star performer and gain a struggling manager.\n\nThis course walks you through the first 90 days and the year that follows. You'll make the shift from doing the work to leading it, plan your first 90 days, reset relationships with former peers, and get work done through others. Then you'll learn to give feedback and hold the hard conversations, develop your team, manage up and across, and prove the promotion with results you present to senior leaders.\n\nYou'll follow Tolu, the best claims officer at a Lagos insurance company, promoted to supervise eight of her former colleagues, and Ibrahim, the HR manager who promoted her and fourteen others this year. Organisations can also run the course as a cohort programme with live coaching.",
+      "icon": "🪜",
+      "price": 100,
+      "currency": "USD",
+      "instN": 3,
+      "instAmt": 36.67,
+      "amld": "",
+      "mode": "paid",
+      "downloads": [
+        "Transition baseline self-assessment",
+        "Team pulse survey",
+        "Role-clarity worksheet (with your boss)",
+        "One-to-one listening tour guide",
+        "30-60-90 day plan template",
+        "Delegation planner (five levels)",
+        "Team rhythm calendar",
+        "Feedback and hard conversation planner",
+        "Team development profile",
+        "Stay conversation guide",
+        "90-day results presentation template",
+        "Manager's Manager Guide (for your boss)"
+      ],
+      "modules": [
+        {
+          "id": "m-stepup-1",
+          "title": "Module 1: The Shift — From Doing the Work to Leading It",
+          "outcome": "The learner understands what has really changed, has named their own traps, and has agreed the role with their boss.",
+          "worksheet": "Transition baseline self-assessment, team pulse survey and role-clarity worksheet.",
+          "lessons": [
+            {
+              "id": "l8s9ep8",
+              "title": "Why great performers struggle as new managers",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The skills that got you promoted, and the new ones the job now needs. Tolu's first week."
+            },
+            {
+              "id": "lropjc",
+              "title": "What changes the day you are promoted",
+              "kind": "video",
+              "mins": 0,
+              "sum": "You are now measured by your team's results, not your own. What that means for how you spend each day."
+            },
+            {
+              "id": "l1no012v",
+              "title": "Letting go of being the expert",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Moving from \"I know the answer\" to \"we find the answer\". Why this identity shift is the hardest part."
+            },
+            {
+              "id": "lun2egj",
+              "title": "The six traps of new managers",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Doing the work yourself, needing to be liked, avoiding conflict, holding on to information, waiting for permission, and copying your old boss."
+            },
+            {
+              "id": "l2qsjkq",
+              "title": "What does your organisation actually expect?",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Holding a role-clarity conversation with your boss: results, authority, budget and the decisions that are yours."
+            },
+            {
+              "id": "ln61dnc",
+              "title": "Your transition baseline",
+              "kind": "video",
+              "mins": 0,
+              "sum": "An honest self-assessment, and a short pulse survey from your team to compare against later."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-2",
+          "title": "Module 2: Your First 90 Days",
+          "outcome": "The learner has a written 30-60-90 day plan and has met every team member one-to-one.",
+          "worksheet": "One-to-one listening tour guide and 30-60-90 day plan template.",
+          "lessons": [
+            {
+              "id": "lrxjvdi",
+              "title": "Before day one",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Preparing for the role: what to learn, who to speak to, and what to stop doing."
+            },
+            {
+              "id": "l4mwq2p",
+              "title": "The listening tour",
+              "kind": "video",
+              "mins": 0,
+              "sum": "A first one-to-one with every team member: what to ask, what to listen for, and what not to promise."
+            },
+            {
+              "id": "l17v3zcm",
+              "title": "Understanding the team you inherited",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Its results, strengths, frustrations, unwritten rules and the problems everyone avoids."
+            },
+            {
+              "id": "l1ghg8o4",
+              "title": "Early wins that build trust",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Small, visible fixes the team cares about, rather than big changes nobody asked for."
+            },
+            {
+              "id": "lbypv2w",
+              "title": "What not to change too early",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Why new managers rush to prove themselves, and how that backfires."
+            },
+            {
+              "id": "l1hpekrf",
+              "title": "Your 30-60-90 day plan",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Turning what you have heard into priorities, and agreeing them with your boss."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-3",
+          "title": "Module 3: Leading Former Peers and Friends",
+          "outcome": "The learner has reset relationships with former peers and is building authority that does not depend on the title.",
+          "lessons": [
+            {
+              "id": "l1lj1v1e",
+              "title": "Naming the change",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The first team meeting after the promotion: acknowledging the shift openly instead of pretending nothing has changed."
+            },
+            {
+              "id": "l8nqmwl",
+              "title": "Friendship and fairness",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Staying warm without playing favourites. New boundaries around gossip, lunch groups and social media."
+            },
+            {
+              "id": "lefhtgg",
+              "title": "When a colleague wanted your job",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Bayo's story: turning a rival into an ally, or managing the situation if he will not come along."
+            },
+            {
+              "id": "l1pac1r6",
+              "title": "Leading people older or more experienced than you",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Respect without surrender in a culture that honours age. Mrs Adeyemi's story."
+            },
+            {
+              "id": "lzw64dl",
+              "title": "Earning authority without the title",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Credibility, consistency, keeping your word and standing up for the team."
+            },
+            {
+              "id": "l6tqu6g",
+              "title": "Loyalty tests, cliques and office politics",
+              "kind": "video",
+              "mins": 0,
+              "sum": "What to do when people test the new boss, and how to stay out of old factions."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-4",
+          "title": "Module 4: Getting Work Done Through Others",
+          "outcome": "The learner has set clear goals, delegated real work and set up a steady team rhythm.",
+          "worksheet": "Delegation planner (five levels) and team rhythm calendar.",
+          "lessons": [
+            {
+              "id": "lu2u5i0",
+              "title": "Setting clear goals and expectations",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Turning the department's targets into clear goals for each person, so everyone knows what good looks like."
+            },
+            {
+              "id": "lmbg6d",
+              "title": "Delegation in five levels",
+              "kind": "video",
+              "mins": 0,
+              "sum": "From \"do exactly this\" to \"decide and tell me later\". Matching the level to the person and the task."
+            },
+            {
+              "id": "l6s2a8x",
+              "title": "Your team rhythm",
+              "kind": "video",
+              "mins": 0,
+              "sum": "One-to-ones, short daily huddles and team meetings that are worth attending."
+            },
+            {
+              "id": "ldt07ar",
+              "title": "Planning and prioritising the team's work",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Saying no, sequencing work and handling urgent requests from above."
+            },
+            {
+              "id": "l1blxp8t",
+              "title": "Following up without micromanaging",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Simple tracking, checkpoints, and the difference between support and control."
+            },
+            {
+              "id": "l1rpb2q9",
+              "title": "The player-coach problem",
+              "kind": "video",
+              "mins": 0,
+              "sum": "When you are still expected to do your old job. Protecting time for leadership, and negotiating your own workload with your boss."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-5",
+          "title": "Module 5: Feedback, Performance and Hard Conversations",
+          "outcome": "The learner gives regular feedback and has held at least one difficult performance conversation well.",
+          "worksheet": "Feedback and hard conversation planner.",
+          "lessons": [
+            {
+              "id": "l19s5430",
+              "title": "Feedback people can use",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Specific, timely and about behaviour, not personality. A simple model to practise every week."
+            },
+            {
+              "id": "l1bwnxxh",
+              "title": "Recognition that motivates",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Praise, credit and appreciation, and why many Nigerian workplaces under-use them."
+            },
+            {
+              "id": "lsayf32",
+              "title": "Running a fair appraisal",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Preparing evidence, rating honestly, and avoiding the common biases that damage trust."
+            },
+            {
+              "id": "lqzso88",
+              "title": "Diagnosing underperformance",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Is it skill, will, or the system? Different causes need different responses."
+            },
+            {
+              "id": "lzm5jqp",
+              "title": "Working with HR on discipline",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Policies, documentation, warnings and fairness. When to involve HR, and how to do it early."
+            },
+            {
+              "id": "lismzou",
+              "title": "The conversations you are avoiding",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Conflict between team members, emotional reactions, and delivering bad news from above."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-6",
+          "title": "Module 6: Building and Developing Your Team",
+          "outcome": "The learner has a development plan for each team member and knows who is at risk of leaving.",
+          "worksheet": "Team development profile and stay conversation guide.",
+          "lessons": [
+            {
+              "id": "l1qma37i",
+              "title": "Knowing your people",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Strengths, motivations, ambitions and life pressures. A simple team profile."
+            },
+            {
+              "id": "lkuo6y8",
+              "title": "Coaching on the job",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Asking good questions instead of giving answers, in five-minute conversations."
+            },
+            {
+              "id": "l1qatqpm",
+              "title": "Building trust and safety",
+              "kind": "video",
+              "mins": 0,
+              "sum": "A team where people admit mistakes, raise problems early and disagree openly."
+            },
+            {
+              "id": "l1phvta",
+              "title": "Team norms and culture",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Agreeing how your team works together, within the wider company culture."
+            },
+            {
+              "id": "lpff58",
+              "title": "Hiring and onboarding into your team",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Your role in choosing new people and helping them settle quickly."
+            },
+            {
+              "id": "l2mruye",
+              "title": "Keeping your best people",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Spotting the signs that someone is about to leave, and the stay conversation."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-7",
+          "title": "Module 7: Managing Up, Across and Yourself",
+          "outcome": "The learner has a working relationship with their boss, allies across departments, and a sustainable personal routine.",
+          "lessons": [
+            {
+              "id": "l15vvb69",
+              "title": "Managing your boss",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Understanding their pressures, how they like to communicate, and what they need from you."
+            },
+            {
+              "id": "l27vkt1",
+              "title": "Speaking for your team in senior meetings",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Preparing, keeping it short and representing your team's work with confidence."
+            },
+            {
+              "id": "lgj5278",
+              "title": "Working across departments",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Building allies, handling turf battles and getting help from people who do not report to you."
+            },
+            {
+              "id": "l1s1z7u",
+              "title": "Carrying decisions you did not make",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Disagreeing in private and committing in public, and what to do when you cannot."
+            },
+            {
+              "id": "l16lqtm8",
+              "title": "Managing your time, energy and stress",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The new manager's week, protecting rest, and where to find support."
+            },
+            {
+              "id": "lobglhx",
+              "title": "Integrity under pressure",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Favours, requests from family and community, pressure from above, and keeping your name clean."
+            }
+          ]
+        },
+        {
+          "id": "m-stepup-8",
+          "title": "Module 8: Proving the Promotion — Results and the Road Ahead",
+          "outcome": "The learner presents their first 90-day results to senior leaders and has a personal development plan.",
+          "deliverable": "A 90-day results presentation to your boss and HR, with your plan for the next 90 days.",
+          "lessons": [
+            {
+              "id": "l14hpopk",
+              "title": "Knowing how your team is measured",
+              "kind": "video",
+              "mins": 0,
+              "sum": "The few numbers that matter, and how to read and present them."
+            },
+            {
+              "id": "l17i4imu",
+              "title": "Basic numbers every manager should understand",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Budgets, costs and productivity in plain language. Linked to Financial Intelligence for Leaders."
+            },
+            {
+              "id": "lzxedwv",
+              "title": "Solving problems and deciding with your team",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Simple tools for team decisions, and when to decide alone."
+            },
+            {
+              "id": "l583irh",
+              "title": "Leading change your team did not ask for",
+              "kind": "video",
+              "mins": 0,
+              "sum": "Explaining it, handling resistance and keeping the team steady."
+            },
+            {
+              "id": "l23l6ye",
+              "title": "Your development plan and next step",
+              "kind": "video",
+              "mins": 0,
+              "sum": "What to build over the next year, and the road towards AMLD."
+            },
+            {
+              "id": "l1rho8tb",
+              "title": "Capstone: your 90-day results presentation",
+              "kind": "video",
+              "mins": 0,
+              "sum": "A short presentation to your boss and HR: what you found, what you changed, your team's results and your plan for the next 90 days."
+            }
+          ]
+        }
+      ],
+      "gains": [
+        "A clear understanding of what changed the day you were promoted, and the traps to avoid",
+        "A written 30-60-90 day plan agreed with your boss",
+        "The confidence to lead former peers, rivals and older colleagues fairly",
+        "A team rhythm of goals, delegation, one-to-ones and follow-up that gets work done without you doing it all",
+        "Practical skills for feedback, appraisals and the hard conversations most managers avoid",
+        "Your 90-day results, presented to senior leaders, and a plan for the next step in your career"
+      ]
+    },
+    {
       "id": "run",
       "space": "courses",
       "track": "t-lead",
       "title": "Now Run It: Management Foundations for Founders and New Leaders",
       "headline": "Turn a good business model into a well-run enterprise",
-      "sub": "For founders starting from scratch, individual contributors, emerging leaders, and leaders rebuilding after getting things wrong.",
+      "sub": "For founders starting from scratch and leaders rebuilding after getting things wrong. Newly promoted employees should start with Stepping Up.",
       "desc": "Having a good business model is one thing. Running the business every day is another. Suddenly you are the salesperson, the accountant, the HR department and the person who fixes the generator. Or you were the best at your job, got promoted, and now you lead people who used to be your peers. Nobody prepares you for this shift.\n\nThis course is the bridge from idea to enterprise. You'll set the business up properly, with the right legal structure and a board that adds value, prepare a workplace that works, win and keep your first customers, and grow on customer money instead of debt. Then you'll build your team and its rhythm, learn to make good decisions when the facts are incomplete, and write the business plan and pitch that raise money.\n\nYou'll follow Adaeze as she builds Zuri Kitchens, a Lagos cloud kitchen, and Kofi, a newly promoted engineering lead in Accra. Their mistakes and wins become your shortcut.",
       "icon": "🏁",
       "price": 50,
