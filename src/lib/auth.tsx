@@ -9,6 +9,7 @@ type AuthState = {
   session: Session | null;
   profile: Profile | null;
   teamRole: '' | 'admin' | 'editor';
+  teamChecked: boolean;   // true once we know whether the signed-in person is on the team
   recovering: boolean;
   signUp: (a: { name: string; email: string; phone: string; password: string }) => Promise<'signed-in' | 'confirm-email'>;
   signIn: (email: string, password: string) => Promise<void>;
@@ -41,6 +42,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [teamRole, setTeamRole] = useState<AuthState['teamRole']>('');
+  const [teamChecked, setTeamChecked] = useState(false);
   const [recovering, setRecovering] = useState(false);
 
   useEffect(() => {
@@ -56,7 +58,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Load the member's profile and team role whenever the signed-in person changes.
   const uid = session?.user.id;
   useEffect(() => {
-    if (!supabase || !uid) { setProfile(null); setTeamRole(''); return; }
+    if (!supabase || !uid) { setProfile(null); setTeamRole(''); setTeamChecked(!uid); return; }
+    setTeamChecked(false);
     let live = true;
     (async () => {
       const meta = session?.user.user_metadata || {};
@@ -64,15 +67,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (live) setProfile(data ?? { name: meta.name || session?.user.email?.split('@')[0] || 'Member', email: session?.user.email ?? null, phone: meta.phone ?? null, kind: 'member', status: 'Active' });
       const admin = await supabase.rpc('is_app_admin', { min_role: 'admin' });
       if (!live) return;
-      if (admin.data === true) return setTeamRole('admin');
+      if (admin.data === true) { setTeamRole('admin'); setTeamChecked(true); return; }
       const editor = await supabase.rpc('is_app_admin', { min_role: 'editor' });
-      if (live) setTeamRole(editor.data === true ? 'editor' : '');
+      if (live) { setTeamRole(editor.data === true ? 'editor' : ''); setTeamChecked(true); }
     })();
     return () => { live = false; };
   }, [uid]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const value: AuthState = {
-    ready, session, profile, teamRole, recovering,
+    ready, session, profile, teamRole, teamChecked, recovering,
     async signUp({ name, email, phone, password }) {
       const { data, error } = await need().auth.signUp({
         email, password,

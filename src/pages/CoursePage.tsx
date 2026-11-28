@@ -1,10 +1,11 @@
 import { useEffect, useState, type FormEvent } from 'react';
+import type { Module } from '../data/types';
 import { Link, useParams } from 'react-router-dom';
-import { courseById, flatLessons, naira, site, trackById } from '../data/site';
+import { cm, courseById, flatLessons, site, trackById, trackHref, trackNo } from '../data/site';
 import type { Course, Lesson } from '../data/types';
 import { niceError, useAuth } from '../lib/auth';
 import {
-  completeLesson, embedUrl, myPendingRequests, paystackKey, payWithPaystack, pdfSrc, sendPaymentRequest,
+  checkPromo, completeLesson, embedUrl, useCoursePrices, myPendingRequests, paystackKey, payWithPaystack, pdfSrc, sendPaymentRequest,
   startFreeCourse, useCourseState, useLessonMedia, type Enrollment,
 } from '../lib/learning';
 import { useModals } from '../components/Modals';
@@ -12,20 +13,19 @@ import { useModals } from '../components/Modals';
 const hasAccess = (e: Enrollment | null) => !!e && (e.plan === 'free' || e.plan === 'granted' || e.amount_paid > 0);
 const priceText = (c: Course) =>
   c.mode === 'application' ? 'By application' : c.mode === 'free' ? 'Free' :
-  naira(c.price) + (c.instN > 1 ? ` or ${c.instN} × ${naira(c.instAmt)}` : '');
+  cm(c, c.price) + (c.instN > 1 ? ` or ${c.instN} × ${cm(c, c.instAmt)}` : '');
 
 /* ---------- Full-width course banner (shown above the page layout) ---------- */
 export function CourseBanner({ id }: { id: string }) {
   const c = courseById(id);
   if (!c) return null;
   const sp = site.spaces.find((s) => s.id === c.space), tr = trackById(c.track), n = flatLessons(c).length;
-  const trackNo = tr ? site.tracks.indexOf(tr) + 1 : 0;
   return (
     <section className="cbf" aria-label="Course banner">
       <div className="in">
         <nav className="small crumbs" aria-label="Breadcrumb">
           <Link to={'/space/' + c.space}>{sp?.name || 'Courses'}</Link> ›{' '}
-          {tr && <><Link to={'/track/' + tr.id}>Track {trackNo}: {tr.title}</Link> › </>}
+          {tr && <><Link to={trackHref(tr)}>Track {trackNo(tr)}: {tr.title}</Link> › </>}
           <b style={{ color: '#fff' }}>{c.title}</b>
         </nav>
         <div style={{ marginTop: 14 }}><span className="badge lemon">{tr ? tr.title : 'Course'}</span></div>
@@ -34,9 +34,21 @@ export function CourseBanner({ id }: { id: string }) {
         <div className="meta">
           <span>{c.modules.length} modules</span><span>{n} lessons</span><span>{priceText(c)}</span>
         </div>
+        <div className="row" style={{ marginTop: 16 }}><LockButton c={c} /></div>
       </div>
     </section>
   );
+}
+
+/* The button on the course banner: unlocked, unlock (from the lowest payment), free, or apply */
+function LockButton({ c }: { c: Course }) {
+  const st = useCourseState(c.id);
+  if (hasAccess(st.enrollment)) return <span className="btn sm onDark" style={{ cursor: 'default' }}>🔓 Unlocked</span>;
+  const go = () => document.querySelector('.enrolbox')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (c.mode === 'application') return <Link className="btn lemon" to={'/space/' + (c.amld === 'sprint' ? 'amld' : 'presence')}>📝 Apply for a place</Link>;
+  if (c.mode === 'free' || !(c.price > 0)) return <button className="btn lemon" onClick={go}>🔓 Unlock course · free</button>;
+  const inst = c.instN > 1 && c.instAmt > 0;
+  return <button className="btn lemon" onClick={go}>🔓 Unlock course · {inst ? 'from ' + cm(c, Math.min(c.instAmt, c.price)) + ' a month' : cm(c, c.price)}</button>;
 }
 
 /* ---------- Course page: access box, current lesson, outline, downloads ---------- */
@@ -55,26 +67,26 @@ export function CoursePage() {
 
   return (
     <>
-      <AccessBox c={c} st={st} access={access} nextUp={nextUp} />
+      {/* Learners who are in see their place and "Continue" first. Everyone else reads about the course first,
+          and the unlock box comes at the end as the invitation (the banner already shows the fee and the unlock button). */}
+      {access && <AccessBox c={c} st={st} access={access} nextUp={nextUp} />}
       {lesson && <LessonView c={c} lesson={lesson} open={isOpen(lesson)} access={access} done={st.done.has(lesson.id)} flat={flat} onDone={st.refresh} />}
       {!lesson && c.desc && (
-        <section className="card"><h2>About this course</h2>{c.desc.split('\n\n').map((p, i) => <p key={i}>{p}</p>)}</section>
+        <section className="card">
+          <h2>About this course</h2>
+          {c.desc.split('\n\n').map((p, i) => <p key={i} className={i === 0 ? 'lead' : undefined}>{p}</p>)}
+          {!!c.gains?.length && (
+            <>
+              <h3 style={{ margin: '18px 0 8px' }}>What you'll walk away with</h3>
+              <ul className="gains">{c.gains.map((g) => <li key={g}>{g}</li>)}</ul>
+            </>
+          )}
+        </section>
       )}
       <section className="card">
         <div className="spread"><h2 style={{ margin: 0 }}>Course content</h2>{access && <span className="small muted">{pct}% complete</span>}</div>
         {access && <div className="progress" style={{ margin: '10px 0 14px' }}><span style={{ width: pct + '%' }} /></div>}
-        {c.modules.map((m) => (
-          <details className="mod" open key={m.id}>
-            <summary>{m.title}</summary>
-            {m.lessons.map((l) => {
-              const i = flat.indexOf(l), open = isOpen(l), ok = st.done.has(l.id);
-              const inner = <><span className={'st' + (ok ? ' ok' : '')}>{ok ? '✓' : open ? i + 1 : '🔒'}</span>{l.title}<span className="k">{l.kind}{l.mins ? ' · ' + l.mins + ' min' : ''}</span></>;
-              return open
-                ? <Link key={l.id} className={'les' + (l.id === lessonId ? ' cur' : '')} to={`/course/${c.id}/${l.id}`}>{inner}</Link>
-                : <div key={l.id} className="les locked">{inner}</div>;
-            })}
-          </details>
-        ))}
+        <Outline c={c} lessonId={lessonId} isOpen={isOpen} done={st.done} />
         {access && pct === 100 && (
           <div className="notice" style={{ marginTop: 14 }}>
             🎉 You completed every lesson.{st.enrollment && st.enrollment.amount_paid < st.enrollment.amount_due ? ' Your certificate is ready once all installments are paid.' : ' Well done!'}
@@ -84,11 +96,13 @@ export function CoursePage() {
       {c.downloads.length > 0 && (
         <section className="card">
           <h2>Downloads</h2>
+          <p className="small muted" style={{ margin: '-4px 0 8px' }}>{access ? 'Each one is shared inside the lesson where you use it.' : 'Included with the course, alongside the lessons.'}</p>
           {c.downloads.map((d) => (
-            <div key={d} className="dlrow"><span>📎 {d.split('|')[0]}</span><span className="small muted" style={{ marginLeft: 'auto' }}>{access ? 'Shared inside the lessons' : '🔒 Unlocks with the course'}</span></div>
+            <div key={d} className="dlrow"><span>📎 {d.split('|')[0]}</span></div>
           ))}
         </section>
       )}
+      {!access && <AccessBox c={c} st={st} access={access} nextUp={nextUp} />}
     </>
   );
 }
@@ -119,12 +133,12 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
       <section className="card enrolbox">
         <div className="spread">
           <div><span className="badge">✓ {e.plan === 'free' ? 'Enrolled' : e.plan === 'granted' ? 'Place confirmed' : 'Unlocked'}</span>
-            {e.plan === 'installments' && <p className="small muted" style={{ margin: '6px 0 0' }}>Paid {naira(e.amount_paid)} of {naira(e.amount_due)}{owed > 0 ? ` · next installment ${naira(Math.min(c.instAmt, owed))}` : ' · fully paid'}</p>}
+            {e.plan === 'installments' && <p className="small muted" style={{ margin: '6px 0 0' }}>Paid {cm(c, e.amount_paid)} of {cm(c, e.amount_due)}{owed > 0 ? ` · next installment ${cm(c, Math.min(Number(e.inst_amt ?? c.instAmt), owed))}` : ' · fully paid'}</p>}
           </div>
           {continueLink}
         </div>
         {e.plan === 'installments' && owed > 0 && (
-          <PayOptions c={c} amount={Math.min(c.instAmt, owed)} label="Pay next installment" busy={busy} setBusy={setBusy} setMsg={setMsg}
+          <PayOptions c={c} amount={Math.min(Number(e.inst_amt ?? c.instAmt), owed)} label="Pay next installment" busy={busy} setBusy={setBusy} setMsg={setMsg}
             email={profile?.email || session?.user.email || ''} userId={session!.user.id} onPaid={st.refresh} manual={manual} setManual={setManual} />
         )}
         {msg && <p className="formmsg" role="alert">{msg}</p>}
@@ -136,8 +150,8 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
     const sp = c.amld === 'sprint' ? 'amld' : 'presence';
     return (
       <section className="card enrolbox">
-        <h2 style={{ margin: 0 }}>Places on this course are by application</h2>
-        <p style={{ margin: '6px 0 12px' }}>It is part of an advanced programme. Once your application is accepted, the course opens here for you.</p>
+        <h2 style={{ margin: 0 }}>Ready to take your place?</h2>
+        <p style={{ margin: '6px 0 12px' }}>Places are by application, to keep each group senior and well matched. Once your application is accepted, the course opens here for you.</p>
         <Link className="btn" to={'/space/' + sp}>Learn about the programme and apply</Link>
       </section>
     );
@@ -146,8 +160,8 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
   if (!session) {
     return (
       <section className="card enrolbox">
-        <h2 style={{ margin: 0 }}>{c.mode === 'free' ? 'This course is free' : priceText(c)}</h2>
-        <p style={{ margin: '6px 0 12px' }}>{c.mode === 'free' ? 'Create a free account or sign in to start learning.' : 'Create a free account or sign in, then unlock the course to open every lesson.'}</p>
+        <h2 style={{ margin: 0 }}>Ready to begin?</h2>
+        <p style={{ margin: '6px 0 12px' }}>{c.mode === 'free' ? 'Create a free account or sign in, and start learning straight away.' : 'Create a free account or sign in, then unlock the course to open every lesson, the downloads and your certificate. Your progress is saved as you go.'}</p>
         <div className="row"><button className="btn lemon" onClick={() => openAccount('up')}>Create a free account</button><button className="btn quiet" onClick={() => openAccount('in')}>Sign in</button></div>
       </section>
     );
@@ -167,29 +181,59 @@ function AccessBox({ c, st, access, nextUp }: { c: Course; st: ReturnType<typeof
     );
   }
 
-  // Paid and not yet unlocked
-  const amount = plan === 'inst' && c.instN > 1 ? c.instAmt : c.price;
+  // Paid and not yet unlocked: the server says what each plan costs now (offers and promo code included)
+  return <Checkout c={c} plan={plan} setPlan={setPlan} pending={pending} setPending={setPending} busy={busy} setBusy={setBusy} msg={msg} setMsg={setMsg}
+    manual={manual} setManual={setManual} email={profile?.email || session.user.email || ''} userId={session.user.id} onPaid={st.refresh} />;
+}
+
+function Checkout(p: {
+  c: Course; plan: 'full' | 'inst'; setPlan: (v: 'full' | 'inst') => void; pending: { amount: number; method: string }[]; setPending: (v: { amount: number; method: string }[]) => void;
+  busy: boolean; setBusy: (b: boolean) => void; msg: string; setMsg: (m: string) => void; manual: boolean; setManual: (b: boolean) => void;
+  email: string; userId: string; onPaid: () => void;
+}) {
+  const { c, plan, setPlan, pending } = p;
+  const [code, setCode] = useState('');           // the applied code
+  const [typed, setTyped] = useState('');
+  const [codeMsg, setCodeMsg] = useState('');
+  const pr = useCoursePrices(c.id, code);
+  const full = pr?.full_amount ?? c.price, inst = pr?.inst_amount ?? (c.instN > 1 && c.instAmt > 0 ? c.instAmt : null);
+  const hasInst = inst != null && c.instN > 1;
+  const amount = plan === 'inst' && hasInst ? inst! : full;
+  const usedCode = code && ((plan === 'inst' ? pr?.inst_promo : pr?.full_promo) ? code : '');
+  const was = (now: number, base: number) => (now < base - 0.004 ? <><s className="muted" style={{ fontWeight: 400 }}>{cm(c, base)}</s> </> : null);
+  const apply = async (e: FormEvent) => {
+    e.preventDefault(); setCodeMsg('');
+    const t = typed.trim().toUpperCase();
+    if (!t) { setCode(''); return; }
+    try { const r = await checkPromo(t, c.id); if (r.ok) { setCode(t); setCodeMsg(`✓ ${r.name} applied.`); } else { setCode(''); setCodeMsg(r.message); } }
+    catch (err) { setCodeMsg(niceError(err)); }
+  };
   return (
     <section className="card enrolbox">
-      <h2 style={{ margin: 0 }}>Unlock this course</h2>
-      <p style={{ margin: '6px 0 12px' }}>Unlocking opens every lesson, the downloads and your certificate.</p>
-      {c.instN > 1 && (
+      <h2 style={{ margin: 0 }}>Ready to begin? Unlock this course</h2>
+      <p style={{ margin: '6px 0 12px' }}>Unlocking opens every lesson, the downloads and your certificate. Learn at your own pace; your progress is saved as you go.</p>
+      {hasInst ? (
         <div className="stack" role="radiogroup" aria-label="How would you like to pay?" style={{ gap: 6, marginBottom: 12 }}>
-          <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay in full: <b>{naira(c.price)}</b></label>
-          <label className="row"><input type="radio" name="plan" checked={plan === 'inst'} onChange={() => setPlan('inst')} style={{ width: 'auto' }} /> {c.instN} installments of <b>{naira(c.instAmt)}</b> (total {naira(c.instN * c.instAmt)}). The course opens after the first.</label>
+          <label className="row"><input type="radio" name="plan" checked={plan === 'full'} onChange={() => setPlan('full')} style={{ width: 'auto' }} /> Pay once: <b>{was(full, c.price)}{cm(c, full)}</b>{full < inst! * c.instN - 0.004 && <span className="small muted"> · saves {cm(c, Math.round((inst! * c.instN - full) * 100) / 100)} on installments</span>}</label>
+          <label className="row"><input type="radio" name="plan" checked={plan === 'inst'} onChange={() => setPlan('inst')} style={{ width: 'auto' }} /> {c.instN} monthly installments of <b>{was(inst!, c.instAmt)}{cm(c, inst!)}</b> (total {cm(c, Math.round(inst! * c.instN * 100) / 100)}). The course opens after the first.</label>
         </div>
-      )}
-      {pending.length > 0 && <div className="notice" style={{ marginBottom: 12 }}>⏳ We received your {pending[0].method.toLowerCase()} notice for {naira(pending[0].amount)}. The course opens as soon as we confirm it, usually within one working day.</div>}
-      <PayOptions c={c} amount={amount} label={'Pay ' + naira(amount)} busy={busy} setBusy={setBusy} setMsg={setMsg}
-        email={profile?.email || session.user.email || ''} userId={session.user.id} onPaid={st.refresh} manual={manual} setManual={setManual}
-        onRequested={() => myPendingRequests(c.id).then((r) => setPending(r as { amount: number; method: string }[]))} />
-      {msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{msg}</p>}
+      ) : <p style={{ margin: '0 0 12px' }}><b>{was(full, c.price)}{cm(c, full)}</b></p>}
+      <form className="row" onSubmit={apply} style={{ marginBottom: 12, gap: 6 }}>
+        <input value={typed} onChange={(e) => setTyped(e.target.value)} placeholder="Promo code" aria-label="Promo code" style={{ maxWidth: 200, textTransform: 'uppercase' }} maxLength={30} />
+        <button className="btn quiet sm">Apply</button>
+        {codeMsg && <span className="small" role="status">{codeMsg}</span>}
+      </form>
+      {pending.length > 0 && <div className="notice" style={{ marginBottom: 12 }}>⏳ We received your {pending[0].method.toLowerCase()} notice for {cm(c, pending[0].amount)}. The course opens as soon as we confirm it, usually within one working day.</div>}
+      <PayOptions c={c} amount={amount} promo={usedCode || ''} label={'Pay ' + cm(c, amount)} busy={p.busy} setBusy={p.setBusy} setMsg={p.setMsg}
+        email={p.email} userId={p.userId} onPaid={p.onPaid} manual={p.manual} setManual={p.setManual}
+        onRequested={() => myPendingRequests(c.id).then((r) => p.setPending(r as { amount: number; method: string }[]))} />
+      {p.msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{p.msg}</p>}
     </section>
   );
 }
 
 function PayOptions(p: {
-  c: Course; amount: number; label: string; busy: boolean; setBusy: (b: boolean) => void; setMsg: (m: string) => void;
+  c: Course; amount: number; promo?: string; label: string; busy: boolean; setBusy: (b: boolean) => void; setMsg: (m: string) => void;
   email: string; userId: string; onPaid: () => void; manual: boolean; setManual: (b: boolean) => void; onRequested?: () => void;
 }) {
   const pay = site.payments;
@@ -198,7 +242,7 @@ function PayOptions(p: {
   const card = async () => {
     p.setBusy(true); p.setMsg('');
     try {
-      const r = await payWithPaystack({ courseId: p.c.id, courseTitle: p.c.title, amount: p.amount, email: p.email, userId: p.userId });
+      const r = await payWithPaystack({ courseId: p.c.id, courseTitle: p.c.title, amount: p.amount, currency: p.c.currency, promo: p.promo, email: p.email, userId: p.userId });
       if (r === 'paid') p.onPaid(); else p.setMsg('Payment window closed. You have not been charged.');
     } catch (err) { p.setMsg(niceError(err)); } finally { p.setBusy(false); }
   };
@@ -209,7 +253,7 @@ function PayOptions(p: {
     p.setBusy(true); p.setMsg('');
     try {
       await sendPaymentRequest({
-        course_id: p.c.id, method: (fd.get('method') as 'Bank transfer' | 'LinPay') || 'Bank transfer', amount: p.amount,
+        course_id: p.c.id, currency: p.c.currency, promo_code: p.promo || null, method: (fd.get('method') as 'Bank transfer' | 'LinPay') || 'Bank transfer', amount: p.amount,
         reference: String(fd.get('reference') || '').trim(), note: String(fd.get('note') || '').trim(),
       });
       setSent(true); p.onRequested?.();
@@ -229,7 +273,7 @@ function PayOptions(p: {
       ) : (
         <form className="stack paybox" onSubmit={request}>
           <p className="small" style={{ margin: 0 }}>
-            <b>1.</b> Send <b>{naira(p.amount)}</b>{' '}
+            <b>1.</b> Send <b>{cm(p.c, p.amount)}</b>{' '}
             {pay.accountNumber ? <>to <b>{pay.accountName}</b>, {pay.bankName}, account <b>{pay.accountNumber}</b></> : <>using the bank details we share on request (<Link to="/space/contact">contact us</Link>)</>}
             {pay.linpayUrl && <>, or pay through <a href={pay.linpayUrl} target="_blank" rel="noopener">LinPay ↗</a></>}.
             {' '}<b>2.</b> Tell us below, and we’ll unlock the course once we see it.
@@ -294,6 +338,7 @@ function LessonView({ c, lesson, open, access, done, flat, onDone }: { c: Course
     <div className="card" id="lesson">
       <span className="small muted">Lesson {i + 1} of {flat.length}</span>
       <h2>{lesson.title}</h2>
+      {lesson.sum && <div className="lcov"><b>What this lesson covers</b><span>{lesson.sum}</span></div>}
       {body}
       {msg && <p className="formmsg" role="alert" style={{ marginTop: 10 }}>{msg}</p>}
       {open && (
@@ -303,5 +348,70 @@ function LessonView({ c, lesson, open, access, done, flat, onDone }: { c: Course
         </div>
       )}
     </div>
+  );
+}
+
+/* ---------- Course outline: parts, module notes, collapsible modules and lesson summaries ---------- */
+function Outline({ c, lessonId, isOpen, done }: { c: Course; lessonId?: string; isOpen: (l: Lesson) => boolean; done: Set<string> }) {
+  const flat = flatLessons(c);
+  const long = c.modules.length > 3 || flat.length > 18, sums = flat.some((l) => l.sum);
+  const focus = lessonId || flat.find((l) => !done.has(l.id))?.id || '';
+  const focusMi = Math.max(0, c.modules.findIndex((m) => m.lessons.some((l) => l.id === focus)));
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [ex, setEx] = useState<Record<string, boolean>>({});
+  const [allSums, setAllSums] = useState(false);
+  const isMod = (m: Module, mi: number) => m.lessons.some((l) => l.id === lessonId) || (m.id in open ? open[m.id] : (!long || mi === focusMi));
+  let lastPart = '';
+  return (
+    <>
+      {(long || sums) && (
+        <div className="ctools">
+          {long && <><button className="btn ghost sm" onClick={() => setOpen(Object.fromEntries(c.modules.map((m) => [m.id, true])))}>⊞ Expand all</button>
+            <button className="btn ghost sm" onClick={() => setOpen(Object.fromEntries(c.modules.map((m) => [m.id, false])))}>⊟ Collapse all</button></>}
+          {sums && <button className="btn ghost sm" aria-pressed={allSums} onClick={() => { setAllSums(!allSums); setEx({}); }}>☰ {allSums ? 'Hide' : 'Show'} lesson summaries</button>}
+        </div>
+      )}
+      {c.modules.map((m, mi) => {
+        let head = null;
+        if (m.part && m.part !== lastPart) {
+          lastPart = m.part;
+          const p = (c.parts || []).find((x) => x.id === m.part);
+          head = <div className="mpart"><b>{p ? p.title : m.part}</b>{p?.desc && <p>{p.desc}</p>}</div>;
+        }
+        const meta = [`${m.lessons.length} lesson${m.lessons.length === 1 ? '' : 's'}`, m.worksheet && 'worksheet', m.deliverable && 'deliverable'].filter(Boolean).join(' · ');
+        const info = m.about || m.outcome || m.worksheet || m.deliverable;
+        return (
+          <div key={m.id}>
+            {head}
+            <details className="mod" open={isMod(m, mi)} onToggle={(e) => { const v = (e.currentTarget as HTMLDetailsElement).open; if (v !== isMod(m, mi)) setOpen((o) => ({ ...o, [m.id]: v })); }}>
+              <summary><span>{m.title}</span><span className="mmeta">{meta}</span></summary>
+              {info && (
+                <div className="minfo">
+                  {m.about && <p><i>{m.about}</i></p>}
+                  {m.outcome && <p><b>By the end:</b> {m.outcome}</p>}
+                  {m.worksheet && <p><b>📝 Worksheet:</b> {m.worksheet}</p>}
+                  {m.deliverable && <p><b>🎯 Deliverable:</b> {m.deliverable}</p>}
+                </div>
+              )}
+              {m.lessons.map((l) => {
+                const i = flat.indexOf(l), op = isOpen(l), ok = done.has(l.id);
+                const inner = <><span className={'st' + (ok ? ' ok' : '')}>{ok ? '✓' : op ? i + 1 : '🔒'}</span>{l.title}<span className="k">{l.kind}{l.mins ? ' · ' + l.mins + ' min' : ''}</span></>;
+                const row = op
+                  ? <Link className={'les' + (l.id === lessonId ? ' cur' : '')} to={`/course/${c.id}/${l.id}`}>{inner}</Link>
+                  : <div className="les locked">{inner}</div>;
+                if (!l.sum) return <div key={l.id}>{row}</div>;
+                const shown = l.id in ex ? ex[l.id] : allSums;
+                return (
+                  <div className={'lw' + (shown ? ' ex' : '')} key={l.id}>
+                    <div className="lrow">{row}<button className="lx" aria-expanded={shown} aria-label={`What “${l.title}” covers`} title="What this lesson covers" onClick={() => setEx((x) => ({ ...x, [l.id]: !shown }))}><span aria-hidden="true">▾</span></button></div>
+                    <p className="lsum">{l.sum}</p>
+                  </div>
+                );
+              })}
+            </details>
+          </div>
+        );
+      })}
+    </>
   );
 }

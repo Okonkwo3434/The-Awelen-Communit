@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { site } from '../data/site';
+import { Link, useLocation } from 'react-router-dom';
+import { site, trackHref, trackItems } from '../data/site';
+import type { Course, Space, Track } from '../data/types';
+import { useMyLearning } from '../lib/learning';
 import { firstName, useAuth } from '../lib/auth';
 import { useModals } from './Modals';
+import { RightSide } from './RightSide';
 import { initials } from '../pages/PublicPages';
 import { CourseBanner } from '../pages/CoursePage';
+import { AdminBanner, SpaceBanner, TrackBanner } from './Banners';
+import { PlansBanner } from '../pages/PlansPage';
 
 export function Logo() {
   return (
@@ -90,59 +95,105 @@ const TYPE_TAG: Record<string, string> = {
   course: 'course', post: 'post', event: 'event', members: 'database', affiliates: 'experts', crucible: 'ideation',
   ebooks: 'library', consult: 'services', announce: 'news', amld: 'programme', presence: 'programme', peer: 'circle',
 };
+const KIND_ICO: Record<string, string> = { video: '▶', pdf: '📄', quiz: '✍️' };
 
+/* Left sidebar, as in the single-file app: categories of spaces; under Courses, each track with its courses
+   (which open out into modules and lessons) and any spaces placed in that track. A space that belongs to a track,
+   or is a track's home, shows under the track and not in its own category. */
 export function LeftNav({ onNavigate }: { onNavigate: () => void }) {
-  const [closed, setClosed] = useState<Record<string, boolean>>({});
-  const toggle = (k: string) => setClosed((c) => ({ ...c, [k]: !c[k] }));
-  const spaces = site.spaces.filter((s) => !s.hidden);
+  const { pathname } = useLocation();
+  const { teamRole } = useAuth();
+  const mine = useMyLearning();
+  const unlocked = new Set(mine.filter(({ e }) => e.plan === 'free' || e.plan === 'granted' || e.amount_paid > 0).map(({ e }) => e.course_id));
+  const [, sec, id, sub] = pathname.split('/');
+  const activeCourse = sec === 'course' ? id : '';
+  const [tog, setTog] = useState<Record<string, boolean>>({});
+  const isOpen = (k: string, dflt: boolean) => (k in tog ? tog[k] : dflt);
+  const flip = (k: string, dflt: boolean) => setTog((t) => ({ ...t, [k]: !(k in t ? t[k] : dflt) }));
+  const visible = (sp: Space) => !sp.hidden || !!teamRole;
+  const tIds = new Set(site.tracks.map((t) => t.id)), homes = new Set(site.tracks.map((t) => t.home).filter(Boolean));
+  const on = (path: string) => pathname === path;
+
+  const caret = (k: string, open: boolean, label: string) => (
+    <button className={'tg' + (open ? ' open' : '')} onClick={() => flip(k, open)} aria-expanded={open} aria-label={(open ? 'Hide' : 'Show') + ' what is inside ' + label}>▸</button>
+  );
+  const noC = <span className="tg sp" aria-hidden="true" />;
+  const spaceRow = (sp: Space, depth: number) => (
+    <div className={'tr d' + depth} key={'s' + sp.id}>{noC}
+      <Link to={'/space/' + sp.id} className={'tl' + (sec === 'space' && id === sp.id ? ' on' : '')} onClick={onNavigate}>
+        <span className="ico">{sp.icon}</span>
+        {sp.navSub ? <span className="nm">{sp.name}<span className="ns">{sp.navSub}</span></span> : <span className="nm">{sp.name}</span>}
+        {sp.hidden ? <span className="ty">hidden</span> : TYPE_TAG[sp.type] && <span className="ty">{TYPE_TAG[sp.type]}</span>}
+      </Link>
+    </div>
+  );
+  const courseRows = (c: Course, depth: number) => {
+    const k = 'c:' + c.id, open = isOpen(k, activeCourse === c.id), acc = unlocked.has(c.id);
+    return (
+      <div key={'c' + c.id}>
+        <div className={'tr d' + depth}>{c.modules.length ? caret(k, open, c.title) : noC}
+          <Link to={'/course/' + c.id} className={'tl' + (activeCourse === c.id && !sub ? ' on' : '')} onClick={onNavigate}>
+            <span className="ico">{c.icon || '🎓'}</span><span className="nm">{c.title}</span><span className="ty">{acc ? 'unlocked' : '🔒'}</span>
+          </Link>
+        </div>
+        {open && c.modules.map((m) => {
+          const mk = 'm:' + m.id, mo = isOpen(mk, activeCourse === c.id && m.lessons.some((l) => l.id === sub));
+          return (
+            <div key={m.id}>
+              <div className={'tr d' + (depth + 1)}>{m.lessons.length ? caret(mk, mo, m.title) : noC}
+                <Link to={acc && m.lessons[0] ? `/course/${c.id}/${m.lessons[0].id}` : '/course/' + c.id} className="tl nmod" onClick={onNavigate}>
+                  <span className="nm">{m.title}</span><span className="ty">{m.lessons.length}</span>
+                </Link>
+              </div>
+              {mo && m.lessons.map((l) => (
+                <div className={'tr d' + (depth + 2)} key={l.id}>{noC}
+                  <Link to={acc ? `/course/${c.id}/${l.id}` : '/course/' + c.id} className={'tl nles' + (activeCourse === c.id && sub === l.id ? ' on' : '')} onClick={onNavigate}>
+                    {acc ? <span className="lk" aria-hidden="true">{KIND_ICO[l.kind] || '•'}</span> : <span className="lk" aria-label="Locked">🔒</span>}<span className="nm">{l.title}</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+  const trackRows = (t: Track, i: number) => {
+    const k = 't:' + t.id, open = isOpen(k, true), its = trackItems(t);
+    const act = on('/track/' + t.id) || (!!t.home && on('/space/' + t.home));
+    return (
+      <div key={t.id}>
+        <div className="tr d1 trkrow">{caret(k, open, t.title)}
+          <Link className={'trk' + (act ? ' on' : '')} to={trackHref(t)} onClick={onNavigate}><span className="tn">Track {i + 1}</span><span className="tt">{t.title}</span></Link>
+        </div>
+        {open && (its.length ? its.map((it) => (it.k === 'course' ? courseRows(it.c, 2) : spaceRow(it.s, 2))) : <div className="tempty">No courses in this track yet</div>)}
+      </div>
+    );
+  };
 
   return (
     <nav className="nav" aria-label="Categories, tracks and spaces">
-      <div className="navhint">Open a category, then a track, course, module or lesson.</div>
+      <div className="navhint"><span aria-hidden="true">👇 </span>Open a category, then a track, course, module or lesson.</div>
       {site.groups.map((g) => {
-        const open = !closed[g.id];
-        const inGroup = spaces.filter((s) => s.group === g.id);
-        if (!inGroup.length && g.id !== 'tracks') return null;
+        const list = site.spaces.filter((sp) => sp.group === g.id && visible(sp) && !(sp.track && tIds.has(sp.track)) && !homes.has(sp.id));
+        if (!list.length) return null;
+        const k = 'g:' + g.id, open = isOpen(k, true);
         return (
           <div key={g.id}>
-            <div className="tr cat">
-              <button className="catn" onClick={() => toggle(g.id)} aria-expanded={open}>
-                <span className={'tg' + (open ? ' open' : '')} aria-hidden="true">▸</span>{g.name}
-              </button>
-            </div>
-            {open && g.id === 'tracks' && (
-              <>
-                <NavRow to="/space/courses" icon="🗺️" name="All tracks at a glance" onClick={onNavigate} />
-                {site.tracks.map((t, i) => (
-                  <div className="tr d1 trkrow" key={t.id}>
-                    <span className="tg sp" aria-hidden="true" />
-                    <NavLink className="trk" to={'/track/' + t.id} onClick={onNavigate}>
-                      <span className="tn">Track {i + 1}</span><span className="tt">{t.title}</span>
-                    </NavLink>
-                  </div>
-                ))}
-              </>
-            )}
-            {open && g.id !== 'tracks' && inGroup.map((s) => (
-              <NavRow key={s.id} to={'/space/' + s.id} icon={s.icon} name={s.name} sub={s.navSub} tag={TYPE_TAG[s.type]} onClick={onNavigate} />
-            ))}
+            <div className="tr cat"><button className="catn" onClick={() => flip(k, open)} aria-expanded={open}><span className={'tg' + (open ? ' open' : '')} aria-hidden="true">▸</span>{g.name}</button></div>
+            {open && list.map((sp) => sp.type === 'course' ? (
+              <div key={sp.id}>
+                <div className="tr d1">{noC}<Link to={'/space/' + sp.id} className={'tl' + (on('/space/' + sp.id) ? ' on' : '')} onClick={onNavigate}><span className="ico">🗺️</span><span className="nm">All tracks at a glance</span></Link></div>
+                {site.tracks.filter((t) => t.space === sp.id).map(trackRows)}
+              </div>
+            ) : spaceRow(sp, 1))}
           </div>
         );
       })}
+      <div className="tr cat"><span className="catn" style={{ cursor: 'default' }}><span className="tg sp" aria-hidden="true" />For creators</span></div>
+      <div className="tr d1">{noC}<Link to="/plans" className={'tl' + (on('/plans') ? ' on' : '')} onClick={onNavigate}><span className="ico">🚀</span><span className="nm">Teach on Awelen</span><span className="ty">plans</span></Link></div>
+      {teamRole && <div className="tr d1">{noC}<Link to="/admin" className={'tl' + (pathname.startsWith('/admin') ? ' on' : '')} onClick={onNavigate}><span className="ico">⚙️</span><span className="nm">Admin portal</span><span className="ty">admin</span></Link></div>}
     </nav>
-  );
-}
-
-function NavRow(p: { to: string; icon: string; name: string; sub?: string; tag?: string; onClick: () => void }) {
-  return (
-    <div className="tr d1">
-      <span className="tg sp" aria-hidden="true" />
-      <NavLink to={p.to} className={({ isActive }) => 'tl' + (isActive ? ' on' : '')} onClick={p.onClick}>
-        <span className="ico">{p.icon}</span>
-        {p.sub ? <span className="nm">{p.name}<span className="ns">{p.sub}</span></span> : <span className="nm">{p.name}</span>}
-        {p.tag && <span className="ty">{p.tag}</span>}
-      </NavLink>
-    </div>
   );
 }
 
@@ -192,12 +243,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <>
       <TopBar onMenu={() => setDrawer((d) => !d)} />
       {home && <Banner />}
+      {!home && pathname.startsWith('/space/') && <SpaceBanner id={pathname.split('/')[2]} />}
+      {pathname.startsWith('/track/') && <TrackBanner id={pathname.split('/')[2]} />}
       {pathname.startsWith('/course/') && <CourseBanner id={pathname.split('/')[2]} />}
+      {pathname.startsWith('/admin') && <AdminBanner />}
+      {pathname === '/plans' && <PlansBanner />}
       <UserBar />
       <div className="layout">
         <aside className={'left' + (drawer ? ' open' : '')}><LeftNav onNavigate={() => setDrawer(false)} /></aside>
         <main className="stack" id="main">{children}</main>
-        <aside className="right" aria-label="Activity" />
+        <aside className="right" aria-label="Activity"><RightSide /></aside>
       </div>
       {drawer && <div className="scrim" onClick={() => setDrawer(false)} />}
       <Footer />

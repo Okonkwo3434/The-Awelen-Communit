@@ -1,0 +1,1258 @@
+{
+ "coachProgs": [
+  {
+   "id": "finance",
+   "name": "Financial coaching",
+   "icon": "💰",
+   "tag": "Clarity and control over your money, your investments and what you leave behind.",
+   "intro": "Most people don’t have a money problem. They have a planning problem. Their income has grown faster than their financial knowledge, and nobody has sat down with them to build a plan that fits their real life. Financial coaching gives you that thinking partner: practical, jargon-free and always honest about the numbers.",
+   "forWho": "Early-to-mid career professionals, founders and business owners who earn well but want a clear plan for their money, their family and their future.",
+   "areas": [
+    {
+     "id": "planning",
+     "icon": "📒",
+     "title": "Financial planning",
+     "tag": "From “where does the money go?” to a plan you actually follow.",
+     "quote": "I earn well. I work hard. But I genuinely don’t know where all the money goes, or whether I’m doing the right things with what I have.",
+     "intro": "We build the foundation: a clear picture of where you stand today, a budget that fits your real life, and a step-by-step path to the goals that matter to you.",
+     "stuck": [
+      [
+       "No written financial plan",
+       "Decisions get made reactively, not strategically, and money is left on the table."
+      ],
+      [
+       "Income growing, clarity shrinking",
+       "As earnings rise, so does complexity, and it is hard to keep up without a guide."
+      ],
+      [
+       "Living month to month",
+       "Not because of low income, but because there is no structured budget or spending framework."
+      ],
+      [
+       "Saving without a strategy",
+       "Money is saved towards no specific goal, so it never feels like enough."
+      ],
+      [
+       "Debt without a roadmap",
+       "Loans and obligations pile up with no clear plan to clear them."
+      ]
+     ],
+     "offer": [
+      [
+       "Financial health assessment",
+       "An honest look at your income, spending, savings, debts and obligations. Not a judgement, just a clear starting point."
+      ],
+      [
+       "Personal budget design",
+       "A realistic monthly framework for essentials, goals, savings and lifestyle, simple enough to follow. For founders, we also separate personal money from business money."
+      ],
+      [
+       "Goal mapping",
+       "What do you want your money to do in one, five and ten years? A home, a business, your children’s education: we map a realistic path to each."
+      ],
+      [
+       "Debt repayment strategy",
+       "A structured plan that tackles debt in the smartest order, cuts the interest you pay and frees up income."
+      ],
+      [
+       "Emergency fund",
+       "A cushion for life’s surprises, so one unexpected bill no longer derails your plans."
+      ],
+      [
+       "Accountability and review",
+       "Optional monthly check-ins to review progress and adjust the plan as your life changes."
+      ]
+     ],
+     "change": [
+      [
+       "Budgeting",
+       "Spending feels out of control",
+       "A personal budget you follow consistently"
+      ],
+      [
+       "Savings",
+       "Irregular, with no targets",
+       "Saving every month towards named goals"
+      ],
+      [
+       "Debt",
+       "Many obligations, no plan",
+       "A clear repayment order and monthly targets"
+      ],
+      [
+       "Emergency fund",
+       "One bill away from panic",
+       "Three to six months of essential costs set aside"
+      ],
+      [
+       "Confidence",
+       "Avoiding bank statements",
+       "Informed, intentional and at ease with money"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Foundations",
+       "Financial health assessment, budget design and one goal-mapping session"
+      ],
+      [
+       "Clarity Plan",
+       "Everything in Foundations, plus a debt strategy and an emergency fund plan"
+      ],
+      [
+       "Full Coaching Partnership",
+       "Everything in Clarity Plan, plus three months of monthly coaching and progress reviews"
+      ]
+     ]
+    },
+    {
+     "id": "invest",
+     "icon": "📈",
+     "title": "Investment planning",
+     "tag": "Move from thinking about investing to doing it, with a plan you understand.",
+     "quote": "I know I should be investing. I just don’t know where to start, who to trust, or how to do it without making a costly mistake.",
+     "intro": "Money left in a savings account quietly loses value to inflation. We take the noise out of investing so you can build a simple, diversified portfolio that matches your goals and your comfort with risk.",
+     "stuck": [
+      [
+       "Information overload",
+       "Too many options and too much conflicting advice lead to doing nothing."
+      ],
+      [
+       "Fear of a costly mistake",
+       "Losing money early feels devastating, so many people never start."
+      ],
+      [
+       "Not knowing your risk comfort",
+       "Without it, every investment feels like a gamble."
+      ],
+      [
+       "No long-term strategy",
+       "Products bought one at a time from tips, with no portfolio tying them together."
+      ],
+      [
+       "Inflation eating savings",
+       "Money in low-yield accounts loses real value every year."
+      ]
+     ],
+     "offer": [
+      [
+       "Investor profile and risk assessment",
+       "Your income, obligations, time horizon, goals and genuine risk tolerance. Everything else is built on this."
+      ],
+      [
+       "Investment education",
+       "Stocks, bonds, mutual funds, ETFs, REITs, treasury bills and dollar assets, explained plainly. You should never own something you don’t understand."
+      ],
+      [
+       "Portfolio strategy",
+       "A simple, diversified plan: what to invest in, how much, how often and through which channels."
+      ],
+      [
+       "Local and international assets",
+       "From Nigerian treasury bills and money market funds to global ETFs and dollar-denominated assets: what is open to you and how to access it."
+      ],
+      [
+       "Monitoring framework",
+       "How to track your portfolio, when to rebalance and how life changes should shape your decisions."
+      ],
+      [
+       "Ongoing coaching",
+       "Optional regular sessions to review performance and keep your strategy in step with your goals."
+      ]
+     ],
+     "change": [
+      [
+       "Activity",
+       "Money idle in savings",
+       "A structured, diversified portfolio"
+      ],
+      [
+       "Knowledge",
+       "Confused and afraid of mistakes",
+       "Clear on what you own and why"
+      ],
+      [
+       "Risk",
+       "Too much or too little without knowing",
+       "Investing within a known, comfortable range"
+      ],
+      [
+       "Strategy",
+       "Tips and social media",
+       "A goal-aligned plan with clear review rules"
+      ],
+      [
+       "Mindset",
+       "Spooked by short-term noise",
+       "Patient and focused on long-term growth"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Investment Starter",
+       "Investor profile, an education session and a basic portfolio strategy"
+      ],
+      [
+       "Build & Grow",
+       "Everything in Starter, plus local and international asset navigation and implementation guidance"
+      ],
+      [
+       "Full Investment Partnership",
+       "Everything in Build & Grow, plus three months of coaching and portfolio reviews"
+      ]
+     ]
+    },
+    {
+     "id": "insure",
+     "icon": "🛡️",
+     "title": "Life insurance planning",
+     "tag": "The right cover, at the right level, without the sales pressure.",
+     "quote": "I know I should have life insurance. I just don’t know how much I need, what type to get, or who to trust to help me figure it out.",
+     "intro": "Life insurance is not for you. It is for the people who depend on you. We work out how much cover your family really needs, explain the options plainly and help you choose a policy you can afford and sustain.",
+     "stuck": [
+      [
+       "Confusing products",
+       "Term, whole life, endowment and investment-linked policies, rarely explained clearly."
+      ],
+      [
+       "Distrust of salespeople",
+       "Past experience with pushy, commission-driven selling puts people off."
+      ],
+      [
+       "Not knowing how much cover",
+       "Most people have no idea what sum assured would truly protect their family."
+      ],
+      [
+       "Assuming it’s unaffordable",
+       "Many never check how affordable proper cover can be."
+      ],
+      [
+       "Putting it off",
+       "It feels urgent in theory but never in the moment."
+      ]
+     ],
+     "offer": [
+      [
+       "Needs assessment",
+       "How much cover you need, based on your income, dependants, debts, lifestyle and future obligations."
+      ],
+      [
+       "Policy types explained",
+       "What each type does, what it costs and when it fits, so you can decide with confidence."
+      ],
+      [
+       "Provider and product review",
+       "Comparing cover, premiums, exclusions, claims record and value across reputable insurers."
+      ],
+      [
+       "Beneficiaries and structure",
+       "Who to name, how to name them and how to set the policy up so claims are smooth."
+      ],
+      [
+       "Affordability planning",
+       "Adequate cover at a premium you can keep paying, built into your budget as a fixed line."
+      ],
+      [
+       "Annual review",
+       "Optional yearly check so your cover keeps pace with marriage, children, a new home or a promotion."
+      ]
+     ],
+     "change": [
+      [
+       "Cover",
+       "No policy; family unprotected",
+       "The right policy at the right level"
+      ],
+      [
+       "Understanding",
+       "Confused and avoiding the decision",
+       "Clear on type, cover and what it provides"
+      ],
+      [
+       "Beneficiaries",
+       "Not considered or wrongly named",
+       "Correctly named and structured"
+      ],
+      [
+       "Premiums",
+       "Assumed too expensive",
+       "An affordable premium in the monthly budget"
+      ],
+      [
+       "Peace of mind",
+       "Quiet worry about the worst",
+       "Confidence that your family is protected"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Cover Clarity",
+       "Needs assessment, policy types explained and beneficiary guidance"
+      ],
+      [
+       "Protection Plan",
+       "Everything in Cover Clarity, plus a provider review and affordability planning"
+      ],
+      [
+       "Full Insurance Partnership",
+       "Everything in Protection Plan, plus implementation support and an annual review"
+      ]
+     ]
+    },
+    {
+     "id": "estate",
+     "icon": "🏛️",
+     "title": "Trusts & estate planning",
+     "tag": "Protect what you have built and make sure it reaches the people you love.",
+     "quote": "I know I should have a will and some kind of plan in place. I just don’t know where to start, or whether I have enough to make it worth doing yet.",
+     "intro": "If you have assets, dependants or a business, you need a plan, however modest it feels. We map your estate, explain wills, trusts and succession in plain language, and connect you with qualified lawyers for the formal drafting.",
+     "stuck": [
+      [
+       "“I don’t have enough yet”",
+       "Estate planning is not only for the wealthy. Anyone with assets or dependants needs a plan."
+      ],
+      [
+       "Legal fear",
+       "Wills, trusts, probate and letters of administration feel intimidating and are rarely explained."
+      ],
+      [
+       "Avoiding the topic",
+       "Thinking about death is uncomfortable, so many never start."
+      ],
+      [
+       "No trusted guide",
+       "Most people don’t know the difference between a will and a trust, or when each is needed."
+      ],
+      [
+       "Fear of family conflict",
+       "Worry about how relatives will react keeps important decisions unmade."
+      ]
+     ],
+     "offer": [
+      [
+       "Asset inventory and estate map",
+       "Every asset, account, property, business interest and obligation, clearly mapped."
+      ],
+      [
+       "Will essentials",
+       "Executors, distribution, guardians for minor children and specific gifts, documented clearly, with referral to a qualified lawyer for drafting."
+      ],
+      [
+       "Trusts: when and why",
+       "Which trusts fit your situation, if any, from trusts for minor beneficiaries to living trusts."
+      ],
+      [
+       "Beneficiary review",
+       "Making sure nominations on pensions, insurance and investment accounts match your actual wishes."
+      ],
+      [
+       "Business succession",
+       "What happens to your business and your co-owners if you can no longer run it."
+      ],
+      [
+       "Review and update",
+       "Optional sessions after life changes such as marriage, a new child or new assets."
+      ]
+     ],
+     "change": [
+      [
+       "Will",
+       "No will; intestacy decides",
+       "A clear will reflecting your wishes"
+      ],
+      [
+       "Beneficiaries",
+       "Outdated or inconsistent",
+       "Reviewed and consistent across every account"
+      ],
+      [
+       "Children",
+       "No guardian or trust",
+       "Guardian named and inheritance protected"
+      ],
+      [
+       "Business",
+       "Could be left in legal limbo",
+       "A clear succession framework"
+      ],
+      [
+       "Family",
+       "Risk of disputes and long delays",
+       "A smooth, dignified handover of assets"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Foundations",
+       "Asset inventory, will essentials and beneficiary review"
+      ],
+      [
+       "Legacy Plan",
+       "Everything in Foundations, plus trust guidance and an introduction to business succession"
+      ],
+      [
+       "Full Estate Coaching",
+       "Everything in Legacy Plan, plus full plan design, legal referral and an annual review"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "leadership",
+   "name": "Leadership coaching",
+   "icon": "🧭",
+   "tag": "Grow from doing the work well to leading the people, the strategy and the room.",
+   "intro": "Most people are promoted, or start a business, because they are good at the work. Then they discover that leading people, thinking strategically and carrying a room are entirely different skills, and nobody taught them. These are not personality traits you either have or don’t. They are skills, and they can be learned, practised and mastered with the right guidance.",
+   "forWho": "Individual contributors stepping into leadership, managers developing their teams, senior leaders shaping organisations, and founders growing from doing everything themselves to leading others.",
+   "areas": [
+    {
+     "id": "manage",
+     "icon": "🧭",
+     "title": "Management performance",
+     "tag": "Delegate with confidence and build a team that delivers without you in every detail.",
+     "quote": "I was promoted because I was good at the work. But nobody ever taught me how to lead the people doing it, and I feel that gap every single day.",
+     "intro": "Managing people is a different skill from doing the work yourself. We build the habits of a strong manager: clear delegation, honest feedback, a steady management rhythm and a team that takes ownership.",
+     "stuck": [
+      [
+       "Struggling to delegate",
+       "Holding on to work that belongs to others causes bottlenecks and burnout."
+      ],
+      [
+       "Avoiding performance conversations",
+       "Underperformance slides because the conversation feels too uncomfortable."
+      ],
+      [
+       "Team disengagement",
+       "You work harder while the team’s energy and output keep falling."
+      ],
+      [
+       "No management rhythm",
+       "Meetings without agendas, feedback without structure, goals without owners."
+      ],
+      [
+       "Transition shock",
+       "Moving into management with no framework for the shift."
+      ]
+     ],
+     "offer": [
+      [
+       "Management style assessment",
+       "An honest look at how you manage today: your strengths and where your approach limits the team."
+      ],
+      [
+       "60-day management plan",
+       "A week-by-week plan with clear actions, milestones and accountability checkpoints."
+      ],
+      [
+       "360-degree review",
+       "Optional structured feedback from your team, peers and seniors to uncover blind spots."
+      ],
+      [
+       "Delegation and accountability",
+       "Matching tasks to people, setting expectations that stick and holding people to them without micromanaging."
+      ],
+      [
+       "Difficult conversations",
+       "Coaching through the real conversations you face, from feedback to conflict."
+      ],
+      [
+       "Work and life priorities",
+       "A system for managing competing demands so your growth doesn’t cost you everything else."
+      ]
+     ],
+     "change": [
+      [
+       "Delegation",
+       "Holding on to everything",
+       "Delegating to the right people with clear expectations"
+      ],
+      [
+       "Feedback",
+       "Issues left to pile up",
+       "Timely, structured performance conversations"
+      ],
+      [
+       "Team",
+       "Passive and unclear on priorities",
+       "Energised, clear on goals and taking ownership"
+      ],
+      [
+       "Rhythm",
+       "Ad hoc and reactive",
+       "Regular one-to-ones and clear accountability"
+      ],
+      [
+       "Balance",
+       "Growth at real personal cost",
+       "Results without sacrificing your wellbeing"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Management Foundations",
+       "Assessment, 60-day plan and four coaching sessions"
+      ],
+      [
+       "Performance Accelerator",
+       "Foundations, plus a 360-degree review, delegation frameworks and eight sessions"
+      ],
+      [
+       "Full Leadership Partnership",
+       "Everything in Accelerator, plus a work-life priority system and six months of coaching"
+      ]
+     ]
+    },
+    {
+     "id": "strategy",
+     "icon": "♟️",
+     "title": "Strategic thinking",
+     "tag": "See the bigger picture and shape the decisions that set tomorrow’s direction.",
+     "quote": "I’m excellent at getting things done. But when the conversation turns to strategy and the big picture, I always feel like I’m playing catch-up.",
+     "intro": "Strategic thinking is not a gift reserved for a few. It is a set of frameworks and habits. We build them through your real work, so you move from solving today’s problems well to seeing around corners.",
+     "stuck": [
+      [
+       "Operational mindset",
+       "All your energy goes on today’s tasks, with no room to think about next year."
+      ],
+      [
+       "Not seeing the system",
+       "Hard to connect the dots across functions and see how decisions elsewhere affect you."
+      ],
+      [
+       "Weak business cases",
+       "Ideas framed by function or feeling, not by value, risk and return."
+      ],
+      [
+       "Reactive, not proactive",
+       "Always responding to the urgent and leaving strategy to others."
+      ],
+      [
+       "Low visibility with leaders",
+       "Not seen as strategic, so overlooked for high-profile work and promotion."
+      ]
+     ],
+     "offer": [
+      [
+       "Strategic thinking assessment",
+       "Where your thinking operates today, what you see well and what you miss."
+      ],
+      [
+       "Organisational politics and processes",
+       "How decisions really get made and who holds influence, navigated with integrity."
+      ],
+      [
+       "60-day strategic development plan",
+       "Applied weekly challenges drawn from your real work, with reflection built in."
+      ],
+      [
+       "Business cases and stakeholders",
+       "Framing ideas in the language of value, risk and return that decision-makers respond to."
+      ],
+      [
+       "Market and competitor analysis",
+       "Practical tools to scan your market, read competitors and spot trends early."
+      ],
+      [
+       "Leadership presence",
+       "Carrying and communicating your strategic thinking in senior meetings and proposals."
+      ]
+     ],
+     "change": [
+      [
+       "Horizon",
+       "Only this week’s tasks",
+       "Short-term delivery balanced with long-term view"
+      ],
+      [
+       "Navigation",
+       "Confused by politics",
+       "A clear map of how your organisation works"
+      ],
+      [
+       "Senior meetings",
+       "Present but passive",
+       "Framing, questioning and shaping direction"
+      ],
+      [
+       "Proposals",
+       "Pitched by feeling",
+       "Framed in value, risk and return"
+      ],
+      [
+       "Career",
+       "Seen only as a strong executor",
+       "Recognised as a strategic thinker"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Strategic Foundations",
+       "Assessment, 60-day plan, organisational navigation and four sessions"
+      ],
+      [
+       "Strategic Accelerator",
+       "Foundations, plus business case coaching, leadership presence and eight sessions"
+      ],
+      [
+       "Full Strategic Partnership",
+       "Everything in Accelerator, plus stakeholder influence and six months of coaching"
+      ]
+     ]
+    },
+    {
+     "id": "comms",
+     "icon": "🗣️",
+     "title": "Communication & influence",
+     "tag": "Close the gap between the quality of your thinking and the impact of what you say.",
+     "quote": "I know my ideas are good. But somehow, in the meetings that matter most, I never quite land the way I want to.",
+     "intro": "How you communicate your thinking is often as important as the thinking itself. We work on how you speak, write and influence, so your ideas are heard, understood and acted on, by your team, your seniors, your customers and your investors.",
+     "stuck": [
+      [
+       "Ideas lost in delivery",
+       "Strong thinking undermined by unclear structure or the wrong style for the audience."
+      ],
+      [
+       "Struggling to influence upward",
+       "Senior people don’t act on sound recommendations."
+      ],
+      [
+       "Little presence in meetings",
+       "In the room but not truly heard."
+      ],
+      [
+       "Avoiding conflict",
+       "Holding back hard truths and disagreements because they feel risky."
+      ],
+      [
+       "Weak written impact",
+       "Emails, reports and proposals that inform but don’t persuade."
+      ]
+     ],
+     "offer": [
+      [
+       "Communication style assessment",
+       "How you come across today in speech, writing and body language."
+      ],
+      [
+       "Influencing without authority",
+       "Stakeholder mapping, building alliances and moving people who don’t report to you."
+      ],
+      [
+       "Executive-level communication",
+       "Concise, data-informed, outcome-focused messages that senior people respond to."
+      ],
+      [
+       "Politics through communication",
+       "Building trust and momentum instead of resistance."
+      ],
+      [
+       "Difficult conversations",
+       "Feedback, disagreement and boundaries, handled with composure and respect."
+      ],
+      [
+       "Writing and proposals",
+       "Structure, tone and persuasive logic for emails, reports and business cases."
+      ]
+     ],
+     "change": [
+      [
+       "Meetings",
+       "Ideas don’t land",
+       "Clear contributions that move things forward"
+      ],
+      [
+       "Upward influence",
+       "Recommendations ignored",
+       "Proposals taken seriously"
+      ],
+      [
+       "Hard conversations",
+       "Issues left to fester",
+       "Handled with composure and confidence"
+      ],
+      [
+       "Writing",
+       "Informs but doesn’t persuade",
+       "Clear, structured and persuasive"
+      ],
+      [
+       "Relationships",
+       "Unintended friction",
+       "Trust and momentum"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Communication Foundations",
+       "Style assessment, 60-day plan, influencing without authority and four sessions"
+      ],
+      [
+       "Influence Accelerator",
+       "Foundations, plus executive communication, difficult conversations and eight sessions"
+      ],
+      [
+       "Full Communication Partnership",
+       "Everything in Accelerator, plus writing, organisational navigation and six months of coaching"
+      ]
+     ]
+    },
+    {
+     "id": "presence",
+     "icon": "✨",
+     "title": "Leadership presence",
+     "tag": "Earn trust before you speak and stay grounded when the stakes are high.",
+     "quote": "I do the work. I get the results. But in the rooms that really matter, I don’t quite show up the way I know I should.",
+     "intro": "Presence is not charisma or personality type. It is a set of deliberate practices. We clarify what you stand for as a leader and build the habits that let you show up with confidence, especially under pressure.",
+     "stuck": [
+      [
+       "Inconsistent presence",
+       "Confident in some settings, losing it under pressure or in senior company."
+      ],
+      [
+       "Seen as a doer, not a leader",
+       "Valued for delivery but not for vision or influence."
+      ],
+      [
+       "Shrinking in high-stakes rooms",
+       "Deferring when your view matters most."
+      ],
+      [
+       "Unclear personal brand",
+       "People can’t say what you stand for as a leader."
+      ],
+      [
+       "Self-doubt",
+       "Imposter feelings that make capable people play small."
+      ]
+     ],
+     "offer": [
+      [
+       "Presence assessment and 360 review",
+       "How you show up today, and how others genuinely see you."
+      ],
+      [
+       "Leadership identity and brand",
+       "Your values, your leadership philosophy and how you want to be known."
+      ],
+      [
+       "Presence growth strategy",
+       "A tailored plan with milestones and deliberate practice, not generic tips."
+      ],
+      [
+       "Presence under pressure",
+       "Staying composed and authoritative in board meetings, tough conversations and crises."
+      ],
+      [
+       "Work and life priorities",
+       "Protecting the energy that real presence depends on."
+      ],
+      [
+       "Politics with integrity",
+       "Navigating complex relationships without compromising your reputation."
+      ]
+     ],
+     "change": [
+      [
+       "Presence",
+       "Strong in some places, not others",
+       "Consistent and grounded in every setting"
+      ],
+      [
+       "Brand",
+       "Unclear",
+       "Deliberate and distinctive"
+      ],
+      [
+       "Visibility",
+       "Great work goes unnoticed",
+       "Seen as a leader by the people who matter"
+      ],
+      [
+       "Under pressure",
+       "Shrinking or deferring",
+       "Calm and authoritative"
+      ],
+      [
+       "Energy",
+       "Running on empty",
+       "A priority system that sustains you"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Presence Foundations",
+       "Assessment, leadership brand, presence strategy and four sessions"
+      ],
+      [
+       "Presence Accelerator",
+       "Foundations, plus a 360 review, presence under pressure, work-life framework and eight sessions"
+      ],
+      [
+       "Full Presence Partnership",
+       "Everything in Accelerator, plus organisational navigation, executive presence and six months of coaching"
+      ]
+     ]
+    },
+    {
+     "id": "sales",
+     "icon": "📊",
+     "title": "Sales leadership",
+     "tag": "Build a sales team, and a pipeline, that doesn’t depend on you closing every deal.",
+     "quote": "I was the best seller on the team. Now I’m leading it, and everything I was good at is almost the opposite of what this job needs.",
+     "intro": "Great sellers don’t automatically become great sales leaders, and founders who sell everything themselves eventually hit a ceiling. We build the coaching system, pipeline discipline and strategy that turn individual selling into a team that grows revenue.",
+     "stuck": [
+      [
+       "The seller-to-leader shift",
+       "Moving from personal sales success to developing others."
+      ],
+      [
+       "Pipeline depends on you",
+       "Deals stall without your personal involvement."
+      ],
+      [
+       "Can’t replicate top performance",
+       "Unclear why your best people succeed or how to teach it."
+      ],
+      [
+       "Losing top talent",
+       "Strong sellers leave because they aren’t developed or recognised."
+      ],
+      [
+       "Activity mistaken for strategy",
+       "Counting calls and meetings instead of focusing on the best opportunities."
+      ]
+     ],
+     "offer": [
+      [
+       "Sales leadership assessment",
+       "Your coaching approach, pipeline discipline, strategy and team culture today."
+      ],
+      [
+       "60-day sales leadership plan",
+       "Week-by-week people, pipeline and strategy priorities."
+      ],
+      [
+       "A sales coaching system",
+       "Deal reviews, pipeline conversations and skills coaching that work even when you’re not in the room."
+      ],
+      [
+       "Strategy and pipeline",
+       "Territory and account priorities and honest pipeline health checks."
+      ],
+      [
+       "Working across the business",
+       "Aligning with marketing, product, finance and operations."
+      ],
+      [
+       "Sustainable pace",
+       "A leadership rhythm that protects your energy in a demanding role."
+      ]
+     ],
+     "change": [
+      [
+       "Team",
+       "Depends on you",
+       "Clear ownership and independent performance"
+      ],
+      [
+       "Coaching",
+       "Ad hoc deal chats",
+       "A regular coaching rhythm"
+      ],
+      [
+       "Strategy",
+       "Activity metrics only",
+       "Effort aimed at the highest-value opportunities"
+      ],
+      [
+       "Talent",
+       "Top performers leaving",
+       "Top performers staying and growing"
+      ],
+      [
+       "You",
+       "Unsustainable pace",
+       "Strong results within a sustainable rhythm"
+      ]
+     ],
+     "pkgs": [
+      [
+       "Sales Leadership Foundations",
+       "Assessment, 60-day plan, coaching system design and four sessions"
+      ],
+      [
+       "Revenue Accelerator",
+       "Foundations, plus pipeline and strategy, organisational navigation and eight sessions"
+      ],
+      [
+       "Full Sales Leadership Partnership",
+       "Everything in Accelerator, plus a talent retention strategy, work-life system and six months of coaching"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "coachTiers": [
+  [
+   "Foundations",
+   "🌱",
+   "A focused start on one area: an honest assessment of where you are, a clear plan and the first sessions to put it to work."
+  ],
+  [
+   "Accelerator",
+   "🚀",
+   "Everything in Foundations, plus deeper work on the parts that matter most to you and more sessions to build real habits."
+  ],
+  [
+   "Partnership",
+   "🤝",
+   "Everything in Accelerator, plus ongoing coaching and regular reviews over several months, so the change lasts."
+  ]
+ ],
+ "coachFaq": [
+  [
+   "Is the discovery call really free?",
+   "Yes. It is a relaxed 30-minute conversation about where you are and what you want to change. If it doesn’t feel like the right fit, or the timing isn’t right, there is no invoice and no obligation."
+  ],
+  [
+   "What is the difference between coaching and mentoring?",
+   "Coaching helps you find your own answers, with structure and accountability. Mentoring gives you the benefit of Awele’s experience: what he has seen work, and fail, as an accountant, banker, executive and founder. Most engagements blend both."
+  ],
+  [
+   "How much does it cost?",
+   "Every engagement is shaped around you, so fees for Foundations, Accelerator and Partnership are agreed after your discovery call, once we both understand what you need. If you would rather start small, you can book a single paid session under Book a session."
+  ],
+  [
+   "How are sessions held?",
+   "By video call, usually fortnightly or monthly. Your joining link is emailed before each session."
+  ],
+  [
+   "Is what I share confidential?",
+   "Yes. What you share in coaching stays between you and your coach. Financial details and workplace situations are never discussed with anyone else without your permission."
+  ],
+  [
+   "Will I be sold insurance or investment products?",
+   "No. Financial coaching is about understanding your options and making your own decisions. You choose your provider. Where you need regulated advice or formal legal drafting, such as a will or trust deed, we connect you with qualified professionals."
+  ],
+  [
+   "Can my company book coaching for me or my team?",
+   "Yes. Leadership coaching works for individuals, for managers developing their teams and for senior leaders. Mention your organisation when you request a discovery call and we will shape the engagement with you."
+  ]
+ ],
+ "chTypes": [
+  [
+   "pivot",
+   "Strategic pivot",
+   "🧭",
+   "When the plan stops working: decide whether to persevere or pivot, and how to change direction without losing your people, customers or momentum."
+  ],
+  [
+   "crisis",
+   "Crisis management",
+   "⛈️",
+   "Prepare for and lead through crisis: fast decisions, clear communication, protecting people and reputation, and coming out stronger."
+  ],
+  [
+   "growth",
+   "Growth bottleneck",
+   "📈",
+   "Find what is really capping growth (people, systems, cash, market or the leader’s own habits) and break through it."
+  ],
+  [
+   "innov",
+   "Innovation challenge",
+   "💡",
+   "Pressure-test new ideas, overcome internal resistance and turn creativity into results that matter."
+  ]
+ ],
+ "orgTypes": [
+  "Private firm",
+  "Public institution",
+  "Development organisation",
+  "Government",
+  "Non-profit or faith-based organisation",
+  "Other"
+ ],
+ "sprintWeeks": [
+  [
+   "Week 1: The brief",
+   "Meet your Professor of Practice, receive the client brief, learn the core frameworks for the sprint",
+   [
+    [
+     "Masterclass: the core frameworks for this sprint",
+     "video",
+     90
+    ],
+    [
+     "Studio session: meet your team and the brief",
+     "video",
+     90
+    ],
+    [
+     "The client brief and confidentiality agreement",
+     "pdf"
+    ]
+   ]
+  ],
+  [
+   "Week 2: Diagnose",
+   "Dig into the problem in your studio team, gather facts, interview the client",
+   [
+    [
+     "Masterclass: finding the real problem",
+     "video",
+     90
+    ],
+    [
+     "Studio session: fact-finding and the client interview",
+     "video",
+     90
+    ],
+    [
+     "Deliverable: your diagnosis",
+     "quiz"
+    ]
+   ]
+  ],
+  [
+   "Week 3: Options",
+   "Build and test options; mid-sprint review with a Guild Mentor",
+   [
+    [
+     "Masterclass: building and testing options",
+     "video",
+     90
+    ],
+    [
+     "Studio session: options review with a Guild Mentor",
+     "video",
+     90
+    ],
+    [
+     "Deliverable: your options paper",
+     "quiz"
+    ]
+   ]
+  ],
+  [
+   "Week 4: Decide",
+   "Choose a recommendation, model the numbers, plan the people side",
+   [
+    [
+     "Masterclass: deciding and modelling the numbers",
+     "video",
+     90
+    ],
+    [
+     "Studio session: the recommendation and the people plan",
+     "video",
+     90
+    ],
+    [
+     "Deliverable: recommendation and financial model",
+     "quiz"
+    ]
+   ]
+  ],
+  [
+   "Week 5: Rehearse",
+   "Prepare the client presentation; practise with feedback",
+   [
+    [
+     "Masterclass: presenting to a client",
+     "video",
+     90
+    ],
+    [
+     "Studio session: rehearsal with feedback",
+     "video",
+     90
+    ],
+    [
+     "Deliverable: final presentation draft",
+     "quiz"
+    ]
+   ]
+  ],
+  [
+   "Week 6: Deliver",
+   "Present to the client, receive their sign-off, write your reflection, add it to your portfolio",
+   [
+    [
+     "Client presentation and sign-off",
+     "video",
+     90
+    ],
+    [
+     "Your reflection: what you learned and would do differently",
+     "quiz"
+    ],
+    [
+     "Portfolio checklist",
+     "pdf"
+    ]
+   ]
+  ]
+ ],
+ "sprints": [
+  [
+   "strategy",
+   "Strategy & Business Model Renewal",
+   "Seeing where the business really makes money, and where it should go next.",
+   "Our core product is stalling. Where do we grow?"
+  ],
+  [
+   "finance",
+   "Financial Leadership & Capital",
+   "Reading the numbers like a CFO, managing cash, raising and pricing capital.",
+   "We need to raise funds. Are we ready, and on what terms?"
+  ],
+  [
+   "leaders",
+   "Leading Leaders & Building Teams",
+   "Moving from managing people to leading managers: culture, hiring and succession.",
+   "Our managers are stretched and turnover is rising."
+  ],
+  [
+   "ops",
+   "Operations, Systems & Digital Transformation",
+   "Making the business run without you: process, data and technology choices.",
+   "We’re growing, but everything still depends on the founder."
+  ],
+  [
+   "growth",
+   "Growth, Markets & Partnerships",
+   "Customers, pricing, channels and the partnerships that open new markets.",
+   "We want to enter a new state or country."
+  ],
+  [
+   "turn",
+   "Turnaround, Risk & Governance",
+   "Steering through trouble: risk, boards, compliance and hard decisions.",
+   "Revenue fell 30% this year. What do we cut, keep and fix?"
+  ]
+ ],
+ "epMods": [
+  {
+   "title": "Module 1: Executive Presence",
+   "blurb": "What presence really is, why it matters, and where you stand today.",
+   "lessons": [
+    "What executive presence is, and what it isn’t",
+    "Gravitas, communication and appearance: the three pillars",
+    "Your presence audit: how others see you today",
+    "Confidence without arrogance",
+    "Character behind the presence: integrity, humility and trust",
+    "Your personal presence plan"
+   ],
+   "out": "A clear, honest picture of your current presence and a plan to grow it.",
+   "practice": "Write your personal presence plan"
+  },
+  {
+   "title": "Module 2: Executive Communications",
+   "blurb": "Speaking and writing so that busy, senior people listen and act.",
+   "lessons": [
+    "Say less, mean more: the executive message",
+    "Speaking with authority in meetings",
+    "Presenting to boards, investors and large audiences",
+    "Executive writing: memos, emails and briefs that get read",
+    "Voice, pace and the power of the pause",
+    "Body language in person and on camera"
+   ],
+   "out": "A three-minute recorded executive briefing, reviewed against the programme rubric.",
+   "practice": "Record your three-minute executive briefing"
+  },
+  {
+   "title": "Module 3: Board Readiness and Stakeholder Diplomacy",
+   "blurb": "Holding your own where decisions are made.",
+   "lessons": [
+    "How boards really work, and how to work with them",
+    "Reading the room: power, influence and politics",
+    "High-stakes negotiation",
+    "Disagreeing well: difficult conversations at the top",
+    "Managing investors, regulators and partners",
+    "Chairing meetings that end in decisions"
+   ],
+   "out": "A recorded mock board presentation with live Q&A.",
+   "practice": "Record your mock board presentation"
+  },
+  {
+   "title": "Module 4: Business Etiquette and Global Protocol",
+   "blurb": "The quiet skills that open doors across cultures.",
+   "lessons": [
+    "Professional etiquette for senior leaders",
+    "Business dining: from the business lunch to the formal dinner",
+    "Hosting VIPs, delegations and dignitaries",
+    "Doing business across cultures: Nigeria, Africa and the world",
+    "Diplomatic and government protocol",
+    "Networking with purpose at events and receptions"
+   ],
+   "out": "A hosting plan for a high-level visit, and (Cohort) live practice at the Presence Dinner.",
+   "practice": "Draft a hosting plan for a high-level visit"
+  },
+  {
+   "title": "Module 5: Image, Personal Branding and Digital Presence",
+   "blurb": "Making sure what people see matches who you are and where you’re going.",
+   "lessons": [
+    "Dressing for the role you’re stepping into",
+    "Grooming and the details people notice",
+    "Defining your leadership brand",
+    "Your LinkedIn and digital footprint",
+    "Thought leadership: writing and speaking in public",
+    "Protecting your reputation online"
+   ],
+   "out": "A refreshed LinkedIn profile and a one-page personal brand statement.",
+   "practice": "Refresh your LinkedIn profile and write your brand statement"
+  },
+  {
+   "title": "Module 6: Media Readiness and Leading Under Pressure",
+   "blurb": "Staying composed when the stakes and the cameras are on you.",
+   "lessons": [
+    "Emotional intelligence for senior leaders",
+    "Poise under pressure: staying calm when it matters",
+    "Media interviews: TV, radio, print and podcasts",
+    "Crisis communication: speaking when things go wrong",
+    "Handling hostile questions and difficult audiences",
+    "Leading through change with steadiness and hope",
+    "Influence: where presence leads"
+   ],
+   "out": "A recorded mock media interview, including a tough crisis question.",
+   "practice": "Record your mock media interview"
+  }
+ ],
+ "appKinds": {
+  "cohort": [
+   "✨",
+   "Executive Presence Cohort application"
+  ],
+  "faculty": [
+   "🧑‍🏫",
+   "Faculty application"
+  ],
+  "corporate": [
+   "🏢",
+   "Organisation enquiry"
+  ],
+  "brief": [
+   "📋",
+   "Client brief offer"
+  ]
+ },
+ "cats": [
+  "Legal & compliance",
+  "Finance & tax",
+  "Marketing",
+  "Design & branding",
+  "Technology",
+  "Sourcing & trade",
+  "Operations",
+  "Other"
+ ],
+ "stages": [
+  "Idea",
+  "Starting",
+  "Running",
+  "Growing"
+ ]
+}

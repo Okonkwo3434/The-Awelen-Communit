@@ -213,7 +213,7 @@ a.les:hover{background:var(--page);color:inherit}
 .rule .ri{font-size:1.25rem;width:26px;flex-shrink:0;text-align:center;line-height:1.3}
 .sign{margin:20px 0 0;font-size:.95rem}
 .agree{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px dashed var(--line-strong);padding-top:16px;margin-top:16px}
-.navhint{font-size:.8rem;color:var(--ink-3);padding:4px 8px 8px;margin-bottom:4px;border-bottom:1px dashed var(--line);line-height:1.4}
+.navhint{font-size:.84rem;font-weight:600;color:var(--purple-ink);background:var(--lemon-soft);border-radius:8px;padding:8px 10px;margin-bottom:8px;line-height:1.4}
 .feedhead{display:flex;gap:10px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
 .feedhead h2{margin:0}
 
@@ -497,3 +497,32 @@ form[data-f=prices] input{padding:6px 8px;font-size:.88rem}
 .enrolbox{border:2px solid var(--purple)}
 .paybox{border:1px dashed var(--line-strong);border-radius:10px;padding:12px}
 .lnotes p{margin:0 0 .7em}
+
+/* ---------- From the 27 Nov single-file app: course outline parts, module notes, lesson summaries ---------- */
+.ctools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.ctools .small{margin-right:auto}
+.mpart{margin:18px 0 8px;padding:10px 14px;border-left:4px solid var(--lemon-2);background:var(--lemon-soft);border-radius:8px}
+.mpart:first-child{margin-top:0}
+.mpart b{display:block;font-family:var(--serif);font-weight:400;font-size:1.05rem}
+.mpart p{margin:4px 0 0;font-size:.85rem;color:var(--ink-2)}
+.mpart+details.mod{margin-top:0}
+details.mod summary .mmeta{display:block;font-weight:400;font-size:.8rem;color:var(--ink-3);margin-top:2px}
+.minfo{padding:2px 14px 10px;font-size:.85rem;color:var(--ink-2)}
+.minfo p{margin:0 0 4px}
+.minfo p:last-child{margin:0}
+.lw .lrow{display:flex;align-items:stretch;border-top:1px solid var(--line)}
+.lw .lrow>.les{flex:1;min-width:0;border-top:0}
+.lx{border:0;background:none;padding:0 14px;color:var(--ink-3);font-size:.8rem;min-width:44px}
+.lx:hover{color:var(--purple);background:var(--page)}
+.lx span{display:inline-block;transition:transform .15s}
+.lw.ex .lx span{transform:rotate(180deg)}
+.lsum{display:none;margin:0;padding:0 14px 12px 48px;font-size:.85rem;color:var(--ink-2)}
+.lw.ex .lsum{display:block}
+.lcov{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:var(--page);border:1px solid var(--line);font-size:.92rem}
+.lcov b{display:block;font-size:.8rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+
+/* Course page: what you'll walk away with */
+.gains{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.gains li{position:relative;padding:10px 12px 10px 36px;background:var(--page);border-radius:10px;font-size:.92rem;line-height:1.4}
+.gains li:before{content:"✓";position:absolute;left:12px;top:9px;color:var(--purple);font-weight:700}
+.card>p.lead{font-size:1.05rem;color:var(--ink)}

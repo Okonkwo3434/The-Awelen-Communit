@@ -28,11 +28,12 @@ Deno.serve(async (req) => {
   const { data: who } = await asUser.auth.getUser();
   if (!who?.user) return reply({ error: 'Please sign in again and retry.' }, 401);
 
-  let body: { reference?: string; course_id?: string };
+  let body: { reference?: string; course_id?: string; ebook_id?: string };
   try { body = await req.json(); } catch { return reply({ error: 'Bad request' }, 400); }
   const reference = String(body.reference || '').trim();
   const courseId = String(body.course_id || '').trim();
-  if (!/^[A-Za-z0-9._=-]{6,100}$/.test(reference) || !courseId) return reply({ error: 'Missing payment reference or course.' }, 400);
+  const ebookId = String(body.ebook_id || '').trim();
+  if (!/^[A-Za-z0-9._=-]{6,100}$/.test(reference) || (!courseId && !ebookId)) return reply({ error: 'Missing payment reference or item.' }, 400);
 
   // 2. Ask Paystack about this payment
   const ps = await fetch('https://api.paystack.co/transaction/verify/' + encodeURIComponent(reference), {
@@ -42,20 +43,36 @@ Deno.serve(async (req) => {
   const tx = pj?.data;
   if (!ps.ok || !pj?.status || !tx) return reply({ error: 'Paystack could not confirm this payment yet. If you were charged, contact us with reference ' + reference }, 402);
   if (tx.status !== 'success') return reply({ error: 'This payment was not successful (' + tx.status + ').' }, 402);
-  if (tx.currency !== 'NGN') return reply({ error: 'Payment must be in naira.' }, 402);
 
-  // 3. Make sure the payment was made for this member and this course
+  // 3. Make sure the payment was made for this member and this course or eBook
   const meta = typeof tx.metadata === 'string' ? JSON.parse(tx.metadata || '{}') : (tx.metadata || {});
+  const admin = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
+
+  // eBook purchase (Phase 4)
+  if (ebookId) {
+    if (meta.user_id !== who.user.id || meta.ebook_id !== ebookId) return reply({ error: 'This payment belongs to a different account or eBook.' }, 403);
+    const { error } = await admin.rpc('apply_ebook_payment', {
+      p_user: who.user.id, p_ebook: ebookId, p_amount: Math.round(Number(tx.amount)) / 100, p_currency: tx.currency, p_reference: reference,
+    });
+    if (error && !/duplicate key|unique/i.test(error.message)) return reply({ error: error.message }, 400);
+    return reply({ ok: true });
+  }
+
   if (meta.user_id !== who.user.id || meta.course_id !== courseId) {
     return reply({ error: 'This payment belongs to a different account or course.' }, 403);
   }
 
-  // 4. Record it and unlock the course (amount in naira; Paystack reports kobo)
-  const admin = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
-  const amount = Math.floor(Number(tx.amount) / 100);
+  // 4. The payment must be in the course's own currency (US dollars or naira)
+  const { data: course } = await admin.from('courses').select('currency').eq('id', courseId).maybeSingle();
+  const want = course?.currency || 'NGN';
+  if (tx.currency !== want) return reply({ error: 'This course is paid in ' + (want === 'USD' ? 'US dollars' : 'naira') + '. Reference: ' + reference }, 402);
+
+  // 5. Record it and unlock the course (whole dollars or naira; Paystack reports cents or kobo)
+  const amount = Math.round(Number(tx.amount)) / 100;
   const { data, error } = await admin.rpc('apply_payment', {
     p_user: who.user.id, p_course: courseId, p_amount: amount, p_gateway: 'Paystack', p_reference: reference,
-    p_raw: { id: tx.id, paid_at: tx.paid_at, channel: tx.channel, email: tx.customer?.email, amount_kobo: tx.amount },
+    p_promo: typeof meta.promo === 'string' && meta.promo ? meta.promo : null,   // promo code typed at checkout (Phase 5)
+    p_raw: { id: tx.id, paid_at: tx.paid_at, channel: tx.channel, email: tx.customer?.email, currency: tx.currency, amount_minor: tx.amount },
   });
   if (error) {
     // Already recorded (e.g. the page was refreshed): treat as success
